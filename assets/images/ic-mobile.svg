@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
+  <g id="ic-mobile" transform="translate(-1912 -1667)">
+    <g id="smartphone" transform="translate(1919 1668)">
+      <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+        <path id="Path_105" data-name="Path 105" d="M104.905,0h-11.1a3.939,3.939,0,0,0-3.951,3.951V27.656a3.962,3.962,0,0,0,3.951,3.951h11.1a3.939,3.939,0,0,0,3.951-3.951V3.951A3.939,3.939,0,0,0,104.905,0ZM99.374,29.057a1.8,1.8,0,1,1,1.8-1.8A1.778,1.778,0,0,1,99.374,29.057Zm7.686-5.5H91.652V5.28H107.06Z" transform="translate(-89.856)" fill="#1f89cd"/>
+      </g>
+    </g>
+    <rect id="Rectangle_160" data-name="Rectangle 160" width="33" height="33" transform="translate(1912 1667)" fill="none"/>
+  </g>
+</svg>

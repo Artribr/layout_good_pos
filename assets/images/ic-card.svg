@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
+  <g id="ic-card" transform="translate(-1812 -1667)">
+    <g id="credit-card" transform="translate(1814 1673)">
+      <g id="Group_74" data-name="Group 74" transform="translate(0 0)">
+        <g id="Group_73" data-name="Group 73" transform="translate(0 0)">
+          <path id="Path_103" data-name="Path 103" d="M25.932,77.014H3.031A3.031,3.031,0,0,0,0,80.045v3.366a.337.337,0,0,0,.337.337H28.626a.337.337,0,0,0,.337-.337V80.045A3.031,3.031,0,0,0,25.932,77.014Z" transform="translate(0 -77.014)" fill="#1f89cd"/>
+        </g>
+      </g>
+      <g id="Group_76" data-name="Group 76" transform="translate(0 8.754)">
+        <g id="Group_75" data-name="Group 75" transform="translate(0 0)">
+          <path id="Path_104" data-name="Path 104" d="M28.626,231.765H.337A.337.337,0,0,0,0,232.1v8.128a3.031,3.031,0,0,0,3.031,3.031h22.9a3.031,3.031,0,0,0,3.031-3.031V232.1A.337.337,0,0,0,28.626,231.765ZM6.976,236.327H4.407a1.029,1.029,0,0,1-1.038-.962,1.01,1.01,0,0,1,1.009-1.059H6.947a1.029,1.029,0,0,1,1.038.961A1.01,1.01,0,0,1,6.976,236.327Zm17.609,3.566H18.648a1.029,1.029,0,0,1-1.038-.961,1.01,1.01,0,0,1,1.009-1.059h5.937a1.029,1.029,0,0,1,1.038.962A1.01,1.01,0,0,1,24.585,239.893Z" transform="translate(0 -231.765)" fill="#1f89cd"/>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_159" data-name="Rectangle 159" width="33" height="33" transform="translate(1812 1667)" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-online-list" transform="translate(-25 -533)">
+    <g id="ic-print-setting" transform="translate(1 147)">
+      <rect id="Rectangle_328" data-name="Rectangle 328" width="30" height="30" transform="translate(24 386)" fill="none"/>
+    </g>
+    <g id="smartphone" transform="translate(-57.856 535)">
+      <g id="Group_345" data-name="Group 345" transform="translate(89.856)">
+        <path id="Path_298" data-name="Path 298" d="M102.5,0H93.175a3.31,3.31,0,0,0-3.319,3.319V23.235a3.329,3.329,0,0,0,3.319,3.319H102.5a3.31,3.31,0,0,0,3.319-3.319V3.319A3.31,3.31,0,0,0,102.5,0ZM97.852,24.412A1.509,1.509,0,1,1,99.361,22.9,1.494,1.494,0,0,1,97.852,24.412Zm6.458-4.617H91.365V4.436H104.31Z" transform="translate(-89.856)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

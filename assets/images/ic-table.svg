@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-table" transform="translate(-1204 -11)">
+    <g id="table" transform="translate(1207.429 18.714)">
+      <path id="Path_38" data-name="Path 38" d="M128.407,177.638a2.712,2.712,0,0,0,2.674-2.26H118.666a2.712,2.712,0,0,0,2.674,2.26h2.178v7.74h-3.742a.678.678,0,1,0,0,1.356h10.2a.678.678,0,0,0,0-1.356H126.23v-7.74Z" transform="translate(-113.302 -171.31)" fill="#1f89cd"/>
+      <path id="Path_39" data-name="Path 39" d="M22.465,85.378H.678A.678.678,0,0,0,0,86.056v1.356a.678.678,0,0,0,.678.678H22.465a.678.678,0,0,0,.678-.678V86.056A.678.678,0,0,0,22.465,85.378Z" transform="translate(0 -85.378)" fill="#1f89cd"/>
+    </g>
+    <rect id="Rectangle_22" data-name="Rectangle 22" width="30" height="30" transform="translate(1204 11)" fill="none"/>
+  </g>
+</svg>

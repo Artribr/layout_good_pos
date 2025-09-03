@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <g id="ic-clock" transform="translate(2805 1813)">
+    <rect id="Rectangle_308" data-name="Rectangle 308" width="23" height="23" transform="translate(-2805 -1813)" fill="none"/>
+    <g id="ic-clock-2" data-name="ic-clock" transform="translate(-2801.933 -1809.933)">
+      <path id="Path_278" data-name="Path 278" d="M9.433,1a8.433,8.433,0,1,0,8.433,8.433A8.433,8.433,0,0,0,9.433,1Zm2.842,11.275a.767.767,0,0,1-1.084,0l-2.3-2.3a.767.767,0,0,1-.225-.542v-4.6a.767.767,0,0,1,1.533,0V9.116l2.075,2.075a.767.767,0,0,1,0,1.084Z" transform="translate(-1 -1)" fill="#1f89cd"/>
+    </g>
+  </g>
+</svg>

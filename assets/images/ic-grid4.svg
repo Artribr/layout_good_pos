@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="12" viewBox="0 0 22 12">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="22" height="12" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ic-grid4" clip-path="url(#clip-path)">
+    <g transform="translate(-902 -169)">
+      <rect id="Rectangle_150" data-name="Rectangle 150" width="4" height="5" rx="1" transform="translate(902 169)" fill="#888"/>
+    </g>
+    <g transform="translate(-896 -169)">
+      <rect id="Rectangle_150-2" data-name="Rectangle 150" width="4" height="5" rx="1" transform="translate(902 169)" fill="#888"/>
+    </g>
+    <g transform="translate(-890 -169)">
+      <rect id="Rectangle_150-3" data-name="Rectangle 150" width="4" height="5" rx="1" transform="translate(902 169)" fill="#888"/>
+    </g>
+    <g transform="translate(-884 -169)">
+      <rect id="Rectangle_150-4" data-name="Rectangle 150" width="4" height="5" rx="1" transform="translate(902 169)" fill="#888"/>
+    </g>
+    <g transform="translate(-902 -162)">
+      <rect id="Rectangle_150-5" data-name="Rectangle 150" width="4" height="5" rx="1" transform="translate(902 169)" fill="#888"/>
+    </g>
+    <g transform="translate(-896 -162)">
+      <rect id="Rectangle_150-6" data-name="Rectangle 150" width="4" height="5" rx="1" transform="translate(902 169)" fill="#888"/>
+    </g>
+    <g transform="translate(-890 -162)">
+      <rect id="Rectangle_150-7" data-name="Rectangle 150" width="4" height="5" rx="1" transform="translate(902 169)" fill="#888"/>
+    </g>
+    <g transform="translate(-884 -162)">
+      <rect id="Rectangle_150-8" data-name="Rectangle 150" width="4" height="5" rx="1" transform="translate(902 169)" fill="#888"/>
+    </g>
+  </g>
+</svg>

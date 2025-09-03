@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="ic-tableware" transform="translate(-475 -16)">
+    <g id="dinner" transform="translate(480 18)">
+      <g id="Group_18" data-name="Group 18">
+        <g id="Group_17" data-name="Group 17">
+          <path id="Path_84" data-name="Path 84" d="M5.405,0a.6.6,0,0,0-.6.6V4.8H3.6V.6A.6.6,0,0,0,2.4.6V4.8H1.2V.6A.6.6,0,0,0,0,.6V6.606A1.838,1.838,0,0,0,1.8,8.448H4.2a1.838,1.838,0,0,0,1.8-1.842V.6A.6.6,0,0,0,5.405,0Z" fill="#1f89cd"/>
+        </g>
+      </g>
+      <g id="Group_26" data-name="Group 26" transform="translate(9.974 0)">
+        <g id="Group_25" data-name="Group 25">
+          <path id="Path_88" data-name="Path 88" d="M396.487.073a.6.6,0,0,0-.616.03A7.844,7.844,0,0,0,392,6.862v5.793a.6.6,0,0,0,.6.6h1.8V19.3a1.2,1.2,0,0,0,2.4,0V.6A.6.6,0,0,0,396.487.073Z" transform="translate(-392 -0.002)" fill="#1f89cd"/>
+        </g>
+      </g>
+      <g id="Group_28" data-name="Group 28" transform="translate(1.802 7.628)">
+        <g id="Group_27" data-name="Group 27">
+          <path id="Path_89" data-name="Path 89" d="M45,238.88v11.671a1.2,1.2,0,1,0,2.4,0V238.88Z" transform="translate(-45 -238.88)" fill="#1f89cd"/>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_140" data-name="Rectangle 140" width="25" height="25" transform="translate(475 16)" fill="none"/>
+  </g>
+</svg>

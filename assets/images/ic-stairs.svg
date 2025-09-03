@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="13.852" viewBox="0 0 18 13.852">
+  <g id="ic-stairs" transform="translate(0 -59)">
+    <g id="Group_43" data-name="Group 43" transform="translate(0 59)">
+      <g id="Group_42" data-name="Group 42" transform="translate(0 0)">
+        <path id="Path_99" data-name="Path 99" d="M17.3,59H13.148a.7.7,0,0,0-.7.7v3.445H9a.7.7,0,0,0-.7.7V67.3H4.852a.7.7,0,0,0-.7.7v3.445H.7a.7.7,0,0,0,0,1.406H4.852a.7.7,0,0,0,.7-.7V68.7H9a.7.7,0,0,0,.7-.7V64.555h3.445a.7.7,0,0,0,.7-.7V60.406H17.3A.7.7,0,0,0,17.3,59Z" transform="translate(0 -59)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

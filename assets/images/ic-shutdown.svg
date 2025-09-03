@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-shutdown" transform="translate(1598 813)">
+    <g id="power-button" transform="translate(-1617.774 -809)">
+      <path id="Path_218" data-name="Path 218" d="M35.161,94.117a10.388,10.388,0,0,1-4.987-19.5,1.113,1.113,0,0,1,1.07,1.952,8.161,8.161,0,1,0,7.806-.015A1.113,1.113,0,0,1,40.113,74.6a10.388,10.388,0,0,1-4.952,19.52Z" transform="translate(0 -71.117)" fill="#fff"/>
+      <path id="Path_219" data-name="Path 219" d="M232.339,9.645a1.113,1.113,0,0,1-1.113-1.113V1.113a1.113,1.113,0,0,1,2.226,0V8.532A1.113,1.113,0,0,1,232.339,9.645Z" transform="translate(-197.178 0)" fill="#fff"/>
+    </g>
+    <rect id="Rectangle_271" data-name="Rectangle 271" width="30" height="30" transform="translate(-1598 -813)" fill="none"/>
+  </g>
+</svg>

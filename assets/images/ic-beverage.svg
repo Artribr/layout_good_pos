@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="ic-beverage" transform="translate(-594 -16)">
+    <g id="soft-drink" transform="translate(517.568 18)">
+      <g id="Group_30" data-name="Group 30" transform="translate(82.432)">
+        <g id="Group_29" data-name="Group 29" transform="translate(0)">
+          <path id="Path_90" data-name="Path 90" d="M89.666,4.146v-1.8l4.282-1.059L93.609,0l-5.3,1.284V4.146H82.432v2.93H95.547V4.146Z" transform="translate(-82.432)" fill="#1f89cd"/>
+        </g>
+      </g>
+      <g id="Group_32" data-name="Group 32" transform="translate(83.333 8.203)">
+        <g id="Group_31" data-name="Group 31" transform="translate(0)">
+          <path id="Path_91" data-name="Path 91" d="M102.912,186.368l1.555,11a1.355,1.355,0,0,0,1.33,1.172h5.476a1.338,1.338,0,0,0,1.33-1.172l1.555-11Z" transform="translate(-102.912 -186.368)" fill="#1f89cd"/>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_141" data-name="Rectangle 141" width="25" height="25" transform="translate(594 16)" fill="none"/>
+  </g>
+</svg>

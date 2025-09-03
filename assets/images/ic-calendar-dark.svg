@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="ic-calendar-dark" transform="translate(-1563 2471)">
+    <g id="Layer_93" data-name="Layer 93" transform="translate(1563 -2471)">
+      <path id="Path_366" data-name="Path 366" d="M16.744,4.6h-.867V2.867a.867.867,0,1,0-1.735,0V4.6H7.2V2.867a.867.867,0,1,0-1.735,0V4.6H4.6A2.6,2.6,0,0,0,2,7.2v.867H19.346V7.2A2.6,2.6,0,0,0,16.744,4.6Z" transform="translate(0)" fill="#1f89cd"/>
+      <path id="Path_367" data-name="Path 367" d="M2,17.938a2.6,2.6,0,0,0,2.6,2.6H16.744a2.6,2.6,0,0,0,2.6-2.6V11H2Z" transform="translate(0 -1.194)" fill="#1f89cd"/>
+    </g>
+    <rect id="Rectangle_401" data-name="Rectangle 401" width="21" height="21" transform="translate(1563 -2471)" fill="none"/>
+  </g>
+</svg>

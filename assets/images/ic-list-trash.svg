@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="ic-list-trash" transform="translate(-1130 -295)">
+    <rect id="Rectangle_234" data-name="Rectangle 234" width="22" height="22" transform="translate(1130 295)" fill="none"/>
+    <g id="ic-trash" transform="translate(1131 296)">
+      <path id="Path_201" data-name="Path 201" d="M17.2,5H2.8a.765.765,0,1,0,0,1.529H4.4v9.176A2.35,2.35,0,0,0,6.8,18h6.4a2.349,2.349,0,0,0,2.4-2.294V6.529h1.6A.765.765,0,1,0,17.2,5Zm-8,8.412a.8.8,0,0,1-1.6,0V9.588a.8.8,0,0,1,1.6,0Zm3.2,0a.8.8,0,0,1-1.6,0V9.588a.8.8,0,0,1,1.6,0Z" fill="#f9f9f9"/>
+      <path id="Path_202" data-name="Path 202" d="M10,4h4a1,1,0,0,0,0-2H10a1,1,0,0,0,0,2Z" transform="translate(-2)" fill="#f9f9f9"/>
+    </g>
+  </g>
+</svg>

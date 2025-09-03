@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-takeout" transform="translate(-14 -6)">
+    <g id="Group_147" data-name="Group 147">
+      <g id="ic-table" transform="translate(-1190 -5)">
+        <rect id="Rectangle_22" data-name="Rectangle 22" width="30" height="30" transform="translate(1204 11)" fill="none"/>
+      </g>
+      <g id="bag" transform="translate(-29.763 9)">
+        <g id="bag-2" data-name="bag" transform="translate(49.763)">
+          <path id="Path_162" data-name="Path 162" d="M66.774,7.282a.814.814,0,0,0-.815-.766H62.7V4.073a4.073,4.073,0,1,0-8.145,0V6.516H51.3a.814.814,0,0,0-.815.766l-.717,12.943a2.444,2.444,0,0,0,2.3,2.578H65.055a2.444,2.444,0,0,0,2.448-2.44q0-.071,0-.142ZM56.185,4.073a2.444,2.444,0,1,1,4.888,0V6.516H56.185Z" transform="translate(-49.763)" fill="#1f89cd"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="ic-member" transform="translate(-1076 -26)">
+    <rect id="Rectangle_348" data-name="Rectangle 348" width="20" height="20" transform="translate(1076 26)" fill="none"/>
+    <g id="user_1_" data-name="user (1)" transform="translate(1048.61 28.893)">
+      <g id="Group_355" data-name="Group 355" transform="translate(33.556)">
+        <g id="Group_354" data-name="Group 354">
+          <path id="Path_312" data-name="Path 312" d="M124.834,0a3.834,3.834,0,1,0,3.834,3.834A3.838,3.838,0,0,0,124.834,0Z" transform="translate(-121)" fill="#1f89cd"/>
+        </g>
+      </g>
+      <g id="Group_357" data-name="Group 357" transform="translate(31 8.519)">
+        <g id="Group_356" data-name="Group 356">
+          <path id="Path_313" data-name="Path 313" d="M42.159,301.653A5.465,5.465,0,0,0,38.241,300h-1.7a5.465,5.465,0,0,0-3.918,1.653A5.587,5.587,0,0,0,31,305.594a.426.426,0,0,0,.426.426H43.353a.426.426,0,0,0,.426-.426A5.587,5.587,0,0,0,42.159,301.653Z" transform="translate(-31 -300)" fill="#1f89cd"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-dine-in" transform="translate(-14 -6)">
+    <g id="Group_147" data-name="Group 147">
+      <g id="ic-table" transform="translate(-1190 -5)">
+        <rect id="Rectangle_22" data-name="Rectangle 22" width="30" height="30" transform="translate(1204 11)" fill="none"/>
+      </g>
+      <g id="serving-dish" transform="translate(6 -10.333)">
+        <path id="Path_150" data-name="Path 150" d="M37.778,36a10.557,10.557,0,0,0-9.5-10.5V23.333H26.167V25.5a10.557,10.557,0,0,0-9.5,10.5Z" transform="translate(-4.556)" fill="#1f89cd"/>
+        <path id="Path_151" data-name="Path 151" d="M35.333,70a2.111,2.111,0,0,1-2.111,2.111H12.111A2.111,2.111,0,0,1,10,70Z" transform="translate(0 -31.889)" fill="#1f89cd"/>
+      </g>
+    </g>
+  </g>
+</svg>

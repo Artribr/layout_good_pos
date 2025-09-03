@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-pay" transform="translate(-14 -6)">
+    <g id="Group_147" data-name="Group 147">
+      <g id="ic-table" transform="translate(-1190 -5)">
+        <rect id="Rectangle_22" data-name="Rectangle 22" width="30" height="30" transform="translate(1204 11)" fill="none"/>
+      </g>
+    </g>
+    <g id="wallet_1_" data-name="wallet (1)" transform="translate(17 8)">
+      <path id="XMLID_436_" d="M22.16,18.4v1.8a1.8,1.8,0,0,1-1.8,1.8H4.88A2.883,2.883,0,0,1,2,19.12V6.88A2.883,2.883,0,0,1,4.88,4H18.2a1.08,1.08,0,0,1,0,2.16H4.88a.72.72,0,0,0,0,1.44H20.36a1.8,1.8,0,0,1,1.8,1.8v1.8h-3.6a3.6,3.6,0,0,0,0,7.2Z" fill="#1f89cd"/>
+      <path id="XMLID_438_" d="M27.76,16v4.32h-3.6a2.16,2.16,0,0,1,0-4.32Z" transform="translate(-5.6 -3.36)" fill="#1f89cd"/>
+    </g>
+  </g>
+</svg>

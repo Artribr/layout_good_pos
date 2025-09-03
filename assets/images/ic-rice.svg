@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="ic-rice" transform="translate(-357 -96)">
+    <g id="sticky-rice" transform="translate(358 30)">
+      <path id="Path_54" data-name="Path 54" d="M22.835,281H.689a.689.689,0,0,0-.689.689,5.293,5.293,0,0,0,5.1,3.905H18.423a5.293,5.293,0,0,0,5.1-3.905A.689.689,0,0,0,22.835,281Z" transform="translate(0 -200.351)" fill="#1f89cd"/>
+      <path id="Path_55" data-name="Path 55" d="M100,411.689a.689.689,0,0,0,.689.689h12.957a.689.689,0,0,0,.689-.689V410H100Z" transform="translate(-95.405 -325.378)" fill="#1f89cd"/>
+      <path id="Path_56" data-name="Path 56" d="M31,78.134a1.151,1.151,0,0,0,1.156,1.136H39.27a5.06,5.06,0,0,1,4.785-5.047,2.528,2.528,0,0,0-1.22-.815,2.521,2.521,0,0,0-2.988-1.725,2.521,2.521,0,0,0-3.451,0,2.521,2.521,0,0,0-2.988,1.725A2.521,2.521,0,0,0,31.683,76.4,2.525,2.525,0,0,0,31,78.122S31,78.13,31,78.134Z" transform="translate(-29.576)" fill="#1f89cd"/>
+      <path id="Path_57" data-name="Path 57" d="M243.986,176.035v-3.61a3.676,3.676,0,0,0-2.986,3.61Z" transform="translate(-229.927 -96.765)" fill="#1f89cd"/>
+      <path id="Path_58" data-name="Path 58" d="M416,172.425v3.61h2.986A3.676,3.676,0,0,0,416,172.425Z" transform="translate(-396.886 -96.765)" fill="#1f89cd"/>
+      <path id="Path_59" data-name="Path 59" d="M336,171h2.3v3.676H336Z" transform="translate(-320.562 -95.405)" fill="#1f89cd"/>
+    </g>
+    <rect id="Rectangle_136" data-name="Rectangle 136" width="25" height="25" transform="translate(357 96)" fill="none"/>
+  </g>
+</svg>

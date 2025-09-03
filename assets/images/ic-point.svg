@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.93" height="16.93" viewBox="0 0 16.93 16.93">
+  <g id="ic-point" transform="translate(-1183 -556)">
+    <g id="euro" transform="translate(1183 556)">
+      <path id="Path_323" data-name="Path 323" d="M8.5,0A8.495,8.495,0,0,0,0,8.432a8.551,8.551,0,0,0,8.5,8.5A8.465,8.465,0,0,0,8.5,0Z" fill="#fedb41"/>
+      <path id="Path_325" data-name="Path 325" d="M66.514,60a6.481,6.481,0,1,0,6.448,6.448A6.518,6.518,0,0,0,66.514,60Z" transform="translate(-58.016 -58.016)" fill="#fea832"/>
+    </g>
+    <path id="Path_345" data-name="Path 345" d="M.97,0H2.13V-2.79H3.24c1.6,0,2.77-.74,2.77-2.35,0-1.66-1.17-2.22-2.81-2.22H.97ZM2.13-3.72V-6.43h.96c1.17,0,1.78.32,1.78,1.29S4.31-3.72,3.13-3.72Z" transform="translate(1188 569)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <title>好點POS | 就是好點</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="好點POS,就是好點,POS,POS機">
+    <meta name="description" content="好點POS | 就是好點" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta property="og:site_name" content="image.png" />
+    <meta property="og:image" content="assets/images/fb-img.png" />
+    <!--分享設定-->
+    <link rel="icon" href="assets/images/favicon.png" type="image/ico" />
+    <!--iconfont設定-->
+    <link rel="stylesheet" href="assets/style/all.css">
+    <!--css設定-->
+</head>
+
+	<body id="all">
+		<div id="loading" class="loading bg-white rounded-lg" style="display:none;">
+			<img src="./assets/images/loading.gif" alt="loading">
+		</div>
+		<div id="member-search" class="member-search" style="display:none;">
+			<img src="./assets/images/ic-member-search.svg" alt="searching" class="mb-3">
+			<p class="primary-light-color font-bold mb-3 ps-4">搜尋會員中<span class="dots"></span></p>
+			<button class="btn btn-dark-primary-light-color" id="cancel">取消</button>
+		</div>
+		<div class="backdrop js-backdrop"></div>
+		<!--訊息視窗開始-->
+<div class="modal fade" id="message" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5 font-smd font-light" id="staticBackdropLabel">送出訂單</h2>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="./assets/images/ic-close.svg" alt="關閉">
+                </button>
+            </div>
+            <div class="modal-body p-3">
+                <p class="text-center">
+                    已成功送出訂單！
+                </p>
+
+            </div>
+            <div class="modal-footer pt-0 pb-3 px-3 px-sm-5">
+                <button type="button" class="modal-action btn btn-dark-gray700 py-2 me-3"
+                    data-bs-dismiss="modal">取消</button>
+                <button type="button" class="modal-action btn btn-dark-alert-color py-2"
+                    data-bs-dismiss="modal">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--桌號視窗開始-->
+<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="table-list"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇桌號</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="box-list-wrapper scrollx-none scrollbar-dark js-box-list-wrapper">
+            <h5 class="d-flex font-sm font-light">
+                <img src="./assets/images/ic-stairs.svg" alt="1樓" class="me-2"> 1 樓
+            </h5>
+            <div class="container px-0">
+                <ul class="row box-list g-3 mb-5">
+                    <li class="col-4">
+                        <button class="btn box-list-item active">
+                            <!--<p class="box-list-status d-flex font-xxs"><img src="./assets/images/ic-check.svg" class="me-1"> 已選擇</p>-->
+                            <p class="box-list-number">
+                                A01
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                A02
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                A03
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                A04
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button class="btn box-list-item disable" data-bs-toggle="pill">
+                            <p class="d-flex font-xxs">已訂位</p>
+                            <p class="box-list-number">
+                                A05
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                A06
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                A07
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                A08
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                A02
+                            </p>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <h5 class="d-flex font-sm font-light">
+                <img src="./assets/images/ic-stairs.svg" alt="2樓" class="me-2"> 2 樓
+            </h5>
+            <div class="container px-0">
+                <ul class="row box-list nav nav-pills g-3 mb-4">
+                    <li class="col-4">
+                        <button class="btn box-list-item disable" data-bs-toggle="pill">
+                            <p class="d-flex font-xxs">使用中</p>
+                            <p class="box-list-number">
+                                B01
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B02
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B03
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B04
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B05
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B06
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B07
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B08
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B09
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B10
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B11
+                            </p>
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <p class="box-list-number">
+                                B12
+                            </p>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-list-action mt-3">
+            <button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas">確認</button>
+        </div>
+    </div>
+</div>
+<!--用餐方式視窗開始-->
+<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="dine"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇用餐方式</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="box-list-wrapper scrollx-none scrollbar-dark">
+            <div class="container px-0">
+                <ul class="row box-list g-3 mb-5 nav nav-pills" data-con="text" role="tablist">
+                    <li class="col-12">
+                        <button class="btn box-list-item active" data-bs-toggle="pill" role="tab">
+                            內用
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            外帶
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            外送
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            Foodpanda 外送
+                            <img src="./assets/images/logo-foodpanda.svg" alt="foodpanda">
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            Uber Eats 外送
+                            <img src="./assets/images/logo-ubereat.svg" alt="ubereat">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-list-action mt-3">
+            <button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas">確認</button>
+        </div>
+    </div>
+</div>
+<!--付款方式視窗開始-->
+<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="pay"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇付款方式</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="box-list-wrapper scrollx-none scrollbar-dark">
+            <div class="container px-0">
+                <ul class="row box-list g-3 mb-5 nav nav-pills" data-con="text" role="tablist">
+                    <li class="col-12">
+                        <button class="btn box-list-item active" data-bs-toggle="pill" role="tab">
+                            現金
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            信用卡
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            LinePay
+                            <img src="./assets/images/logo-linepay.svg" alt="linepay">
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            街口支付
+                            <img src="./assets/images/logo-street.png" alt="street">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-list-action mt-3">
+            <button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas">確認</button>
+        </div>
+    </div>
+</div>
+<!--備註視窗開始-->
+<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="note"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">備註</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="box-list-wrapper scrollx-none scrollbar-dark">
+            <div class="container px-0">
+                <ul class="row box-list g-3 mb-5" data-con="number">
+                    <li class="col-12">
+                        <label for="note-number" class="visually-hidden">備註號碼</label>
+                        <input type="text" id="note-number" class="box-list-form form-control" placeholder="備註號碼">
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            1
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            2
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            3
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            4
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            5
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            6
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            7
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            8
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            9
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button class="btn box-list-item" data-con="clear">
+                            清除
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            0
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <img src="./assets/images/ic-backward.svg" alt="倒退">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-list-action mt-3">
+            <button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas"
+                onclick="checkInput()">確認</button>
+        </div>
+    </div>
+</div>
+<!--數量視窗開始-->
+<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="amount">
+    <div class="offcanvas-header align-items-start">
+        <button type="button" class="btn flex-shrink-0" data-bs-dismiss="offcanvas">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">雙濃起司炸魚番薯比薩</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="box-list-wrapper scrollx-none scrollbar-dark">
+            <div class="container px-0">
+                <ul class="row box-list g-3 mb-5" data-con="number">
+                    <li class="col-12">
+                        <input type="text" id="note-number" class="box-list-form form-control" placeholder="數量">
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            1
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            2
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            3
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            4
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            5
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            6
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            7
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            8
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            9
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button class="btn box-list-item" data-con="clear">
+                            清除
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            0
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <img src="./assets/images/ic-backward.svg" alt="倒退">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-list-action mt-3">
+            <button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas"
+                onclick="checkInput()">確認</button>
+        </div>
+    </div>
+</div>
+<!--點餐視窗開始-->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="order-list">
+    <div class="offcanvas-header bg-primary-color white">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇餐點</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
+        <div class="select-list-wrapper scrollbar">
+            <h5 class="mb-1">雙濃起司炸魚番薯披薩</h5>
+            <p class="font-bold mb-3">
+                <span class="d-block mb-1">NT$289</span>
+                <span class="d-block gray700 font-xxs">披薩 1 份，指定副食 2 份</span>
+            </p>
+            <div class="bg-white rounded p-3 mb-3">
+                <h6 class="d-flex justify-content-between primary-color mb-3">
+                    餅皮選擇<p class="font-xxs gray600">最多選擇 1 項</p>
+                </h6>
+                <div class="select-list js-radio-btn-list">
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="item1" id="item1-1" checked>
+                        <label class="form-check-label" for="item1-1">
+                            <p>鬆厚餅皮</p><span>免費</span>
+                        </label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="item1" id="item1-2" disabled>
+                        <label class="form-check-label" for="item1-2">
+                            <p>薄脆餅皮</p><span>售完</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="item1" id="item1-3">
+                        <label class="form-check-label" for="item1-3">
+                            <p>芝心餅皮</p><span>+$30</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded p-3 mb-3">
+                <h6 class="d-flex justify-content-between primary-color mb-3">
+                    副食選擇<p class="font-xxs gray600">最多選擇 2 項</p>
+                </h6>
+                <div class="checkbox-list">
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="item2-1" checked>
+                        <label class="form-check-label" for="item2-1">
+                            <p>QQ球 (6 顆)</p><span>免費</span>
+                        </label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="item2-2" disabled>
+                        <label class="form-check-label" for="item2-2">
+                            <p>芝心腸 (3 條)</p><span>售完</span>
+                        </label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="item2-3">
+                        <label class="form-check-label" for="item2-3">
+                            <p>半熟起司塔 (1 顆)</p><span>+$30</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="item2-4">
+                        <label class="form-check-label" for="item2-4">
+                            <p>巴斯克蛋糕 (1 塊)</p><span>+$40</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="price-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="input-group number-form">
+                    <button class="btn btn-dark-gray600" type="button">
+                        <img src="./assets/images/ic-minus.svg" alt="減少">
+                    </button>
+                    <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+                    <button class="btn btn-dark-gray600" type="button">
+                        <img src="./assets/images/ic-plus.svg" alt="增加">
+                    </button>
+                </div>
+                <div class="d-flex align-items-center primary-color mb-2">
+                    <p class="font-sm me-2">小計</p>
+                    <p class="font-lg font-heavy">$2,030</p>
+                </div>
+            </div>
+            <div class="price-card-action mt-2">
+                <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
+                <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--點餐視窗(按鈕式)開始-->
+<div class="offcanvas offcanvas-end offcanvas-end-lg" tabindex="-1" id="order-btnlist">
+    <div class="offcanvas-header bg-primary-color white">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">請選擇餐點</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
+        <div class="select-list-wrapper scrollbar">
+            <h5 class="d-flex mb-1">雙濃起司炸魚番薯披薩<span class="d-block ms-auto mb-1">NT$289</span></h5>
+            <p class="font-bold mb-3">
+                <span class="d-block gray700 font-xxs">披薩 1 份，指定副食 2 份</span>
+            </p>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                餅皮選擇<p class="font-xxs gray600">請選擇 1 項</p>
+            </h6>
+            <!--.js-radio-btn-list為限定單選-->
+            <div class="select-list js-radio-btn-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn" data-status="soldout">
+                        <p>薄脆餅皮</p><span>售完</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn active">
+                        <p>芝心餅皮</p><span>+$30</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>鬆厚餅皮</p><span>免費</span>
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                副食選擇<p class="font-xxs gray600">請選擇 1 項</p>
+            </h6>
+            <div class="select-list js-radio-btn-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn active">
+                        <p>QQ球 (6 顆)</p><span>免費</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn" data-status="soldout">
+                        <p>芝心腸 (3 條)</p><span>售完</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>品牌聯名半熟起司塔 (1 顆)</p><span>+$30</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>巴斯克蛋糕 (1 塊)</p><span>+$40</span>
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                飲料選擇<p class="font-xxs gray600">請選擇 1 項</p>
+            </h6>
+            <div class="select-list js-radio-btn-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn active">
+                        <p>可樂</p><span>免費</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>奶蓋紅茶</p><span>+$30</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>珍珠芋奶</p><span>+$50</span>
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                加購選擇
+            </h6>
+            <div class="select-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>香辣雞翅</p><span>+80</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>炙烤雞腿</p><span>+$50</span>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>香蒜奶油脆薯</p><span>+$60</span>
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                提袋選擇
+            </h6>
+            <div class="select-list row align-items-stretch g-2">
+                <div class="col-4">
+                    <button class="btn select-list-btn js-select-list-btn">
+                        <p>塑膠袋</p><span>+3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="price-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="input-group number-form">
+                    <button class="btn btn-dark-gray600" type="button">
+                        <img src="./assets/images/ic-minus.svg" alt="減少">
+                    </button>
+                    <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+                    <button class="btn btn-dark-gray600" type="button">
+                        <img src="./assets/images/ic-plus.svg" alt="增加">
+                    </button>
+                </div>
+                <div class="d-flex align-items-center primary-color mb-2">
+                    <p class="font-sm me-2">小計</p>
+                    <p class="font-lg font-heavy">$2,030</p>
+                </div>
+            </div>
+            <div class="price-card-action mt-2">
+                <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
+                <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--結帳視窗開始-->
+<div class="offcanvas offcanvas-bottom bg-gray100 w-100" tabindex="-1" id="checkout">
+    <button type="button" class="btn offcanvas-header-close" data-bs-dismiss="offcanvas">
+        <img src="./assets/images/ic-close-dark.svg" alt="關閉">
+    </button>
+    <div class="offcanvas-body small h-100">
+        <div class="checkout" data-con="has-receipt"><!--data-con="has-receipt"開啟電子發票功能-->
+            <ul class="checkout-pay js-checkout-pay" role="tablist">
+                <li>
+                    <button class="checkout-pay-item active w-100" data-bs-toggle="tab" data-bs-target="#pay-cash">
+                        <img src="./assets/images/ic-cash.svg" alt="現金" class="me-2">現金
+                    </button>
+                </li>
+                <li>
+                    <button class="checkout-pay-item w-100" data-bs-toggle="tab" data-bs-target="#pay-card">
+                        <img src="./assets/images/ic-card.svg" alt="信用卡" class="me-2">信用卡
+                    </button>
+                </li>
+                <li>
+                    <button class="checkout-pay-item w-100" data-bs-toggle="tab" data-bs-target="#pay-service">
+                        <img src="./assets/images/ic-mobile.svg" alt="第三方支付" class="me-2">第三方支付
+                    </button>
+                </li>
+            </ul>
+            <div class="checkout-coupon js-checkout-coupon">
+                <button class="checkout-coupon-toggler btn btn-dark-danger-light-color js-checkout-coupon-toggler">
+                    <img src="./assets/images/ic-coupon.svg" alt="現金">
+                    <p>使用<br>優惠</p>
+                </button>
+                <ul class="checkout-coupon-list nav nav-pills js-checkout-coupon-list scrollbar">
+                    <li class="checkout-coupon-list-item">
+                        <div class="checkout-coupon-list-select active" data-bs-toggle="pill">
+                            消費滿 $500 折 50 <button
+                                class="checkout-coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                        </div>
+                    </li>
+                    <li class="checkout-coupon-list-item">
+                        <div class="checkout-coupon-list-select" data-bs-toggle="pill">
+                            消費滿 $1,000 折 100<button
+                                class="checkout-coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                        </div>
+                    </li>
+                    <li class="checkout-coupon-list-item">
+                        <div class="checkout-coupon-list-select" data-bs-toggle="pill">
+                            消費新品折 5 元<button
+                                class="checkout-coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                        </div>
+                    </li>
+                    <li class="checkout-coupon-list-item">
+                        <div class="checkout-coupon-list-select" data-bs-toggle="pill">
+                            母親節特惠活動 8 折<button
+                                class="checkout-coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="checkout-keyboard js-checkout-keyboard tab-content">
+                <!--現金內容-->
+                <div class="tab-pane fade show active h-100" id="pay-cash">
+                    <ul class="row checkout-keyboard-list g-2 h-100">
+                        <li class="col-3 mt-0"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600">7</button></li>
+                        <li class="col-3 mt-0"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600">8</button></li>
+                        <li class="col-3 mt-0"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600">9</button></li>
+                        <li class="col-3 mt-0"><button
+                                class="checkout-keyboard-list-item btn btn-dark-alert-color">50</button></li>
+                        <li class="col-3"><button class="checkout-keyboard-list-item btn btn-dark-gray600">4</button>
+                        </li>
+                        <li class="col-3"><button class="checkout-keyboard-list-item btn btn-dark-gray600">5</button>
+                        </li>
+                        <li class="col-3"><button class="checkout-keyboard-list-item btn btn-dark-gray600">6</button>
+                        </li>
+                        <li class="col-3"><button
+                                class="checkout-keyboard-list-item btn btn-dark-alert-color">100</button></li>
+                        <li class="col-3"><button class="checkout-keyboard-list-item btn btn-dark-gray600">1</button>
+                        </li>
+                        <li class="col-3"><button class="checkout-keyboard-list-item btn btn-dark-gray600">2</button>
+                        </li>
+                        <li class="col-3"><button class="checkout-keyboard-list-item btn btn-dark-gray600">3</button>
+                        </li>
+                        <li class="col-3"><button
+                                class="checkout-keyboard-list-item btn btn-dark-alert-color">500</button></li>
+                        <li class="col-3"><button class="checkout-keyboard-list-item btn btn-dark-gray600">C</button>
+                        </li>
+                        <li class="col-6"><button class="checkout-keyboard-list-item btn btn-dark-gray600">0</button>
+                        </li>
+                        <li class="col-3"><button
+                                class="checkout-keyboard-list-item btn btn-dark-alert-color">1000</button></li>
+                    </ul>
+                </div>
+                <!--信用卡內容-->
+                <div class="tab-pane fade h-100" id="pay-card">
+                    <div class="row checkout-keyboard-form g-0">
+                        <div class="col-12">
+                            <div class="position-relative">
+                                <label class="checkout-keyboard-form-label" for="creditcard">信用卡末四碼：</label>
+                                <input
+                                    class="form-control form-control-lg border-0 shadow-none checkout-keyboard-form-input"
+                                    type="text" id="creditcard" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="row checkout-keyboard-list g-2" style="height:calc(100% - 56px)">
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">7</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">8</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">9</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">4</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">5</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">6</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">1</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">2</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">3</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">C</button></li>
+                        <li class="col-8"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">0</button></li>
+                    </ul>
+                </div>
+                <!--第三方支付內容-->
+                <div class="tab-pane fade h-100" id="pay-service">
+                    <ul class="row checkout-keyboard-list g-2 h-100" data-con="pay-service">
+                        <li class="col-4 mt-0">
+                            <button class="btn checkout-keyboard-list-item rounded"><img
+                                    src="./assets/images/logo-apple-pay.svg" alt="apple-pay"></button>
+                        </li>
+                        <li class="col-4 mt-0">
+                            <button class="btn checkout-keyboard-list-item rounded"><img
+                                    src="./assets/images/logo-ipass.jpg" alt="ipass"></button>
+                        </li>
+                        <li class="col-4 mt-0">
+                            <button class="btn checkout-keyboard-list-item rounded"><img
+                                    src="./assets/images/logo-samsung-pay.svg" alt="samsung-pay"></button>
+                        </li>
+                        <li class="col-4">
+                            <button class="btn checkout-keyboard-list-item rounded"><img
+                                    src="./assets/images/logo-google-pay.svg" alt="google-pay"></button>
+                        </li>
+                        <li class="col-4">
+                            <button class="btn checkout-keyboard-list-item rounded"><img
+                                    src="./assets/images/logo-easycard.jpg" alt="easycard"></button>
+                        </li>
+                        <li class="col-4">
+                            <button class="btn checkout-keyboard-list-item rounded"><img
+                                    src="./assets/images/logo-line-pay.svg" alt="line-pay"></button>
+                        </li>
+                    </ul>
+                </div>
+                <!--電子發票內容-->
+                <div class="tab-pane fade h-100" id="pay-receipt">
+                    <div class="d-flex align-items-stretch h-100">
+                        <ul class="row checkout-keyboard-list g-2 h-100 me-3" style="width: 66%;">
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">A</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">B</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">C</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">D</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">E</button>
+                            </li>
+                            <li class="col-2 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">F</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">G</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">H</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">I</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">J</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">K</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">L</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">M</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">N</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">O</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">P</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">Q</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">R</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">S</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">T</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">U</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">V</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">W</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">X</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">Y</button>
+                            </li>
+                            <li class="col-2"><button
+                                    class="checkout-keyboard-list-item btn btn-light-white gray900 border bd-gray400">Z</button>
+                            </li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-light-gray200 gray700 border bd-gray400">C</button>
+                            </li>
+                            <li class="col-4">
+                                <button
+                                    class="checkout-keyboard-list-item btn btn-light-gray200 gray700 border bd-gray400">
+                                    <img src="./assets/images/ic-backward-gray-dark.svg" alt="後退">
+                                </button>
+                            </li>
+                        </ul>
+                        <ul class="row checkout-keyboard-list g-2 h-100 flex-shrink-0" style="width: 33%;">
+                            <li class="col-4 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">7</button></li>
+                            <li class="col-4 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">8</button></li>
+                            <li class="col-4 mt-0"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">9</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">4</button> </li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">5</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">6</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">1</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">2</button></li>
+                            <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">3</button></li>
+                            <li class="col-12"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-gray600">0</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-end">
+                <div class="checkout-receipt" role="tablist">
+                    <div class="input-group mb-2 shadow-sm basic-input-group" data-bs-toggle="tab" data-bs-target="#pay-receipt">
+                        <span class="input-group-text bg-primary-color white">發票載具</span>
+                        <input type="text" class="form-control" placeholder="請輸入載具號碼" data-con="highlight">
+                    </div>
+                    <div class="input-group mb-2 shadow-sm basic-input-group" data-bs-toggle="tab" data-bs-target="#pay-receipt">
+                        <span class="input-group-text bg-primary-color white">統一編號</span>
+                        <input type="text" class="form-control" placeholder="請輸入編號" value="50810791" data-con="highlight">
+                    </div>
+                </div>
+                <div class="checkout-sum bg-white rounded px-4 py-3">
+                    <ul class="checkout-sum-list mb-3">
+                        <li class="checkout-sum-item">
+                            <p class="font-smd font-bold">已收</p>
+                            <p class="font-xl font-heavy">$2,000</p>
+                        </li>
+                        <li class="checkout-sum-item danger-light-color">
+                            <p class="font-smd font-bold">優惠</p>
+                            <p class="font-xl font-heavy">-$100</p>
+                        </li>
+                        <li class="checkout-sum-item">
+                            <p class="font-smd font-bold">應收</p>
+                            <p class="font-xl font-heavy">$1,930</p>
+                        </li>
+                        <li class="checkout-sum-item primary-color">
+                            <p class="font-smd font-bold">找零</p>
+                            <p class="font-xl font-heavy">$70</p>
+                        </li>
+                    </ul>
+                    <div class="price-card-action">
+                        <button class="btn btn-lg btn-dark-primary-color flex-shrink-1">付款</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--設定視窗開始-->
+<div class="offcanvas offcanvas-end offcanvas-end-lg" tabindex="-1" id="setting">
+    <div class="offcanvas-header bg-primary-color white">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">設定視窗</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
+        <div class="setting-wrapper pt-1 scrollbar">
+            <h2 class="font-lg font-heavy mb-3">表單</h2>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                欄位
+            </h6>
+            <div class="row align-items-end">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="input" class="form-label">表單標題</label>
+                        <input type="text" class="form-control" id="input" placeholder="Input">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="input" value="filled">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="input" value="disabled" disabled>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="input" value="readonly" readonly>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="select" class="form-label">下拉表單</label>
+                        <select class="form-select" id="select">
+                            <option selected>請選擇</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="textarea" class="form-label">備註</label>
+                        <textarea class="form-control" id="textarea" rows="3" placeholder="內容"></textarea>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="input-group mb-3" type="file">
+                        <input type="file" class="form-control" id="inputGroupFile04">
+                        <button class="btn btn-dark-primary-color" type="button"
+                            id="inputGroupFileAddon04">選擇檔案</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="搜尋">
+                        <button class="btn btn-dark-primary-color" type="button"><img
+                                src="./assets/images/ic-search-white.svg"></button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" value="pos.jpg">
+                        <button class="btn btn-dark-primary-color" type="button">上傳</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                選取(水平)
+            </h6>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1" checked>
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                            value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Checked</label>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Switch</label>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled"
+                            disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                選取(垂直)
+            </h6>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="RadioOptions" value="option1" checked>
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="RadioOptions" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="RadioOptions" value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Checked</label>
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Switch</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled"
+                            disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h6 class="d-flex justify-content-between primary-color mb-3">
+                按鈕
+            </h6>
+            <div class="row align-items-end gy-3">
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-primary-color w-100 mb-3">按鈕</button>
+                    <button class="btn btn-dark-primary-color w-100 mb-3">按鈕</button>
+                    <button class="btn btn-sm btn-dark-primary-color w-100">按鈕</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-primary-color w-100 mb-3"><img
+                            src="./assets/images/ic-search-white.svg" class="me-1">按鈕</button>
+                    <button class="btn btn-dark-primary-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
+                            class="me-1">按鈕</button>
+                    <button class="btn btn-sm btn-dark-primary-color w-100 "><img
+                            src="./assets/images/ic-search-white.svg" class="me-1">按鈕</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-primary-color mb-3"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-dark-primary-color mb-3"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-sm btn-dark-primary-color"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-alert-color w-100 mb-3">按鈕</button>
+                    <button class="btn btn-dark-alert-color w-100 mb-3">按鈕</button>
+                    <button class="btn btn-sm btn-dark-alert-color w-100">按鈕</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-alert-color w-100 mb-3"><img
+                            src="./assets/images/ic-search-white.svg" class="me-1">按鈕</button>
+                    <button class="btn btn-dark-alert-color w-100 mb-3"><img src="./assets/images/ic-search-white.svg"
+                            class="me-1">按鈕</button>
+                    <button class="btn btn-sm btn-dark-alert-color w-100"><img src="./assets/images/ic-search-white.svg"
+                            class="me-1">按鈕</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-lg btn-dark-alert-color mb-3"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-dark-alert-color mb-3"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                    <button class="btn btn-sm btn-dark-alert-color"><img
+                            src="./assets/images/ic-search-white.svg"></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="price-card">
+            <div class="price-card-action mt-2">
+                <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
+                <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">儲存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--日期視窗開始-->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="date-select">
+    <div class="offcanvas-header bg-primary-color white">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇日期</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
+        <div class="setting-wrapper pt-1 scrollbar">
+            <div id="date-inline-picker"></div>
+        </div>
+        <div class="price-card">
+            <div class="price-card-action mt-2">
+                <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
+                <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--會員視窗開始-->
+<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="member"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇會員</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="box-list-wrapper">
+            <div class="container h-100 px-0 d-flex flex-column">
+                <ul class="row box-list gx-3 gy-2 mb-3" data-con="number" data-style="member">
+                    <li class="col-12">
+                        <label for="member-number" class="visually-hidden">會員資料</label>
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control box-list-form" placeholder="會員資料" id="member-number">
+                            <button class="btn bg-primary-dark-color" type="button" id="member-number-btn">
+                                <img src="./assets/images/ic-search-white.svg" alt="icon" style="width: 24px;">
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            1
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            2
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            3
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            4
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            5
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            6
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            7
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            8
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            9
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button class="btn box-list-item" data-con="clear">
+                            清除
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            0
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <img src="./assets/images/ic-backward.svg" alt="倒退">
+                        </button>
+                    </li>
+                </ul>
+                <div class="bg-primary-dark-color rounded-1 p-3 scrollx-none scrollbar-dark">
+                    <div class="row gy-2" role="tablist">
+                        <div class="col-12">
+                            <button class="btn member-pick active" data-bs-toggle="pill" aria-selected="true"
+                                role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
+                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
+                                <div class="member-pick-con">
+                                    <div class="member-pick-tag">001SDRG</div>
+                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-list-action d-flex mt-3">
+            <button class="btn btn-lg btn-outline-white white w-100 py-2 me-3" data-bs-dismiss="offcanvas">取消</button>
+            <button class="btn btn-lg btn-dark-gray900 w-100 py-2 js-confirm-member" data-bs-dismiss="offcanvas"
+                onclick="checkInput()">確認</button>
+        </div>
+    </div>
+</div>
+			<!--頁面開始-->
+			<div class="wrapper">
+				<div class="d-flex" data-con="">
+
+					<!--主選單開始-->
+<nav class="sidebar bg-primary-color">
+    <a href="https://goodpos.com.tw/" target="_blank" class="img-link">
+        <img src="./assets/images/logo-small.svg" alt="好點POS" class="sidebar-logo mb-3">
+    </a>
+    <ul class="sidebar-nav nav d-flex flex-column h-100">
+        <li class="nav-item">
+            <a class="nav-link js-nav-link " href="menu.html">
+                <img src="./assets/images/ic-menu.svg" alt="菜單">
+                菜單
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-nav-link " href="order.html">
+                <img src="./assets/images/ic-order.svg" alt="訂單">
+                訂單
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-nav-link" href="#">
+                <img src="./assets/images/ic-print-setting.svg" alt="列印設定">
+                列印<br>設定
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-nav-link" href="#" data-status="notice">
+                <img src="./assets/images/ic-online-list.svg" alt="線上訂單">
+                線上<br>訂單
+            </a>
+            <!--data-status="notice"為有提醒的狀態-->
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-nav-link " href="setting.html">
+                <img src="./assets/images/ic-setting.svg" alt="設定">
+                設定
+            </a>
+        </li>
+        <li class="nav-active d-none"></li><!--active背景-->
+    </ul>
+    <button class="sidebar-btn btn-dark-primary-dark-color"><img src="./assets/images/ic-shutdown.svg"
+            alt="離開">離開</button>
+</nav>
+<!--主選單結束-->
+						<div class="content-wrapper d-block">
+							<main class="content bg-white" id="content">
+	<div id="loading-content" class="loading bg-white rounded-lg" style="display:none;">
+		<img src="./assets/images/loading.gif" alt="loading">
+	</div>
+	<header class="navbar p-0 mb-2">
+		<a class="navbar-brand" href="index.html">
+			<h1 class="mb-0 primary-color">訂單編號 # 907653</h1> 
+		</a>
+	</header>
+	<ul class="nav top-nav nav-pills mb-2 scrollbar">
+		<li class="top-nav-item nav-item">
+			<button class="btn top-nav-link active" data-bs-toggle="pill">
+				<img src="./assets/images/ic-pizza.svg" alt="披薩" class="top-nav-icon">
+				<p>披薩</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-burger.svg" alt="漢堡" class="top-nav-icon">
+				<p>漢堡</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-rice.svg" alt="燉飯" class="top-nav-icon">
+				<p>燉飯</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-pasta.svg" alt="義麵" class="top-nav-icon">
+				<p>義麵</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-tableware.svg" alt="排餐" class="top-nav-icon">
+				<p>排餐</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-beverage.svg" alt="飲料" class="top-nav-icon">
+				<p>飲料</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-sandwich.svg" alt="小食" class="top-nav-icon">
+				<p>小食</p>
+			</button>
+		</li>
+		<li class="top-nav-item">
+			<button class="btn top-nav-link" data-bs-toggle="pill">
+				<img src="./assets/images/ic-dessert.svg" alt="甜點" class="top-nav-icon">
+				<p>甜點</p>
+			</button>
+		</li>
+	</ul>
+	<div class="menu-card-info d-flex justify-content-between">
+		<h2 class="font-lg font-heavy mb-3">選擇披薩</h2>
+		<div class="d-flex gray700 align-items-center">
+			<p class="me-2 font-xxs">12 項結果</p>
+			<ul class="function-link d-flex nav nav-pills">
+				<li class="me-2">
+					<a href="#" class="function-link-item active js-grid3" data-bs-toggle="pill">
+						<img src="./assets/images/ic-grid3.svg" alt="一列三欄">
+					</a>
+				</li>
+				<li>
+					<a href="#" class="function-link-item js-grid4" data-bs-toggle="pill">
+						<img src="./assets/images/ic-grid4.svg" alt="一列四欄">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container-fluid menu-card scrollbar scrollx-none px-0 js-menu-card">
+		<ul class="row">
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item soldout" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">0</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-4 mb-4">
+				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
+					<div class="menu-card-info d-flex justify-content-between">
+						<p class="primary-color font-bold font-md">$289</p>
+						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</main>
+<!--清單區塊開始-->
+<div class="sidelist bg-gray100" id="sidelist">
+	<div id="loading-sidelist" class="loading bg-white rounded-lg" style="display:none;">
+		<img src="./assets/images/loading.gif" alt="loading">
+	</div>
+	<div class="sidelist-header">
+		<div class="d-flex justify-content-between align-items-center flex-wrap">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="d-flex ms-auto">
+					<button class="btn btn-dropdown me-2 ps-2" data-bs-toggle="offcanvas" data-bs-target="#pay">
+						<img src="./assets/images/ic-pay.svg" alt="linepay" class="me-1">街口支付付
+					</button>
+					<button class="btn btn-dropdown me-2 ps-2" data-bs-toggle="offcanvas" data-bs-target="#dine">
+						<img src="./assets/images/ic-dine-in.svg" alt="內用" class="me-1">內用
+					</button>
+					<!--外帶：圖ic-takeout.svg-->
+					<button class="btn btn-dropdown ps-2" data-bs-toggle="offcanvas" data-bs-target="#table-list">
+						<img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="order-list-wrapper scrollbar">
+		<ul class="order-list">
+			<li class="order-list-item js-slidedelete">
+				<div class="order-list-end">
+					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
+					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<button class="btn btn-dark-gray600" type="button">
+						<img src="./assets/images/ic-trash.svg" alt="刪除">
+					</button>
+				</div>
+				<div class="order-list-info">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<span class="order-list-caption">NT$289</span>
+						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex justify-content-between">
+						<div class="input-group number-form">
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-minus.svg" alt="減少">
+							</button>
+							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-plus.svg" alt="增加">
+							</button>
+						</div>
+						<p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
+					</div>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item js-slidedelete">
+				<div class="order-list-end">
+					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
+					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<button class="btn btn-dark-gray600" type="button">
+						<img src="./assets/images/ic-trash.svg" alt="刪除">
+					</button>
+				</div>
+				<div class="order-list-info">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<span class="order-list-caption">NT$289</span>
+						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex justify-content-between">
+						<div class="input-group number-form">
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-minus.svg" alt="減少">
+							</button>
+							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-plus.svg" alt="增加">
+							</button>
+						</div>
+						<p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
+					</div>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item js-slidedelete">
+				<div class="order-list-end">
+					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
+					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<button class="btn btn-dark-gray600" type="button">
+						<img src="./assets/images/ic-trash.svg" alt="刪除">
+					</button>
+				</div>
+				<div class="order-list-info">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<span class="order-list-caption">NT$289</span>
+						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex justify-content-between">
+						<div class="input-group number-form">
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-minus.svg" alt="減少">
+							</button>
+							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-plus.svg" alt="增加">
+							</button>
+						</div>
+						<p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
+					</div>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item js-slidedelete">
+				<div class="order-list-end">
+					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
+					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<button class="btn btn-dark-gray600" type="button">
+						<img src="./assets/images/ic-trash.svg" alt="刪除">
+					</button>
+				</div>
+				<div class="order-list-info">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<span class="order-list-caption">NT$289</span>
+						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex justify-content-between">
+						<div class="input-group number-form">
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-minus.svg" alt="減少">
+							</button>
+							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-plus.svg" alt="增加">
+							</button>
+						</div>
+						<p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
+					</div>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item js-slidedelete">
+				<div class="order-list-end">
+					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
+					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<button class="btn btn-dark-gray600" type="button">
+						<img src="./assets/images/ic-trash.svg" alt="刪除">
+					</button>
+				</div>
+				<div class="order-list-info">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<span class="order-list-caption">NT$289</span>
+						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex justify-content-between">
+						<div class="input-group number-form">
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-minus.svg" alt="減少">
+							</button>
+							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-plus.svg" alt="增加">
+							</button>
+						</div>
+						<p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
+					</div>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item js-slidedelete">
+				<div class="order-list-end">
+					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
+					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<button class="btn btn-dark-gray600" type="button">
+						<img src="./assets/images/ic-trash.svg" alt="刪除">
+					</button>
+				</div>
+				<div class="order-list-info">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<span class="order-list-caption">NT$289</span>
+						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex justify-content-between">
+						<div class="input-group number-form">
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-minus.svg" alt="減少">
+							</button>
+							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-plus.svg" alt="增加">
+							</button>
+						</div>
+						<p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
+					</div>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item js-slidedelete">
+				<div class="order-list-end">
+					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
+					data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<button class="btn btn-dark-gray600" type="button">
+						<img src="./assets/images/ic-trash.svg" alt="刪除">
+					</button>
+				</div>
+				<div class="order-list-info">
+					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<span class="order-list-caption">NT$289</span>
+						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex justify-content-between">
+						<div class="input-group number-form">
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-minus.svg" alt="減少">
+							</button>
+							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+							<button class="btn btn-dark-gray600" type="button">
+								<img src="./assets/images/ic-plus.svg" alt="增加">
+							</button>
+						</div>
+						<p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
+					</div>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+		</ul>
+	</div>
+	<div class="price-card">
+		<ul>
+			<li class="price-card-item">
+				<button class="btn price-card-btn py-1 js-note-btn d-none" data-bs-toggle="offcanvas" data-bs-target="#note">
+					<img src="./assets/images/ic-addnote.svg" alt="增加備註" class="me-1">增加備註
+				</button>
+			</li>
+			<li class="price-card-item justify-content-start js-note-show" data-bs-toggle="offcanvas" data-bs-target="#note">
+				<p>備註：0988888888</p>
+				<button class="btn price-card-btn ms-2"><img src="./assets/images/ic-edit-noline.svg" alt="編輯"> 編輯</button>
+			</li>
+			<li class="price-card-item">
+				<p>品項 (5)</p>
+				<p>$1980</p>
+			</li>
+			<li class="price-card-item">
+				<p>外送費</p>
+				<p>$50</p>
+			</li>
+			<li class="price-card-item primary-color" data-con="total">
+				<p class="font-sm">總金額</p>
+				<p class="font-lg font-heavy">$2,030</p>
+			</li>
+		</ul>
+		<div class="price-card-action mt-2">
+			<button class="btn btn-lg btn-dark-gray700 W-100 me-3" onclick="window.location.href='order.html'">取消</button>
+			<button class="btn btn-lg btn-dark-primary-color" onclick="window.location.href='order.html'">完成</button>
+		</div>
+	</div>
+</div>
+						</div>
+				</div>
+			</div>
+			<!-- SCRIPTS -->
+<script src="assets/js/jquery.min.js"></script>
+<script src='assets/js/jquery-ui.min.js'></script>
+<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/hammer.min.js"></script>
+<script src="assets/js/moment-with-locales.min.js"></script><!--日期選擇-->
+<script src="assets/js/tempusdominus-bootstrap-4.js"></script><!--日期選擇-->
+<script src="assets/js/slidetounlock.js"></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+<script src="assets/js/script.js"></script>
+<script type="text/javascript">
+    //popover功能開啟
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    //loading畫面
+    $(document).ready(function () {
+        // 為會員搜尋應用整體加載效果
+        $('.js-searching-demo').on('click', function () {
+            $('#all').block({
+                message: $('#member-search'),
+                overlayCSS: {
+                    opacity: 0.1
+                }
+            });
+        });
+        $('#member-search').on('click', '#cancel', function () {
+            $.unblockUI();
+        });
+        //移除會員資料
+        $('.js-remove-member').on('click', function () {
+           $('.js-member-info').css('display', 'none');
+        });
+        //載入會員資料
+        $('.js-confirm-member').on('click', function () {
+            $('.js-member-info').css('display', 'flex');
+        });
+        // 為整體區塊應用加載效果
+        $('#all').block({
+            message: $('#loading'),
+            overlayCSS: {
+                opacity: 0.1
+            }
+        });
+        
+
+        // 為左側區塊應用加載效果
+        $('#content').block({
+            message: $('#loading-content'),
+            overlayCSS: {
+                'border-radius': '24px',
+                opacity: 0.1
+            }
+        });
+
+        // 為右側區塊應用加載效果
+        $('#sidelist').block({
+            message: $('#loading-sidelist'),
+            overlayCSS: {
+                'border-radius': '24px 0 0 24px',
+                opacity: 0.1
+            }
+        });
+
+        // 1秒後解除整體區塊的加載效果
+        setTimeout(function () {
+            $('#all').unblock();
+        }, 1000);
+        setTimeout(function () {
+            $('#content').unblock();
+        }, 2000);
+        setTimeout(function () {
+            $('#sidelist').unblock();
+        }, 2000);
+
+        //日期表單
+        var datetimepickerOptions = {
+            locale: 'zh-tw',
+            defaultDate: new Date(),
+            format: 'L',
+            icons: {
+                time: "bi bi-clock",
+                date: "bi bi-calendar",
+                up: "bi bi-arrow-up",
+                down: "bi bi-arrow-down",
+                previous: "bi bi-chevron-left",
+                next: "bi bi-chevron-right",
+                today: "bi bi-clock",
+                clear: "bi bi-trash3"
+            }
+        };
+        $('#thedate').datetimepicker(datetimepickerOptions);
+        $('#date-inline-picker').datetimepicker({
+            inline: true,
+            locale: 'zh-tw',
+            format: 'L',
+        });
+        $('#date-inline-picker').on('change.datetimepicker', function (e) {
+        $('[data-target="#thedate"]').val(e.date.format('YYYY 年 M 月 DD 日'));
+    });
+    });
+
+</script>
+	</body>
+
+</html>
