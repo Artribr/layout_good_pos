@@ -16650,6 +16650,83 @@ body {
     line-height: 30px;
     padding: 0 5px; }
 
+.number-form-ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 110px;
+  height: 27px;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #a3a3a3;
+  margin-left: 16px;
+  margin-right: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+  .number-form-ol button {
+    height: 100%;
+    border-radius: 0 !important;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    background: #a3a3a3 !important; }
+  .number-form-ol div {
+    width: 100%;
+    cursor: pointer;
+    line-height: 30px;
+    padding: 0 5px; }
+
+.form-check {
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  min-height: 36px; }
+  .form-check:last-child {
+    border-bottom: none;
+    margin-bottom: 0; }
+  .form-check-input {
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  .form-check span {
+    display: inline-block;
+    width: 30px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+
+.form-check:has(input:checked) .number-form-ol {
+  border-color: #A1DAFF;
+  /* 這裡改成你想要的顏色 */ }
+  .form-check:has(input:checked) .number-form-ol button {
+    background: #A1DAFF !important; }
+    .form-check:has(input:checked) .number-form-ol button img {
+      -webkit-filter: invert(49%) sepia(53%) saturate(4618%) hue-rotate(165deg) brightness(66%) contrast(101%);
+              filter: invert(49%) sepia(53%) saturate(4618%) hue-rotate(165deg) brightness(66%) contrast(101%); }
+
+.form-check:has(input:disabled) span {
+  color: #F16464 !important; }
+
+.form-check-label {
+  margin-right: auto; }
+
 .price-card {
   font-variation-settings: "wght" 500;
   font-size: 0.9rem;
@@ -17066,8 +17143,6 @@ body {
   .select-list-wrapper input[disabled] ~ label {
     opacity: 1 !important;
     color: #7a7a7a; }
-  .select-list-wrapper input[disabled] ~ label span {
-    color: #F16464 !important; }
   .select-list-wrapper label {
     display: -webkit-box;
     display: -ms-flexbox;

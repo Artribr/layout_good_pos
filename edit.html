@@ -496,7 +496,7 @@
     </div>
 </div>
 <!--點餐視窗開始-->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="order-list">
+<div class="offcanvas offcanvas-end offcanvas-end-lg" tabindex="-1" id="order-list">
     <div class="offcanvas-header bg-primary-color white">
         <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
             <img src="./assets/images/ic-close.svg" alt="關閉">
@@ -515,23 +515,26 @@
                     餅皮選擇<p class="font-xxs gray600">最多選擇 1 項</p>
                 </h6>
                 <div class="select-list js-radio-btn-list">
-                    <div class="form-check mb-3">
+                    <div class="form-check d-flex align-items-center">
                         <input class="form-check-input" type="radio" name="item1" id="item1-1" checked>
                         <label class="form-check-label" for="item1-1">
-                            <p>鬆厚餅皮</p><span>免費</span>
+                            <p>鬆厚餅皮</p>
                         </label>
+                        <span>免費</span>
                     </div>
-                    <div class="form-check mb-3">
+                    <div class="form-check d-flex align-items-center">
                         <input class="form-check-input" type="radio" name="item1" id="item1-2" disabled>
                         <label class="form-check-label" for="item1-2">
-                            <p>薄脆餅皮</p><span>售完</span>
+                            <p>薄脆餅皮</p>
                         </label>
+                        <span>售完</span>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check d-flex align-items-center">
                         <input class="form-check-input" type="radio" name="item1" id="item1-3">
                         <label class="form-check-label" for="item1-3">
-                            <p>芝心餅皮</p><span>+$30</span>
+                            <p>芝心餅皮</p>
                         </label>
+                        <span>+$30</span>
                     </div>
                 </div>
             </div>
@@ -540,29 +543,51 @@
                     副食選擇<p class="font-xxs gray600">最多選擇 2 項</p>
                 </h6>
                 <div class="checkbox-list">
-                    <div class="form-check mb-3">
+                    <div class="form-check d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" id="item2-1" checked>
                         <label class="form-check-label" for="item2-1">
-                            <p>QQ球 (6 顆)</p><span>免費</span>
+                            <p>QQ球 (6 顆)</p>
                         </label>
+                        <span>免費</span>
                     </div>
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" id="item2-2" disabled>
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input" type="checkbox" id="item2-2" checked>
                         <label class="form-check-label" for="item2-2">
-                            <p>芝心腸 (3 條)</p><span>售完</span>
+                            <p>芝心腸 (3 條)</p>
                         </label>
+                        <div class="input-group number-form-ol">
+                            <button class="btn" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1</div>
+                            <button class="btn" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                        <span>+$40</span>
                     </div>
-                    <div class="form-check mb-3">
+                    <div class="form-check d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" id="item2-3">
                         <label class="form-check-label" for="item2-3">
-                            <p>半熟起司塔 (1 顆)</p><span>+$30</span>
+                            <p>半熟起司塔 (1 顆)</p>
                         </label>
+                        <div class="input-group number-form-ol">
+                            <button class="btn" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">0</div>
+                            <button class="btn" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                        <span>+$30</span>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="item2-4">
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input" type="checkbox" id="item2-4" disabled>
                         <label class="form-check-label" for="item2-4">
-                            <p>巴斯克蛋糕 (1 塊)</p><span>+$40</span>
+                            <p>巴斯克蛋糕 (1 塊)</p>
                         </label>
+                        <span>售完</span>
                     </div>
                 </div>
             </div>
