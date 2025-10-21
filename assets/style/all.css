@@ -10361,6 +10361,17 @@ hr {
   border-color: #e0e0e0;
   opacity: 1; }
 
+.collapse {
+  -webkit-transition: height 0.1s ease !important;
+  -o-transition: height 0.1s ease !important;
+  transition: height 0.1s ease !important;
+  /* 預設大約是 0.35s */ }
+
+.collapsing {
+  -webkit-transition: height 0.1s ease !important;
+  -o-transition: height 0.1s ease !important;
+  transition: height 0.1s ease !important; }
+
 /*-----------------距離樣式---------------------*/
 .mb-xs {
   margin-bottom: 12px; }
@@ -18271,35 +18282,59 @@ html[data-device="pad"] {
   .switch input:last-of-type:checked ~ .switch-button {
     left: 100px; }
 
-.order-card {
+.order {
   height: calc(100vh - 232px);
   padding-right: 8px;
   overflow-x: hidden; }
-  .order-card-wrapper {
-    width: 100%;
-    margin-bottom: 16px;
+  .order > li {
+    margin-bottom: 16px; }
+
+.order-card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-transition: margin-bottom 0.4s ease;
+  -o-transition: margin-bottom 0.4s ease;
+  transition: margin-bottom 0.4s ease; }
+  .order-card:has(.show) {
+    margin-bottom: 0; }
+  .order-card.merging .order-card-check {
+    margin-left: 0; }
+  .order-card.merging .order-card-item {
+    width: calc(100% - 32px);
+    pointer-events: none; }
+  .order-card-check {
+    width: 32px;
+    margin-bottom: 0;
+    padding-bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch; }
-    .order-card-wrapper:nth-last-child(1) .order-card-function-dropdown, .order-card-wrapper:nth-last-child(2) .order-card-function-dropdown {
-      bottom: 110px;
-      top: auto; }
-      .order-card-wrapper:nth-last-child(1) .order-card-function-dropdown:before, .order-card-wrapper:nth-last-child(2) .order-card-function-dropdown:before {
-        top: auto;
-        bottom: 0; }
-      .order-card-wrapper:nth-last-child(1) .order-card-function-dropdown.show:before, .order-card-wrapper:nth-last-child(2) .order-card-function-dropdown.show:before {
-        bottom: -6px; }
-    .order-card-wrapper:nth-child(1) .order-card-function-dropdown, .order-card-wrapper:nth-child(2) .order-card-function-dropdown, .order-card-wrapper:nth-child(3) .order-card-function-dropdown {
-      top: 110px !important; }
-      .order-card-wrapper:nth-child(1) .order-card-function-dropdown:before, .order-card-wrapper:nth-child(2) .order-card-function-dropdown:before, .order-card-wrapper:nth-child(3) .order-card-function-dropdown:before {
-        top: 8px !important; }
-      .order-card-wrapper:nth-child(1) .order-card-function-dropdown.show:before, .order-card-wrapper:nth-child(2) .order-card-function-dropdown.show:before, .order-card-wrapper:nth-child(3) .order-card-function-dropdown.show:before {
-        top: -6px !important; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: none;
+    margin: 0 0 0 -32px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-transition: margin-left 0.4s ease;
+    -o-transition: margin-left 0.4s ease;
+    transition: margin-left 0.4s ease; }
+    .order-card-check .form-check-input {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #1F89CD; }
+    .order-card-check:has(input:checked) ~ .order-card-item {
+      border-color: #5BA9DA; }
   .order-card-item {
     width: 100%;
     display: block;
@@ -18322,7 +18357,7 @@ html[data-device="pad"] {
           flex-shrink: 1;
       border: 1px solid #FFA42D;
       border-left: 6px solid #FFA42D; }
-      .order-card-item.active:before {
+      .order-card-item.active:after {
         content: " ";
         display: block;
         width: calc(100% + 1px);
@@ -18416,72 +18451,130 @@ html[data-device="pad"] {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 12px; }
-    .order-card-function > * {
+    .order-card-function > button {
       height: 100%;
-      position: relative;
-      width: 55px;
+      width: 48px;
       padding: 0;
       border-radius: 0;
       font-size: 0.95rem; }
-      .order-card-function > *:first-child {
+      .order-card-function > button:first-child {
         border-top-left-radius: 5px !important;
         border-bottom-left-radius: 5px !important;
         border-radius: 5px 0 0 5px; }
-        .order-card-function > *:first-child button {
+        .order-card-function > button:first-child button {
           border-top-left-radius: 5px !important;
           border-bottom-left-radius: 5px !important;
           border-radius: 5px 0 0 5px; }
-      .order-card-function > *:last-child {
+      .order-card-function > button:last-child {
         border-radius: 0 5px 5px 0; }
-        .order-card-function > *:last-child button {
+        .order-card-function > button:last-child button {
           border-radius: 0 5px 5px 0; }
-    .order-card-function-dropdown {
-      width: 140px;
-      position: absolute;
-      left: calc(50% - 70px);
-      top: 110px;
-      z-index: 100; }
-      .order-card-function-dropdown:before {
-        content: "";
-        position: absolute;
-        left: calc(50% - 8px);
-        top: 8px;
-        width: 16px;
-        height: 16px;
-        -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-        background: #FF9130;
-        border-radius: 3px;
-        z-index: 0;
-        -webkit-transition: all 0.1s ease;
-        -o-transition: all 0.1s ease;
-        transition: all 0.1s ease; }
-      .order-card-function-dropdown.show:before {
-        top: -6px; }
-    .order-card-function-menu button {
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      border-radius: 0; }
-    .order-card-function-menu ul {
+
+.order-dropdown {
+  width: 100%;
+  z-index: 100;
+  position: relative;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  height: 0; }
+  .order-dropdown.show {
+    height: 56px; }
+  .order-dropdown-item {
+    position: relative;
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    display: none; }
+    .order-dropdown-item:before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: 4px 16px -12px auto;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      border-radius: 3px;
+      z-index: 0;
+      -webkit-transition: all 0.1s ease;
+      -o-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
+    .order-dropdown-item[data-con="print"] {
+      right: 96px; }
+      .order-dropdown-item[data-con="print"]::before {
+        background: #FF9130; }
+      .order-dropdown-item[data-con="print"] ul {
+        border-color: #FF9130; }
+    .order-dropdown-item[data-con="merge"] {
+      right: 48px; }
+      .order-dropdown-item[data-con="merge"]::before {
+        background: #5BA9DA; }
+      .order-dropdown-item[data-con="merge"] ul {
+        border-color: #5BA9DA; }
+      .order-dropdown-item[data-con="merge"] li:first-child {
+        background: #5BA9DA;
+        color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 0 16px; }
+        .order-dropdown-item[data-con="merge"] li:first-child span {
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          border-radius: 20px;
+          background: #1F89CD;
+          min-width: 24px;
+          height: 24px;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          padding: 0 8px 2px 8px;
+          margin-left: 5px;
+          line-height: .9; }
+    .order-dropdown-item.show:before {
+      top: -4px; }
+    .order-dropdown-item ul {
       background: #fff;
       border-radius: 5px;
-      border: 2px solid #FF9130;
-      padding: 8px 16px;
+      border: 2px solid;
       position: relative;
-      z-index: 10; }
-      .order-card-function-menu ul li:last-child a {
-        border-bottom: none; }
-      .order-card-function-menu ul a {
+      z-index: 10;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      -webkit-transition: all 0.1s ease;
+      -o-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
+      .order-dropdown-item ul li:last-child a:after {
+        display: none; }
+      .order-dropdown-item ul a {
         font-family: "Noto Sans TC", "Microsoft JhengHei", "sans-serif";
         font-size: 1rem;
         color: #525252;
-        border-bottom: 1px solid #d6d6d6;
-        padding: 5px;
+        padding: 8px 12px;
         text-align: center;
-        display: block; }
-        .order-card-function-menu ul a:hover {
+        display: block;
+        position: relative; }
+        .order-dropdown-item ul a:after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 18px;
+          right: 0;
+          top: 12px;
+          position: absolute;
+          background: #d6d6d6; }
+        .order-dropdown-item ul a:hover {
           color: #292929; }
 
 .top-nav[data-con="filter"] .top-nav-item {
@@ -18579,9 +18672,6 @@ html[data-device="pad"] {
       padding-right: 0;
       z-index: 100;
       pointer-events: none; }
-  .setting-wrapper .form-check-input:checked {
-    background-color: #1F89CD;
-    border-color: #1F89CD; }
   .setting-wrapper .form-check-input[disabled] {
     background-color: #ebebeb; }
   .setting-wrapper .form-switch {
@@ -18599,6 +18689,10 @@ html[data-device="pad"] {
     .setting-wrapper .form-check-input[role="switch"]:checked {
       background-color: #1F89CD !important;
       background-position: 20px -4px; }
+
+.form-check-input:checked {
+  background-color: #1F89CD;
+  border-color: #1F89CD; }
 
 #date-inline-picker thead th[title="Select Month"] {
   height: 54px;
