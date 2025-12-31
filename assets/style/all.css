@@ -15519,7 +15519,6 @@ hr {
 
 .segmented-control label {
   text-align: center;
-  padding: 8px 0;
   cursor: pointer;
   z-index: 2;
   color: #1F89CD;
@@ -15527,7 +15526,7 @@ hr {
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
   font-size: 1rem;
-  padding: 8px 16px;
+  padding: 8px 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15537,6 +15536,22 @@ hr {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   font-weight: 500; }
+  .segmented-control label[data-con="order"] {
+    position: relative; }
+    .segmented-control label[data-con="order"]::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 23px;
+      height: 27px;
+      left: calc(50% - 11px);
+      top: -20px;
+      background: url("../images/ic-ordernow.svg") no-repeat;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .segmented-control label[data-con="order"].active::before {
+      top: -30px; }
 
 .segmented-control .slider {
   position: absolute;
@@ -16724,97 +16739,99 @@ body {
     .search-input input ~ button:hover img {
       opacity: 0.8; }
 
-.top-dropdown-menu {
-  border: 1px solid #1F89CD;
-  color: #1F89CD;
-  border-radius: 60px;
-  background: url("../images/ic-dropdown-pill.svg") right center no-repeat;
-  width: 125px;
-  height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 16px;
-  font-weight: 500; }
-  .top-dropdown-menu:after {
-    display: none; }
-
-.top-dropdown-item {
-  border: none;
-  padding: 0;
-  width: 100% !important;
-  min-width: auto;
-  display: block;
-  /* 必須設為 block 才能跑動畫 */
-  /*visibility: hidden;*/
-  max-height: 0;
-  /* 初始高度為 0 */
-  overflow: hidden;
-  /* 隱藏溢出內容 */
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-  .top-dropdown-item.show {
-    visibility: visible;
-    max-height: 400px;
-    /* 給一個足夠大的預估高度 */ }
-  .top-dropdown-item:before {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 16px;
-    margin: 4px 16px -12px auto;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    border-radius: 3px;
-    z-index: 0;
-    -webkit-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    transition: all 0.1s ease;
-    background: #1F89CD; }
-  .top-dropdown-item ul {
-    background: #fff;
-    border-radius: 5px;
-    border: 2px solid #1F89CD;
-    position: relative;
-    z-index: 10;
+.top-dropdown {
+  width: 100%; }
+  .top-dropdown-menu {
+    border: 1px solid #1F89CD;
+    color: #1F89CD;
+    border-radius: 60px;
+    background: url("../images/ic-dropdown-pill.svg") right center no-repeat;
+    height: 48px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    -webkit-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    transition: all 0.1s ease; }
-    .top-dropdown-item ul li:last-child a:after {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 16px;
+    font-weight: 500; }
+    .top-dropdown-menu:after {
       display: none; }
-    .top-dropdown-item ul a {
-      font-family: "Noto Sans TC", "Microsoft JhengHei", "sans-serif";
-      font-size: 1rem;
-      color: #525252;
-      padding: 8px 12px;
-      text-align: center;
+  .top-dropdown-item {
+    border: none;
+    padding: 0;
+    width: 100% !important;
+    min-width: auto;
+    display: block;
+    /* 必須設為 block 才能跑動畫 */
+    /*visibility: hidden;*/
+    left: 0;
+    top: 50px;
+    max-height: 0;
+    /* 初始高度為 0 */
+    overflow: hidden;
+    /* 隱藏溢出內容 */
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .top-dropdown-item.show {
+      visibility: visible;
+      max-height: 400px;
+      /* 給一個足夠大的預估高度 */ }
+    .top-dropdown-item:before {
+      content: "";
       display: block;
-      position: relative; }
-      .top-dropdown-item ul a:after {
-        content: "";
+      width: 16px;
+      height: 16px;
+      margin: 4px 16px -12px auto;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      border-radius: 3px;
+      z-index: 0;
+      -webkit-transition: all 0.1s ease;
+      -o-transition: all 0.1s ease;
+      transition: all 0.1s ease;
+      background: #1F89CD; }
+    .top-dropdown-item ul {
+      background: #fff;
+      border-radius: 5px;
+      border: 2px solid #1F89CD;
+      position: relative;
+      z-index: 10;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      -webkit-transition: all 0.1s ease;
+      -o-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
+      .top-dropdown-item ul li:last-child a:after {
+        display: none; }
+      .top-dropdown-item ul a {
+        font-family: "Noto Sans TC", "Microsoft JhengHei", "sans-serif";
+        font-size: 1rem;
+        color: #525252;
+        padding: 8px 12px;
+        text-align: center;
         display: block;
-        width: 1px;
-        height: 18px;
-        right: 0;
-        top: 12px;
-        position: absolute;
-        background: #d6d6d6; }
-      .top-dropdown-item ul a:hover {
-        color: #292929; }
+        position: relative; }
+        .top-dropdown-item ul a:after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 18px;
+          right: 0;
+          top: 12px;
+          position: absolute;
+          background: #d6d6d6; }
+        .top-dropdown-item ul a:hover {
+          color: #292929; }
 
 .search-dropdown {
   position: absolute;

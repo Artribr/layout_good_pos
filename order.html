@@ -1710,8 +1710,8 @@
 		</div>
 	</header>
 
-	<div class="d-flex pt-3 mb-3">
-		<div class="segmented-control me-3">
+	<div class="d-flex pt-3 mb-3 w-100">
+		<div class="segmented-control me-2">
 			<input type="radio" name="status1" checked>
 			<input type="radio" name="status1">
 			<input type="radio" name="status1">
@@ -1723,8 +1723,9 @@
 			<label>退單</label>
 		</div>
 
-		<div class="segmented-control me-3">
+		<div class="segmented-control me-2">
 			<input type="radio" name="status2" checked>
+			<input type="radio" name="status2">
 			<input type="radio" name="status2">
 			<input type="radio" name="status2">
 			<input type="radio" name="status2">
@@ -1733,10 +1734,11 @@
 
 			<label>全部</label>
 			<label>一般</label>
-			<label>預訂</label>
+			<label data-con="order">預訂</label><!--data-con 為預訂提醒-->
+			<label>線上</label>
 			<label>平台</label>
 		</div>
-		<div class="segmented-control me-3">
+		<div class="segmented-control me-2">
 			<input type="radio" name="status3" checked>
 			<input type="radio" name="status3">
 			<input type="radio" name="status3">
@@ -1749,7 +1751,7 @@
 		</div>
 		<div class="top-dropdown dropdown">
 			<div class="top-dropdown-menu dropdown-toggle" data-bs-toggle="dropdown">1 天</div>
-			<div class="dropdown-menu top-dropdown-item">
+			<div class="dropdown-menu top-dropdown-item" data-bs-display="static">
 				<ul>
 					<li><a href='#'>3 天</a></li>
 					<li><a href='#'>7 天</a></li>
