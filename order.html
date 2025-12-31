@@ -1709,43 +1709,57 @@
 			</ul>
 		</div>
 	</header>
-	<ul class="top-nav mb-2 js-filter scrollbar" data-con="filter">
-		<li class="top-nav-item">
-			<button class="top-nav-btn btn btn-dark-primary-dark rounded-pill active">
-				<div class="top-nav-btn-icon"></div> 未結
-			</button>
-		</li>
-		<li class="top-nav-item">
-			<button class="top-nav-btn btn btn-dark-primary-dark rounded-pill">
-				<div class="top-nav-btn-icon"></div> 已結
-			</button>
-		</li>
-		<li class="top-nav-item">
-			<button class="top-nav-btn btn btn-dark-primary-dark rounded-pill">
-				<div class="top-nav-btn-icon"></div> 內用
-			</button>
-		</li>
-		<li class="top-nav-item">
-			<button class="top-nav-btn btn btn-dark-primary-dark rounded-pill">
-				<div class="top-nav-btn-icon"></div> 外帶
-			</button>
-		</li>
-		<li class="top-nav-item">
-			<button class="top-nav-btn btn btn-dark-primary-dark rounded-pill">
-				<div class="top-nav-btn-icon"></div> 已結
-			</button>
-		</li>
-		<li class="top-nav-item">
-			<button class="top-nav-btn btn btn-dark-primary-dark rounded-pill">
-				<div class="top-nav-btn-icon"></div> 已取消
-			</button>
-		</li>
-		<li class="top-nav-item">
-			<button class="top-nav-btn btn btn-dark-primary-dark rounded-pill">
-				<div class="top-nav-btn-icon"></div> 已退貨
-			</button>
-		</li>
-	</ul>
+
+	<div class="d-flex pt-3 mb-3">
+		<div class="segmented-control me-3">
+			<input type="radio" name="status1" checked>
+			<input type="radio" name="status1">
+			<input type="radio" name="status1">
+
+			<div class="slider"></div>
+
+			<label>未結</label>
+			<label>已結</label>
+			<label>退單</label>
+		</div>
+
+		<div class="segmented-control me-3">
+			<input type="radio" name="status2" checked>
+			<input type="radio" name="status2">
+			<input type="radio" name="status2">
+			<input type="radio" name="status2">
+
+			<div class="slider"></div>
+
+			<label>全部</label>
+			<label>一般</label>
+			<label>預訂</label>
+			<label>平台</label>
+		</div>
+		<div class="segmented-control me-3">
+			<input type="radio" name="status3" checked>
+			<input type="radio" name="status3">
+			<input type="radio" name="status3">
+
+			<div class="slider"></div>
+
+			<label>全部</label>
+			<label>現金</label>
+			<label>非現金</label>
+		</div>
+		<div class="top-dropdown dropdown">
+			<div class="top-dropdown-menu dropdown-toggle" data-bs-toggle="dropdown">1 天</div>
+			<div class="dropdown-menu top-dropdown-item">
+				<ul>
+					<li><a href='#'>3 天</a></li>
+					<li><a href='#'>7 天</a></li>
+					<li><a href='#'>14 天</a></li>
+					<li><a href='#'>30 天</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
 
 	<div class="menu-card-info d-flex justify-content-between align-items-center">
 		<h2 class="font-lg font-heavy mb-3">訂單列表<span class="font-sm font-bold ms-2">(最近 7 天)</span></h2>
@@ -1788,7 +1802,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -1845,7 +1860,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -1902,7 +1918,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -1959,7 +1976,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -2016,7 +2034,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -2073,7 +2092,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -2130,7 +2150,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -2187,7 +2208,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -2244,7 +2266,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -2301,7 +2324,8 @@
 					<button class="btn btn-dark-danger-color">會員</button>
 					<button class="btn btn-dark-primary-light-color">加點</button>
 					<button class="btn btn-dark-alert-light-color js-dropdown-toggler" data-target="print">補印</button>
-					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn" data-target="merge">合併</button>
+					<button class="btn btn-dark-primary-pale-color js-dropdown-toggler js-merge-btn"
+						data-target="merge">合併</button>
 					<button class="btn btn-dark-gray600">退貨</button>
 				</div>
 			</div>
@@ -2663,6 +2687,37 @@
     });
     });
 
+</script>
+<script>//多選膠囊按鈕
+document.querySelectorAll('.segmented-control').forEach(group => {
+  const radios = group.querySelectorAll('input[type="radio"]');
+  const labels = group.querySelectorAll('label');
+  const slider = group.querySelector('.slider');
+
+  const count = labels.length;
+  slider.style.width = `calc((100% - 8px) / ${count})`;
+
+  function update() {
+  const index = [...radios].findIndex(r => r.checked);
+  const targetLabel = labels[index];
+
+  slider.style.width = `${targetLabel.offsetWidth}px`;
+  slider.style.transform = `translateX(${targetLabel.offsetLeft}px)`;
+
+  labels.forEach((l, i) => {
+    l.classList.toggle('active', i === index);
+  });
+}
+
+  labels.forEach((label, i) => {
+    label.addEventListener('click', () => {
+      radios[i].checked = true;
+      update();
+    });
+  });
+
+  update();
+});
 </script>
 
 	</body>

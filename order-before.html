@@ -2029,6 +2029,37 @@
     });
 
 </script>
+<script>//多選膠囊按鈕
+document.querySelectorAll('.segmented-control').forEach(group => {
+  const radios = group.querySelectorAll('input[type="radio"]');
+  const labels = group.querySelectorAll('label');
+  const slider = group.querySelector('.slider');
+
+  const count = labels.length;
+  slider.style.width = `calc((100% - 8px) / ${count})`;
+
+  function update() {
+  const index = [...radios].findIndex(r => r.checked);
+  const targetLabel = labels[index];
+
+  slider.style.width = `${targetLabel.offsetWidth}px`;
+  slider.style.transform = `translateX(${targetLabel.offsetLeft}px)`;
+
+  labels.forEach((l, i) => {
+    l.classList.toggle('active', i === index);
+  });
+}
+
+  labels.forEach((label, i) => {
+    label.addEventListener('click', () => {
+      radios[i].checked = true;
+      update();
+    });
+  });
+
+  update();
+});
+</script>
 
 	</body>
 

@@ -10268,7 +10268,7 @@ textarea.form-control-lg {
 /*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');*/
 @font-face {
   font-family: 'Noto Sans TC';
-  font-weight: normal;
+  font-weight: 100 900;
   src: url("../webfonts/NotoSansTC-VariableFont_wght.ttf") format("truetype"); }
 
 /* --------------基本設定開始--------------- */
@@ -10398,6 +10398,14 @@ hr {
   .link-primary-xlight-color:hover {
     color: #3bb2ff; }
     .link-primary-xlight-color:hover img {
+      -webkit-filter: brightness(0.8);
+              filter: brightness(0.8); }
+
+.link-primary-xxlight-color {
+  color: #EEF6FB; }
+  .link-primary-xxlight-color:hover {
+    color: #9bcae8; }
+    .link-primary-xxlight-color:hover img {
       -webkit-filter: brightness(0.8);
               filter: brightness(0.8); }
 
@@ -10675,6 +10683,9 @@ hr {
 .primary-xlight-color {
   color: #A1DAFF !important; }
 
+.primary-xxlight-color {
+  color: #EEF6FB !important; }
+
 .primary-dark-color {
   color: #1379BB !important; }
 
@@ -10917,6 +10928,9 @@ hr {
 .bg-primary-xlight-color {
   background: #A1DAFF !important; }
 
+.bg-primary-xxlight-color {
+  background: #EEF6FB !important; }
+
 .bg-primary-dark-color {
   background: #1379BB !important; }
 
@@ -11099,6 +11113,37 @@ hr {
   .btn-dark-primary-xlight-color.btn-sm {
     padding: 3px 14px; }
     .btn-dark-primary-xlight-color.btn-sm img {
+      width: 12px; }
+
+.btn-dark-primary-xxlight-color {
+  color: #fff !important;
+  background: #EEF6FB !important;
+  border: 1px solid #EEF6FB;
+  padding: 4px 16px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .btn-dark-primary-xxlight-color:hover {
+    color: #fff !important;
+    background: #d9ebf6 !important; }
+  .btn-dark-primary-xxlight-color img {
+    margin: 4px 0; }
+  .btn-dark-primary-xxlight-color.btn-lg {
+    padding: 8px 16px;
+    font-size: 1.2em; }
+    .btn-dark-primary-xxlight-color.btn-lg img {
+      width: 18px;
+      margin: 5px 0; }
+  .btn-dark-primary-xxlight-color.btn-sm {
+    padding: 3px 14px; }
+    .btn-dark-primary-xxlight-color.btn-sm img {
       width: 12px; }
 
 .btn-dark-primary-dark-color {
@@ -12076,6 +12121,21 @@ hr {
       -ms-flex-align: center;
           align-items: center; }
 
+.btn-light-primary-xxlight-color {
+  background: #EEF6FB !important;
+  border: 1px solid #EEF6FB;
+  padding: 4px 16px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .btn-light-primary-dark-color {
   background: #1379BB !important;
   border: 1px solid #1379BB;
@@ -12647,6 +12707,47 @@ hr {
     color: #fff; }
     @media (max-width: 768px) {
       .btn-border-primary-xlight-color .btn-id {
+        padding-top: 4px; } }
+
+.btn-border-primary-xxlight-color {
+  color: #EEF6FB !important;
+  background: #fff !important;
+  border: 1px solid white;
+  padding: 4px 16px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 6px #d6d6d6;
+          box-shadow: 0 3px 6px #d6d6d6;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .btn-border-primary-xxlight-color:hover {
+    color: #d9ebf6 !important;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .btn-border-primary-xxlight-color .btn-id {
+    width: 31px;
+    height: 31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 3px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    left: 16px;
+    top: 6px;
+    border-radius: 50%;
+    color: #fff; }
+    @media (max-width: 768px) {
+      .btn-border-primary-xxlight-color .btn-id {
         padding-top: 4px; } }
 
 .btn-border-primary-dark-color {
@@ -13918,6 +14019,19 @@ hr {
   background: none;
   border: 1px solid #A1DAFF !important; }
 
+.btn-outline-primary-xxlight-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: 1px solid #EEF6FB !important; }
+
 .btn-outline-primary-dark-color {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14495,6 +14609,9 @@ hr {
 .bd-primary-xlight-color {
   border-color: #A1DAFF !important; }
 
+.bd-primary-xxlight-color {
+  border-color: #EEF6FB !important; }
+
 .bd-primary-dark-color {
   border-color: #1379BB !important; }
 
@@ -15068,6 +15185,10 @@ hr {
 .table-bd-primary-xlight-color td {
   border-color: #A1DAFF; }
 
+.table-bd-primary-xxlight-color th,
+.table-bd-primary-xxlight-color td {
+  border-color: #EEF6FB; }
+
 .table-bd-primary-dark-color th,
 .table-bd-primary-dark-color td {
   border-color: #1379BB; }
@@ -15375,6 +15496,65 @@ hr {
 
 .scrolly-none {
   overflow-y: hidden !important; }
+
+/*---------------------膠囊單選選單---------------------*/
+.segmented-control {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #EEF6FB;
+  border-radius: 50px;
+  padding: 4px;
+  gap: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.segmented-control input {
+  display: none; }
+
+.segmented-control label {
+  text-align: center;
+  padding: 8px 0;
+  cursor: pointer;
+  z-index: 2;
+  color: #1F89CD;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+  padding: 8px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-weight: 500; }
+
+.segmented-control .slider {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: calc(100% - 8px);
+  background: #1F89CD;
+  border-radius: 999px;
+  -webkit-transition: width 0.3s ease, -webkit-transform 0.3s ease;
+  transition: width 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease, width 0.3s ease;
+  transition: transform 0.3s ease, width 0.3s ease;
+  transition: transform 0.3s ease, width 0.3s ease, -webkit-transform 0.3s ease;
+  z-index: 1; }
+
+.segmented-control label.active {
+  color: #fff;
+  font-weight: medium; }
 
 /*---------------------滾輪時間選擇器樣式---------------------*/
 :root {
@@ -16543,6 +16723,98 @@ body {
     height: 45px; }
     .search-input input ~ button:hover img {
       opacity: 0.8; }
+
+.top-dropdown-menu {
+  border: 1px solid #1F89CD;
+  color: #1F89CD;
+  border-radius: 60px;
+  background: url("../images/ic-dropdown-pill.svg") right center no-repeat;
+  width: 125px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 16px;
+  font-weight: 500; }
+  .top-dropdown-menu:after {
+    display: none; }
+
+.top-dropdown-item {
+  border: none;
+  padding: 0;
+  width: 100% !important;
+  min-width: auto;
+  display: block;
+  /* 必須設為 block 才能跑動畫 */
+  /*visibility: hidden;*/
+  max-height: 0;
+  /* 初始高度為 0 */
+  overflow: hidden;
+  /* 隱藏溢出內容 */
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .top-dropdown-item.show {
+    visibility: visible;
+    max-height: 400px;
+    /* 給一個足夠大的預估高度 */ }
+  .top-dropdown-item:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 4px 16px -12px auto;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-radius: 3px;
+    z-index: 0;
+    -webkit-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    background: #1F89CD; }
+  .top-dropdown-item ul {
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #1F89CD;
+    position: relative;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease; }
+    .top-dropdown-item ul li:last-child a:after {
+      display: none; }
+    .top-dropdown-item ul a {
+      font-family: "Noto Sans TC", "Microsoft JhengHei", "sans-serif";
+      font-size: 1rem;
+      color: #525252;
+      padding: 8px 12px;
+      text-align: center;
+      display: block;
+      position: relative; }
+      .top-dropdown-item ul a:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 18px;
+        right: 0;
+        top: 12px;
+        position: absolute;
+        background: #d6d6d6; }
+      .top-dropdown-item ul a:hover {
+        color: #292929; }
 
 .search-dropdown {
   position: absolute;
