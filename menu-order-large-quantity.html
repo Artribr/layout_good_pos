@@ -247,20 +247,127 @@
         <div class="box-list-wrapper scrollx-none scrollbar-dark">
             <div class="container px-0">
                 <ul class="row box-list g-3 mb-5 nav nav-pills" data-con="text" role="tablist">
-                    <li class="col-12">
-                        <button class="btn box-list-item active" data-bs-toggle="pill" role="tab">
+                    <li class="col-4">
+                        <button class="btn box-list-item justify-content-center active" data-bs-toggle="pill"
+                            data-bs-target="#dinein" role="tab">
                             內用
                         </button>
                     </li>
-                    <li class="col-12">
-                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                    <li class="col-4">
+                        <button class="btn box-list-item justify-content-center" data-bs-toggle="pill"
+                            data-bs-target="#takeout" role="tab">
                             外帶
                         </button>
                     </li>
-                    <li class="col-12">
-                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                    <li class="col-4">
+                        <button class="btn box-list-item justify-content-center" data-bs-toggle="pill"
+                            data-bs-target="#delivery " role="tab">
                             外送
                         </button>
+                    </li>
+                    <li class="col-12 mt-0">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane pt-4 fade show active" id="dinein" role="tabpanel" tabindex="0">
+                                <div class="d-flex flex-nowrap align-items-center w-100 mb-4">
+                                    <div class="flex-shrink-0">大人</div>
+                                    <div class="input-group number-form-ol w-100 flex-shrink-1"
+                                        data-style="primary-xlight" data-size="lg">
+                                        <button class="btn" type="button">
+                                            <img src="./assets/images/ic-minus.svg" alt="減少">
+                                        </button>
+                                        <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1
+                                        </div>
+                                        <button class="btn" type="button">
+                                            <img src="./assets/images/ic-plus.svg" alt="增加">
+                                        </button>
+                                    </div>
+                                    <div class="flex-shrink-0">位</div>
+                                </div>
+                                <div class="d-flex flex-nowrap align-items-center w-100 mb-4">
+                                    <div class="flex-shrink-0">小孩</div>
+                                    <div class="input-group number-form-ol w-100 flex-shrink-1" data-size="lg">
+                                        <button class="btn" type="button">
+                                            <img src="./assets/images/ic-minus.svg" alt="減少">
+                                        </button>
+                                        <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">1
+                                        </div>
+                                        <button class="btn" type="button">
+                                            <img src="./assets/images/ic-plus.svg" alt="增加">
+                                        </button>
+                                    </div>
+                                    <div class="flex-shrink-0">位</div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane pt-3 fade" id="takeout" role="tabpanel" tabindex="0">
+                                <div class="datetime-picker">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-3 flex-shrink-0">日期</div>
+                                        <div class="picker-container">
+                                            <div class="column">
+                                                <div class="wheel year"></div>
+                                            </div>
+                                            <div class="separator">/</div>
+                                            <div class="column">
+                                                <div class="wheel month"></div>
+                                            </div>
+                                            <div class="separator">/</div>
+                                            <div class="column">
+                                                <div class="wheel day"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="me-3 flex-shrink-0">時間</div>
+                                        <div class="picker-container">
+                                            <div class="column">
+                                                <div class="wheel hour"></div>
+                                            </div>
+                                            <div class="separator">:</div>
+                                            <div class="column">
+                                                <div class="wheel minute"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result d-none">最終選擇時間</div>
+                                </div>
+                            </div>
+                            <div class="tab-pane pt-3 fade" id="delivery" role="tabpanel" tabindex="0">
+                                <div class="datetime-picker">
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-3 flex-shrink-0">日期</div>
+                                        <div class="picker-container">
+                                            <div class="column">
+                                                <div class="wheel year"></div>
+                                            </div>
+                                            <div class="separator">/</div>
+                                            <div class="column">
+                                                <div class="wheel month"></div>
+                                            </div>
+                                            <div class="separator">/</div>
+                                            <div class="column">
+                                                <div class="wheel day"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="me-3 flex-shrink-0">時間</div>
+                                        <div class="picker-container">
+                                            <div class="column">
+                                                <div class="wheel hour"></div>
+                                            </div>
+                                            <div class="separator">:</div>
+                                            <div class="column">
+                                                <div class="wheel minute"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result d-none">最終選擇時間</div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="col-12">
                         <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
@@ -272,6 +379,16 @@
                         <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
                             Uber Eats 外送
                             <img src="./assets/images/logo-ubereat.svg" alt="ubereat">
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            自訂
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-bs-toggle="pill" role="tab">
+                            自訂
                         </button>
                     </li>
                 </ul>
@@ -1031,13 +1148,16 @@
             </div>
             <div class="checkout-end">
                 <div class="checkout-receipt" role="tablist">
-                    <div class="input-group mb-2 shadow-sm basic-input-group" data-bs-toggle="tab" data-bs-target="#pay-receipt">
+                    <div class="input-group mb-2 shadow-sm basic-input-group" data-bs-toggle="tab"
+                        data-bs-target="#pay-receipt">
                         <span class="input-group-text bg-primary-color white">發票載具</span>
                         <input type="text" class="form-control" placeholder="請輸入載具號碼" data-con="highlight">
                     </div>
-                    <div class="input-group mb-2 shadow-sm basic-input-group" data-bs-toggle="tab" data-bs-target="#pay-receipt">
+                    <div class="input-group mb-2 shadow-sm basic-input-group" data-bs-toggle="tab"
+                        data-bs-target="#pay-receipt">
                         <span class="input-group-text bg-primary-color white">統一編號</span>
-                        <input type="text" class="form-control" placeholder="請輸入編號" value="50810791" data-con="highlight">
+                        <input type="text" class="form-control" placeholder="請輸入編號" value="50810791"
+                            data-con="highlight">
                     </div>
                 </div>
                 <div class="checkout-sum bg-white rounded px-4 py-3">
@@ -2054,6 +2174,7 @@
 <script src="assets/js/tempusdominus-bootstrap-4.js"></script><!--日期選擇-->
 <script src="assets/js/slidetounlock.js"></script>
 <script src="assets/js/bootstrap.bundle.js"></script>
+<script src="assets/js/wheel-picker.js"></script><!--滾輪時間日期選擇器-->
 <script src="assets/js/script.js"></script>
 <script type="text/javascript">
     //popover功能開啟
@@ -2147,6 +2268,7 @@
     });
 
 </script>
+
 	</body>
 
 </html>
