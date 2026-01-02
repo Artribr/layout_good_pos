@@ -16740,7 +16740,8 @@ body {
       opacity: 0.8; }
 
 .top-dropdown {
-  width: 100%; }
+  width: 100%;
+  max-width: 125px; }
   .top-dropdown-menu {
     border: 1px solid #1F89CD;
     color: #1F89CD;

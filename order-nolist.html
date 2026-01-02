@@ -1708,32 +1708,58 @@
 			</ul>
 		</div>
 	</header>
-<ul class="top-nav mb-2" data-con="filter">
-	  <li class="top-nav-item form-check form-check-inline">
-		<input class="form-check-input" type="checkbox" id="unpaid" value="未結" checked>
-		<label class="form-check-label" for="unpaid">未結</label>
-	  </li>
-	  <li class="top-nav-item form-check form-check-inline">
-		<input class="form-check-input" type="checkbox" id="paid" value="已結">
-		<label class="form-check-label" for="paid">已結</label>
-	  </li>
-	  <li class="top-nav-item form-check form-check-inline">
-		<input class="form-check-input" type="checkbox" id="dine-in" value="內用">
-		<label class="form-check-label" for="dine-in">內用</label>
-	  </li>
-	  <li class="top-nav-item form-check form-check-inline">
-		<input class="form-check-input" type="checkbox" id="takeout" value="外帶">
-		<label class="form-check-label" for="takeout">外帶</label>
-	  </li>
-	  <li class="top-nav-item form-check form-check-inline">
-		<input class="form-check-input" type="checkbox" id="canceled" value="已取消">
-		<label class="form-check-label" for="canceled">已取消</label>
-	  </li>
-	  <li class="top-nav-item form-check form-check-inline">
-		<input class="form-check-input" type="checkbox" id="returned" value="已退貨">
-		<label class="form-check-label" for="returned">已退貨</label>
-		</li>
-</ul>
+	<div class="d-flex pt-3 mb-3 w-100">
+		<div class="segmented-control me-2">
+			<input type="radio" name="status1" checked>
+			<input type="radio" name="status1">
+			<input type="radio" name="status1">
+	
+			<div class="slider"></div>
+	
+			<label>未結</label>
+			<label>已結</label>
+			<label>退單</label>
+		</div>
+	
+		<div class="segmented-control me-2">
+			<input type="radio" name="status2" checked>
+			<input type="radio" name="status2">
+			<input type="radio" name="status2">
+			<input type="radio" name="status2">
+			<input type="radio" name="status2">
+	
+			<div class="slider"></div>
+	
+			<label>全部</label>
+			<label>一般</label>
+			<label data-con="order">預訂</label><!--data-con 為預訂提醒-->
+			<label>線上</label>
+			<label>平台</label>
+		</div>
+		<div class="segmented-control me-2">
+			<input type="radio" name="status3" checked>
+			<input type="radio" name="status3">
+			<input type="radio" name="status3">
+	
+			<div class="slider"></div>
+	
+			<label>全部</label>
+			<label>現金</label>
+			<label>非現金</label>
+		</div>
+		<div class="top-dropdown dropdown">
+			<div class="top-dropdown-menu dropdown-toggle" data-bs-toggle="dropdown">1 天</div>
+			<div class="dropdown-menu top-dropdown-item" data-bs-display="static">
+				<ul>
+					<li><a href='#'>3 天</a></li>
+					<li><a href='#'>7 天</a></li>
+					<li><a href='#'>14 天</a></li>
+					<li><a href='#'>30 天</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>
 
 <div class="menu-card-info d-flex justify-content-between">
 	<h2 class="font-lg font-heavy mb-3">訂單列表<span class="font-sm font-bold ms-2">(最近 7 天)</span></h2>
