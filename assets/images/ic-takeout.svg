@@ -1,14 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-  <g id="ic-takeout" transform="translate(-14 -6)">
-    <g id="Group_147" data-name="Group 147">
-      <g id="ic-table" transform="translate(-1190 -5)">
-        <rect id="Rectangle_22" data-name="Rectangle 22" width="30" height="30" transform="translate(1204 11)" fill="none"/>
-      </g>
-      <g id="bag" transform="translate(-29.763 9)">
-        <g id="bag-2" data-name="bag" transform="translate(49.763)">
-          <path id="Path_162" data-name="Path 162" d="M66.774,7.282a.814.814,0,0,0-.815-.766H62.7V4.073a4.073,4.073,0,1,0-8.145,0V6.516H51.3a.814.814,0,0,0-.815.766l-.717,12.943a2.444,2.444,0,0,0,2.3,2.578H65.055a2.444,2.444,0,0,0,2.448-2.44q0-.071,0-.142ZM56.185,4.073a2.444,2.444,0,1,1,4.888,0V6.516H56.185Z" transform="translate(-49.763)" fill="#1f89cd"/>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="ic-takeout" transform="translate(-14 -5.875)">
+    <g id="Group_147" data-name="Group 147" transform="translate(14 6)">
+      <g id="ic-table">
+        <rect id="Rectangle_22" data-name="Rectangle 22" width="20" height="20" transform="translate(0 -0.125)" fill="none"/>
       </g>
     </g>
+    <path id="bag" d="M23.384,3.276V16.134a.777.777,0,0,1-.778.776H12.572a.778.778,0,0,1-.778-.776V3.278a.78.78,0,0,1,.778-.778h1.082c.451,0,.778.25.78.6v1.63a1,1,0,0,0,1,1h.842l.1-.078a1.432,1.432,0,0,1,.839-.28h.766a1.441,1.441,0,0,1,.839.28l.092.078h.844a1,1,0,0,0,1-1V3.1c0-.347.33-.6.781-.6h1.08a.778.778,0,0,1,.776.776Z" transform="translate(6.206 5.632)" fill="#1379bb"/>
   </g>
 </svg>
