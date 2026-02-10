@@ -2042,7 +2042,7 @@
 </div>
 			<!--頁面開始-->
 			<div class="wrapper">
-				<div class="d-flex" data-con="consumer">
+				<div class="d-flex" data-con="">
 
 					<!--主選單開始-->
 <nav class="sidebar bg-primary-color">
@@ -2082,7 +2082,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link js-nav-link " href="member.html">
+            <a class="nav-link js-nav-link active" href="member.html">
                 <img src="./assets/images/ic-member-light.svg" alt="會員">
                 會員
             </a>
@@ -2094,147 +2094,301 @@
 </nav>
 <!--主選單結束-->
 						<div class="content-wrapper ">
-							<main class="content bg-white flex-column">
-    <!--影片載入-->
-    <div class="content-video" data-con="videoonly">
-        <video loop="loop" id="video" autoplay muted>
-            <source src="./assets/images/demo.mp4" type="video/mp4" id="source">
-        </video>
-    </div>
-    <script>
-        document.getElementById('video').play();
-    </script>
+							<main class="content bg-white">
+	<header class="navbar p-0 mb-3">
+		<a class="navbar-brand me-auto" href="index.html">
+			<h1 class="mb-0"><img src="./assets/images/logo.svg" alt="好點POS"></h1>
+		</a>
+		<button class="btn btn-dark-primary-light-color btn-dropdown rounded-pill ms-auto me-3"
+			data-position="content" data-bs-toggle="offcanvas" data-bs-target="#add-member">
+			<img src="./assets/images/ic-add.svg" alt="新增會員" class="me-1">新增會員
+		</button>
+		<div class="input-group search-input">
+			<input type="text" class="form-control js-search-input" placeholder="會員搜尋，至少輸入 4 碼">
+			<button class="btn search-btn js-search-btn" type="button" data-bs-toggle="modal" data-bs-target="#member">
+				<img src="./assets/images/ic-search.svg" alt="搜尋">
+			</button>
+			<ul class="row search-dropdown bg-white gx-0 js-search-dropdown">
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">1</button></li>
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">2</button></li>
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">3</button></li>
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">4</button></li>
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">5</button></li>
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">6</button></li>
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">7</button></li>
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">8</button></li>
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">9</button></li>
+				<li class="col-4 d-flex justify-content-center">
+					<button class="btn search-dropdown-item" data-con="clear">清除</button>
+				</li>
+				<li class="col-4 d-flex justify-content-center"><button class="btn search-dropdown-item">0</button></li>
+				<li class="col-4 d-flex justify-content-center">
+					<button class="btn search-dropdown-item"><img src="./assets/images/ic-backward-gray.svg"
+							alt="退回"></button>
+				</li>
+
+			</ul>
+		</div>
+	</header>
+
+	<div class="member-info bg-primary-xxlight-color mb-4">
+		<div class="member-info-photo"></div>
+	</div>
+
+	<div class="menu-card-info d-flex justify-content-between align-items-center">
+		<h2 class="font-lg font-heavy mb-3">會員訂單列表</h2>
+		<div class="d-flex gray700 align-items-center">
+			<p class="me-2 font-xxs">0 項結果</p>
+		</div>
+	</div>
+
+	<div class="message" data-con="member">
+		<div class="d-flex">
+			<div class="d-flex flex-column align-items-center">
+				<div class="message-icon mb-3">
+					<img src="./assets/images/ic-member-searchbar.svg" alt="請由上方欄位搜尋會員">
+				</div>
+				<h4 class="message-title mb-3 text-center">請由上方欄位<br>搜尋會員</h4>
+			</div>
+			<div class="message-sign">或</div>
+			<div class="d-flex flex-column align-items-center">
+				<div class="message-icon mb-3">
+					<img src="./assets/images/ic-scan.svg" alt="掃描會員條碼">
+				</div>
+				<h4 class="message-title mb-3">掃描會員條碼</h4>
+			</div>
+		</div>
+	</div>
 </main>
 <!--清單區塊開始-->
 <div class="sidelist bg-gray100">
-    <div class="sidelist-header">
-        <div class="d-flex justify-content-end align-items-center">
-            <div class="d-flex">
-                <button class="btn btn-dropdown" data-status="disabled">
-                    <img src="./assets/images/ic-takeout.svg" alt="桌號" class="me-1">外帶
-                </button>
-                <!--data-status="disabled"為不能編輯的按鈕，可與平台外送屬性合併使用-->
-            </div>
-        </div>
-    </div>
-    <div class="order-list-wrapper scrollbar-dark">
-        <ul class="order-list">
-            <li class="order-list-item">
-                <div class="order-list-info d-flex ps-0">
-                    <div class="w-100">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between flex-shrink-0">
-                        <p class="font-bold"><span class="font-xxs me-1">數量</span><span class="font-sm">1 </span><span
-                                class="font-xxs me-1">份</span></p>
-                        <p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
-                    </div>
-                </div>
-            </li>
-            <li class="order-list-item">
-                <div class="order-list-info d-flex ps-0">
-                    <div class="w-100">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between flex-shrink-0">
-                        <p class="font-bold"><span class="font-xxs me-1">數量</span><span class="font-sm">1 </span><span
-                                class="font-xxs me-1">份</span></p>
-                        <p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
-                    </div>
-                </div>
-            </li>
-            <li class="order-list-item">
-                <div class="order-list-info d-flex ps-0">
-                    <div class="w-100">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between flex-shrink-0">
-                        <p class="font-bold"><span class="font-xxs me-1">數量</span><span class="font-sm">1 </span><span
-                                class="font-xxs me-1">份</span></p>
-                        <p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
-                    </div>
-                </div>
-            </li>
-            <li class="order-list-item">
-                <div class="order-list-info d-flex ps-0">
-                    <div class="w-100">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between flex-shrink-0">
-                        <p class="font-bold"><span class="font-xxs me-1">數量</span><span class="font-sm">1 </span><span
-                                class="font-xxs me-1">份</span></p>
-                        <p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
-                    </div>
-                </div>
-            </li>
-            <li class="order-list-item">
-                <div class="order-list-info d-flex ps-0">
-                    <div class="w-100">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between flex-shrink-0">
-                        <p class="font-bold"><span class="font-xxs me-1">數量</span><span class="font-sm">1 </span><span
-                                class="font-xxs me-1">份</span></p>
-                        <p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
-                    </div>
-                </div>
-            </li>
-            <li class="order-list-item">
-                <div class="order-list-info d-flex ps-0">
-                    <div class="w-100">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between flex-shrink-0">
-                        <p class="font-bold"><span class="font-xxs me-1">數量</span><span class="font-sm">1 </span><span
-                                class="font-xxs me-1">份</span></p>
-                        <p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
-                    </div>
-                </div>
-            </li>
-            <li class="order-list-item">
-                <div class="order-list-info d-flex ps-0">
-                    <div class="w-100">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between flex-shrink-0">
-                        <p class="font-bold"><span class="font-xxs me-1">數量</span><span class="font-sm">1 </span><span
-                                class="font-xxs me-1">份</span></p>
-                        <p class="font-bold"><span class="font-xxs me-1">小計</span><span class="font-sm">$578</span></p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="price-card">
-        <ul>
-            <li class="price-card-item primary-color">
-                <p class="font-sm">總金額</p>
-                <p class="font-lg font-heavy">$2,030</p>
-            </li>
-            <li class="price-card-item gray700">
-                <p>已付</p>
-                <p>$2,500</p>
-            </li>
-            <li class="price-card-item gray700">
-                <p>找零</p>
-                <p>$470</p>
-            </li>
-        </ul>
-    </div>
+	<div class="sidelist-header">
+		<div class="d-flex justify-content-between align-items-center">
+			<p class="primary-color font-heavy my-2"># 907653</p>
+			<div class="d-flex">
+				<button class="btn btn-dropdown" data-status="disabled">
+					<img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
+				</button>
+				<!--data-status="disabled"為不能編輯的按鈕，可與平台外送屬性合併使用-->
+			</div>
+		</div>
+	</div>
+	<div class="order-list-wrapper scrollbar-dark">
+		<ul class="order-list">
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+		</ul>
+	</div>
+	<div class="price-card">
+		<ul class="mb-3">
+			<li class="price-card-item justify-content-start">
+				<p>備註：0988888888</p>
+			</li>
+			<li class="price-card-item">
+				<p>品項 (5)</p>
+				<p>$1980</p>
+			</li>
+			<li class="price-card-item">
+				<p>外送費</p>
+				<p>$50</p>
+			</li>
+			<li class="price-card-item danger-color">
+				<p>折 100</p>
+				<p>-$100</p>
+			</li>
+			<li class="price-card-item primary-color" data-con="total">
+				<p class="font-sm">總金額</p>
+				<p class="font-lg font-heavy">$2,030</p>
+			</li>
+			<li class="price-card-item gray700">
+				<p>已付</p>
+				<p>$2,500</p>
+			</li>
+			<li class="price-card-item gray700">
+				<p>找零</p>
+				<p>$470</p>
+			</li>
+		</ul>
+		<div class="price-card-action mt-2">
+			<button class="btn btn-lg btn-dark-alert-color W-100 me-3"
+				onclick="window.location.href='edit.html'">編輯</button>
+			<button class="btn btn-lg btn-dark-primary-color" data-bs-toggle="offcanvas"
+				data-bs-target="#checkout">結帳</button>
+		</div>
+	</div>
 </div>
 						</div>
 				</div>

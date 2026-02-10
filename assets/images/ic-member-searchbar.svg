@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="ic-member-searchbar" transform="translate(-369 -466)">
+    <g id="search" transform="translate(376 475)">
+      <path id="Path_349" data-name="Path 349" d="M77.423,25.764A1.366,1.366,0,0,1,76.057,24.4V17.565a6.841,6.841,0,0,0-6.832-6.832H14.565a6.841,6.841,0,0,0-6.832,6.832V24.4A1.366,1.366,0,1,1,5,24.4V17.565A9.576,9.576,0,0,1,14.565,8H69.224a9.576,9.576,0,0,1,9.565,9.565V24.4A1.366,1.366,0,0,1,77.423,25.764Z" transform="translate(1.099)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_350" data-name="Path 350" d="M69.224,62.963H14.565A9.576,9.576,0,0,1,5,53.4V38.366a1.366,1.366,0,1,1,2.733,0V53.4a6.841,6.841,0,0,0,6.832,6.832H69.224A6.841,6.841,0,0,0,76.057,53.4V38.366a1.366,1.366,0,1,1,2.733,0V53.4A9.576,9.576,0,0,1,69.224,62.963Z" transform="translate(1.099 10.628)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_351" data-name="Path 351" d="M68.758,19.733H11.366a1.366,1.366,0,1,1,0-2.733H68.758a1.366,1.366,0,1,1,0,2.733Z" transform="translate(2.932 3.298)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_352" data-name="Path 352" d="M53.832,15.733H48.366a1.366,1.366,0,0,1,0-2.733h5.466a1.366,1.366,0,1,1,0,2.733Z" transform="translate(16.491 1.832)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_353" data-name="Path 353" d="M43.832,15.733H38.366a1.366,1.366,0,1,1,0-2.733h5.466a1.366,1.366,0,0,1,0,2.733Z" transform="translate(12.826 1.832)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <circle id="Ellipse_36" data-name="Ellipse 36" cx="1.308" cy="1.308" r="1.308" transform="translate(16.828 14.978)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <circle id="Ellipse_37" data-name="Ellipse 37" cx="1.308" cy="1.308" r="1.308" transform="translate(23.805 14.978)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <circle id="Ellipse_38" data-name="Ellipse 38" cx="1.308" cy="1.308" r="1.308" transform="translate(30.783 14.978)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_354" data-name="Path 354" d="M82.622,41.131H3.366A1.366,1.366,0,0,1,2,39.764v-16.4A1.366,1.366,0,0,1,3.366,22H82.622a1.366,1.366,0,0,1,1.366,1.366v16.4A1.366,1.366,0,0,1,82.622,41.131ZM4.733,38.4H81.255V24.733H4.733Z" transform="translate(0 5.131)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_355" data-name="Path 355" d="M49.1,33.2a4.1,4.1,0,1,1,4.1-4.1A4.1,4.1,0,0,1,49.1,33.2Zm0-5.466A1.366,1.366,0,1,0,50.466,29.1,1.366,1.366,0,0,0,49.1,27.733Z" transform="translate(15.758 6.23)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_356" data-name="Path 356" d="M53.1,34.466a1.366,1.366,0,0,1-.966-.4L49.4,31.333A1.366,1.366,0,1,1,51.333,29.4l2.733,2.733a1.366,1.366,0,0,1-.966,2.333Z" transform="translate(17.224 7.696)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_357" data-name="Path 357" d="M50.994,35.932H11.366A1.366,1.366,0,0,1,10,34.565v-8.2A1.366,1.366,0,0,1,11.366,25H50.994a1.366,1.366,0,0,1,1.366,1.366v8.2A1.366,1.366,0,0,1,50.994,35.932ZM12.733,33.2H49.628V27.733H12.733Z" transform="translate(2.932 6.23)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_358" data-name="Path 358" d="M33.18,41.733H14.366a1.366,1.366,0,0,1,0-2.733H33.18a1.366,1.366,0,0,1,0,2.733Z" transform="translate(4.031 11.361)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_359" data-name="Path 359" d="M64.926,45.733H14.366a1.366,1.366,0,1,1,0-2.733H64.926a1.366,1.366,0,1,1,0,2.733Z" transform="translate(4.031 12.826)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+      <path id="Path_360" data-name="Path 360" d="M64.926,49.733H14.366a1.366,1.366,0,1,1,0-2.733H64.926a1.366,1.366,0,1,1,0,2.733Z" transform="translate(4.031 14.292)" fill="#1f89cd" stroke="#eef6fb" stroke-width="0.7"/>
+    </g>
+    <rect id="Rectangle_494" data-name="Rectangle 494" width="100" height="100" transform="translate(369 466)" fill="none"/>
+  </g>
+</svg>

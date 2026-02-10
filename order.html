@@ -900,31 +900,58 @@
                     <img src="./assets/images/ic-coupon.svg" alt="現金">
                     <p>使用<br>優惠</p>
                 </button>
+                
                 <ul class="checkout-coupon-list nav nav-pills js-checkout-coupon-list scrollbar">
-                    <li class="checkout-coupon-list-item">
-                        <div class="checkout-coupon-list-select active" data-bs-toggle="pill">
-                            消費滿 $500 折 50 <button
-                                class="checkout-coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                    <div class="btn coupon-list-item active" data-bs-toggle="pill">
+                        <div class="coupon-list-con">
+                            <h6 class="coupon-list-title">
+                                <img src="./assets/images/ic-coupon-member.svg" alt="icon">十要快樂點
+                            </h6>
+                            <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
+                            <span>2025.10.01~2025.10.31</span>
+                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
                         </div>
-                    </li>
-                    <li class="checkout-coupon-list-item">
-                        <div class="checkout-coupon-list-select" data-bs-toggle="pill">
-                            消費滿 $1,000 折 100<button
-                                class="checkout-coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                    </div>
+                    <div class="btn coupon-list-item" data-bs-toggle="pill" data-status="未符合">
+                        <div class="coupon-list-con">
+                            <h6 class="coupon-list-title">
+                                <img src="./assets/images/ic-coupon-member.svg" alt="icon">會員吃美十會員吃美十
+                            </h6>
+                            <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
+                            <span>2025.10.01~2025.10.31</span>
+                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
                         </div>
-                    </li>
-                    <li class="checkout-coupon-list-item">
-                        <div class="checkout-coupon-list-select" data-bs-toggle="pill">
-                            消費新品折 5 元<button
-                                class="checkout-coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                    </div>
+                    <div class="btn coupon-list-item" data-bs-toggle="pill">
+                        <div class="coupon-list-con">
+                            <h6 class="coupon-list-title">
+                                <img src="./assets/images/ic-coupon-member.svg" alt="icon">會員吃美十會員吃美十
+                            </h6>
+                            <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
+                            <span>2025.10.01~2025.10.31</span>
+                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
                         </div>
-                    </li>
-                    <li class="checkout-coupon-list-item">
-                        <div class="checkout-coupon-list-select" data-bs-toggle="pill">
-                            母親節特惠活動 8 折<button
-                                class="checkout-coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                    </div>
+                    <div class="btn coupon-list-item" data-bs-toggle="pill" data-member="none">
+                        <div class="coupon-list-con">
+                            <h6 class="coupon-list-title">
+                                <img src="./assets/images/ic-coupon-member.svg" alt="icon">熟客感恩節
+                            </h6>
+                            <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
+                            <span>2025.10.01~2025.10.31</span>
+                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
                         </div>
-                    </li>
+                    </div>
+                    <div class="btn coupon-list-item" data-bs-toggle="pill">
+                        <div class="coupon-list-con">
+                            <h6 class="coupon-list-title">
+                                <img src="./assets/images/ic-coupon-member.svg" alt="icon">會員吃美十會員吃美十
+                            </h6>
+                            <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
+                            <span>2025.10.01~2025.10.31</span>
+                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                        </div>
+                    </div>
                 </ul>
             </div>
             <div class="checkout-keyboard js-checkout-keyboard tab-content">
@@ -1424,209 +1451,592 @@
     </div>
 </div>
 <!--日期視窗開始-->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="date-select">
-    <div class="offcanvas-header bg-primary-color white">
-        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
-            <img src="./assets/images/ic-close.svg" alt="關閉">
-        </button>
-        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇日期</h4>
-    </div>
-    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
-        <div class="setting-wrapper pt-1 scrollbar">
-            <div id="date-inline-picker"></div>
-        </div>
-        <div class="price-card">
-            <div class="price-card-action mt-2">
-                <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
-                <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">確認</button>
+<div class="modal fade" id="date-select" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">選擇日期</h4>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="./assets/images/ic-close.svg" alt="關閉">
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="date-inline-picker" class="px-4 w-100"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="w-100 d-flex px-4 mb-4">
+                    <button type="button" class="btn btn-dark-gray700 w-100 rounded-2 py-2 me-3"
+                        data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-dark-primary-color w-100 rounded-2 py-2"
+                        data-bs-dismiss="modal">確認</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!--會員視窗開始-->
-<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="member"
-    aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-        <button type="button" class="btn" data-bs-dismiss="offcanvas">
+<!--新增會員視窗開始-->
+<div class="offcanvas offcanvas-end offcanvas-end-lg" tabindex="-1" id="add-member">
+    <div class="offcanvas-header bg-primary-color white">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
             <img src="./assets/images/ic-close.svg" alt="關閉">
         </button>
-        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">選擇會員</h4>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">新增會員</h4>
     </div>
-    <div class="offcanvas-body d-flex flex-column px-0">
-        <div class="box-list-wrapper">
-            <div class="container h-100 px-0 d-flex flex-column">
-                <ul class="row box-list gx-3 gy-2 mb-3" data-con="number" data-style="member">
-                    <li class="col-12">
-                        <label for="member-number" class="visually-hidden">會員資料</label>
-                        <div class="input-group mb-2">
-                            <input type="text" class="form-control box-list-form" placeholder="會員資料" id="member-number">
-                            <button class="btn bg-primary-dark-color" type="button" id="member-number-btn">
-                                <img src="./assets/images/ic-search-white.svg" alt="icon" style="width: 24px;">
+    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
+        <div class="member-wrapper scrollbar">
+            <h5 class="mb-3">請輸入會員資料</h5>
+            <div class="row gy-4">
+                <div class="col-6">
+                    <label for="name" class="form-label">姓名</label>
+                    <input type="text" class="form-control" id="name" placeholder="請輸入姓名">
+                </div>
+                <div class="col-6">
+                    <div class="form-label">性別</div>
+                    <div class="form-check form-check-inline mb-0">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="男" checked>
+                        <label class="form-check-label" for="male">男</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-0">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="女">
+                        <label class="form-check-label" for="female">女</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="birthday" class="form-label">生日</label>
+                    <div class="input-group date js-datetimepicker" data-bs-toggle="modal"
+                        data-bs-target="#date-select">
+                        <input type="text" class="form-control border-end-0 pe-0" id="birthday">
+                        <div class="input-group-append">
+                            <button class="btn input-group-text h-100 bg-white" type="button">
+                                <img src="./assets/images/ic-calendar.svg" alt="icon">
                             </button>
                         </div>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            1
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            2
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            3
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            4
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            5
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            6
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            7
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            8
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            9
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button class="btn box-list-item" data-con="clear">
-                            清除
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            0
-                        </button>
-                    </li>
-                    <li class="col-4">
-                        <button type="button" class="btn box-list-item">
-                            <img src="./assets/images/ic-backward.svg" alt="倒退">
-                        </button>
-                    </li>
-                </ul>
-                <div class="bg-primary-dark-color rounded-1 p-3 scrollx-none scrollbar-dark">
-                    <div class="row gy-2" role="tablist">
-                        <div class="col-12">
-                            <button class="btn member-pick active" data-bs-toggle="pill" aria-selected="true"
-                                role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="mobile" class="form-label">手機</label>
+                    <input type="text" class="form-control" id="name" placeholder="請輸入手機號碼">
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="請輸入電子信箱">
+                </div>
+                <div class="col-12">
+                    <label for="address" class="form-label">通訊地址</label>
+                    <input type="text" class="form-control" id="address" placeholder="請輸入通訊地址">
+                </div>
+                <div class="col-12">
+                    <label for="barcode" class="form-label">行動載具條碼</label>
+                    <div class="input-text" data-txt="/">
+                        <input type="text" class="form-control" id="barcode" placeholder="請輸入 7 碼英數字  或  掃描載具條碼">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="highlight-select rounded-2 mt-2">
+                        <div class="highlight-select-label">會員狀態</div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="not-activated" value="未啟用"
+                                checked>
+                            <label class="form-check-label" for="not-activated">未啟用</label>
                         </div>
-                        <div class="col-12">
-                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="activated" value="啟用">
+                            <label class="form-check-label" for="activated">啟用</label>
                         </div>
-                        <div class="col-12">
-                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true" role="tab">
-                                <img src="./assets/images/ic-check.svg" alt="icon" class="me-2">
-                                <div class="member-pick-con">
-                                    <div class="member-pick-tag">001SDRG</div>
-                                    <p><span class="me-3">Allen</span><span>0923888888</span></p>
-                                </div>
-                            </button>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="suspend" value="停權">
+                            <label class="form-check-label" for="suspend">停權</label>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="box-list-action d-flex mt-3">
-            <button class="btn btn-lg btn-outline-white white w-100 py-2 me-3" data-bs-dismiss="offcanvas">取消</button>
-            <button class="btn btn-lg btn-dark-gray900 w-100 py-2 js-confirm-member" data-bs-dismiss="offcanvas"
-                onclick="checkInput()">確認</button>
+        <div class="price-card">
+            <div class="price-card-action mt-2">
+                <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
+                <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas"
+                    onclick="location.href='member-info.html'">新增</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--編輯會員視窗開始-->
+<div class="offcanvas offcanvas-end offcanvas-end-lg" tabindex="-1" id="edit-member">
+    <div class="offcanvas-header bg-primary-color white">
+        <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">編輯會員</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0 pt-3 pb-0 bg-gray100">
+        <div class="member-wrapper scrollbar">
+            <h5 class="mb-3">請編輯會員資料</h5>
+            <div class="row gy-4">
+                <div class="col-6">
+                    <label for="name" class="form-label">姓名</label>
+                    <input type="text" class="form-control" id="name" placeholder="請輸入姓名" value="王大明">
+                </div>
+                <div class="col-6">
+                    <div class="form-label">性別</div>
+                    <div class="form-check form-check-inline mb-0">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="男" checked>
+                        <label class="form-check-label" for="male">男</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-0">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="女">
+                        <label class="form-check-label" for="female">女</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="birthday" class="form-label">生日</label>
+                    <div class="input-group date js-datetimepicker" data-bs-toggle="modal"
+                        data-bs-target="#date-select">
+                        <input type="text" class="form-control border-end-0 pe-0" id="birthday">
+                        <div class="input-group-append">
+                            <button class="btn input-group-text h-100 bg-white" type="button">
+                                <img src="./assets/images/ic-calendar.svg" alt="icon">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="mobile" class="form-label">手機</label>
+                    <input type="text" class="form-control" id="name" placeholder="請輸入手機號碼" value="0956985632">
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="請輸入電子信箱" value="happy@gmail.com">
+                </div>
+                <div class="col-12">
+                    <label for="address" class="form-label">通訊地址</label>
+                    <input type="text" class="form-control" id="address" placeholder="請輸入通訊地址"
+                        value="台中市西區精誠路 316 號 1 樓">
+                </div>
+                <div class="col-12">
+                    <label for="barcode" class="form-label">行動載具條碼</label>
+                    <div class="input-text" data-txt="/">
+                        <input type="text" class="form-control" id="barcode" placeholder="請輸入 7 碼英數字  或  掃描載具條碼"
+                            value="HXMSTD3">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="highlight-select rounded-2 mt-2">
+                        <div class="highlight-select-label">會員狀態</div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="not-activated" value="未啟用"
+                                checked>
+                            <label class="form-check-label" for="not-activated">未啟用</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="activated" value="啟用">
+                            <label class="form-check-label" for="activated">啟用</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="status" id="suspend" value="停權">
+                            <label class="form-check-label" for="suspend">停權</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="d-flex gray700 align-items-center font-xxs">
+                        <img src="./assets/images/ic-info.svg" alt="icon" class="me-1">註冊於 2024/03/21 (已加入 1 年 7 個月又 3
+                        天)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="price-card">
+            <div class="price-card-action mt-2">
+                <button class="btn btn-lg btn-dark-gray700 W-100 me-3" data-bs-dismiss="offcanvas">取消</button>
+                <button class="btn btn-lg btn-dark-primary-color" data-bs-dismiss="offcanvas">確認修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--會員視窗開始-->
+<div class="modal fade member-modal" id="member" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">會員搜尋與綁定</h4>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="./assets/images/ic-close.svg" alt="關閉">
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="container px-0">
+                    <div class="row gx-0">
+                        <div class="col-4 bg-primary-color">
+                            <div class="p-4">
+                                <h5 class="member-modal-title primary-xlight-color">
+                                    <img src="./assets/images/ic-search-pale.svg" alt="icon">搜尋會員
+                                </h5>
+                                <div class="container h-100 px-0 d-flex flex-column">
+                                    <ul class="row box-list gx-3 gy-2 mb-3" data-con="number" data-style="member">
+                                        <li class="col-12">
+                                            <label for="member-number" class="visually-hidden">會員資料</label>
+                                            <div class="input-group mb-2">
+                                                <input type="text" class="form-control box-list-form" placeholder="會員資料"
+                                                    id="member-number">
+                                                <button class="btn bg-primary-dark-color js-searching-member"
+                                                    type="button">
+                                                    <img src="./assets/images/ic-search-white.svg" alt="icon"
+                                                        style="width: 24px;">
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                1
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                2
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                3
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                4
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                5
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                6
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                7
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                8
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                9
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button class="btn box-list-item" data-con="clear">
+                                                清除
+                                            </button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">0</button>
+                                        </li>
+                                        <li class="col-4">
+                                            <button type="button" class="btn box-list-item">
+                                                <img src="./assets/images/ic-backward.svg" alt="倒退">
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="message-sign mt-2 mb-3">或</div>
+                                    <div class="d-flex flex-column align-items-center">
+                                        <h4 class="message-title white mb-3">掃描會員條碼</h4>
+                                        <div class="message-icon mb-3">
+                                            <img src="./assets/images/ic-scan.svg" alt="掃描會員條碼">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="d-flex p-4">
+                                <div class="w-100"><!--選取會員-->
+                                    <h5 class="member-modal-title primary-color">
+                                        <img src="./assets/images/ic-member.svg" alt="icon">選取會員
+                                        <span class="ms-auto gray800 font-xs">"8888" 的搜尋結果</span>
+                                    </h5>
+
+                                    <div class="member-modal-list scrollx-none scrollbar js-member-modal-list" role="tablist">
+                                        <button class="btn member-pick" data-bs-toggle="pill"
+                                            aria-selected="true" role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
+                                            <div class="member-pick-con w-100 me-3">
+                                                <p class="member-pick-base">王大明<br>0923888888</p>
+                                                <div class="w-100">
+                                                    <div class="member-pick-tag">001SDRG</div>
+                                                    <div class="member-pick-point"><img
+                                                            src="./assets/images/ic-point.svg" alt="icon">102050
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="member-modal-line"><!--分隔線-->
+                                    <img src="./assets/images/ic-forward.svg" alt="icon">
+                                </div>
+                                <div class="w-100"><!--選取優惠-->
+                                    <h5 class="member-modal-title primary-color">
+                                        <img src="./assets/images/ic-coupon-dark.svg" alt="icon">選取優惠
+                                        <span class="ms-auto gray800 font-xs">"王大明" 的可用優惠</span>
+                                    </h5>
+                                    <!--尚未選取會員-->
+                                    <div class="member-modal-notice js-unselected">
+                                        <h4 class="message-title gray800 mb-3">尚未選取會員</h4>
+                                        <div class="message-icon mb-3" data-con="no">
+                                            <img src="./assets/images/ic-goselect.svg" alt="尚未選取會員">
+                                        </div>
+                                    </div>
+                                    <!--無可用優惠券-->
+                                    <div class="member-modal-notice js-nocoupon" style="display: none;">
+                                        <h4 class="message-title gray800 mb-3">無可用優惠券</h4>
+                                        <div class="message-icon mb-3" data-con="no">
+                                            <img src="./assets/images/ic-empty.svg" alt="無可用優惠券">
+                                        </div>
+                                    </div>
+
+                                    <div class="member-modal-list scrollx-none scrollbar js-coupon-list" role="tablist">
+                                        <button class="btn coupon-list-item active" data-bs-toggle="pill">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg" alt="icon">十要快樂點
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                        <button class="btn coupon-list-item" data-bs-toggle="pill" data-status="未符合">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg"
+                                                        alt="icon">會員吃美十會員吃美十
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                        <button class="btn coupon-list-item" data-bs-toggle="pill">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg" alt="icon">熟客感恩節
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 5 次送 1 杯紅茶</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                        <button class="btn coupon-list-item" data-bs-toggle="pill" data-member="none">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg" alt="icon">熟客感恩節
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 5 次送 1 杯紅茶</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                        <button class="btn coupon-list-item" data-bs-toggle="pill" data-status="未符合">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg"
+                                                        alt="icon">會員吃美十會員吃美十
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                        <button class="btn coupon-list-item" data-bs-toggle="pill">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg" alt="icon">熟客感恩節
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 5 次送 1 杯紅茶</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                        <button class="btn coupon-list-item" data-bs-toggle="pill" data-member="none">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg" alt="icon">熟客感恩節
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 5 次送 1 杯紅茶</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                        <button class="btn coupon-list-item" data-bs-toggle="pill" data-status="未符合">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg"
+                                                        alt="icon">會員吃美十會員吃美十
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                        <button class="btn coupon-list-item" data-bs-toggle="pill">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg" alt="icon">熟客感恩節
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 5 次送 1 杯紅茶</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                        <button class="btn coupon-list-item" data-bs-toggle="pill" data-member="none">
+                                            <div class="coupon-list-con">
+                                                <h6 class="coupon-list-title">
+                                                    <img src="./assets/images/ic-coupon-member.svg" alt="icon">熟客感恩節
+                                                </h6>
+                                                <p class="coupon-list-txt">消費滿 5 次送 1 杯紅茶</p>
+                                                <span>2025.10.01~2025.10.31</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center w-100 px-4 mb-4">
+                                <div class="col-3">
+                                    <button type="button" class="btn btn-dark-gray700 w-100 rounded-2 py-2 me-3"
+                                        data-bs-dismiss="modal">
+                                        取消
+                                    </button>
+                                </div>
+                                <div class="col-3">
+                                    <button type="button"
+                                        class="btn btn-dark-primary-color w-100 rounded-2 py-2 js-confirm-member" data-bs-dismiss="modal">
+                                        確認
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -1669,6 +2079,12 @@
             <a class="nav-link js-nav-link " href="setting.html">
                 <img src="./assets/images/ic-setting.svg" alt="設定">
                 設定
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-nav-link " href="member.html">
+                <img src="./assets/images/ic-member-light.svg" alt="會員">
+                會員
             </a>
         </li>
         <li class="nav-active "></li><!--active背景-->
@@ -2602,38 +3018,40 @@
     //popover功能開啟
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-    //loading畫面
     $(document).ready(function () {
-        // 為會員搜尋應用整體加載效果
-        $('.js-searching-demo').on('click', function () {
+       // 會員搜尋畫面
+        $('.js-searching-member').on('click', function () {
             $('#all').block({
                 message: $('#member-search'),
                 overlayCSS: {
                     opacity: 0.1
                 }
             });
+            setTimeout(function () {//1秒後關閉搜尋畫面
+                $('#all').unblock();
+            }, 1000);
         });
         $('#member-search').on('click', '#cancel', function () {
-            $.unblockUI();
+            $('#all').unblock();
         });
         //移除會員資料
         $('.js-remove-member').on('click', function () {
-           $('.js-member-info').css('display', 'none');
+            $('.js-member-info').css('display', 'none');
+            $('.js-member-btn').css('display', 'inline-flex');
         });
-        //載入會員資料
+        //會員視窗確認載入會員資料
         $('.js-confirm-member').on('click', function () {
             $('.js-member-info').css('display', 'flex');
+            $('.js-member-btn').css('display', 'none');
         });
-        // 為整體區塊應用加載效果
+        //整體區塊loading畫面
         $('#all').block({
             message: $('#loading'),
             overlayCSS: {
                 opacity: 0.1
             }
         });
-        
-
-        // 為左側區塊應用加載效果
+        // 左側區塊loading畫面
         $('#content').block({
             message: $('#loading-content'),
             overlayCSS: {
@@ -2641,8 +3059,7 @@
                 opacity: 0.1
             }
         });
-
-        // 為右側區塊應用加載效果
+        // 右側區塊loading畫面
         $('#sidelist').block({
             message: $('#loading-sidelist'),
             overlayCSS: {
@@ -2650,8 +3067,7 @@
                 opacity: 0.1
             }
         });
-
-        // 1秒後解除整體區塊的加載效果
+        // 1秒後關閉loading畫面
         setTimeout(function () {
             $('#all').unblock();
         }, 1000);
@@ -2663,64 +3079,28 @@
         }, 2000);
 
         //日期表單
-        var datetimepickerOptions = {
-            locale: 'zh-tw',
-            defaultDate: new Date(),
-            format: 'L',
-            icons: {
-                time: "bi bi-clock",
-                date: "bi bi-calendar",
-                up: "bi bi-arrow-up",
-                down: "bi bi-arrow-down",
-                previous: "bi bi-chevron-left",
-                next: "bi bi-chevron-right",
-                today: "bi bi-clock",
-                clear: "bi bi-trash3"
-            }
-        };
-        $('#thedate').datetimepicker(datetimepickerOptions);
+       var currentTarget = null; 
+       var today = moment().format('YYYY/MM/DD'); 
+        $('.js-datetimepicker').find('input').val(today);
+
+        $('.js-datetimepicker').on('click', function () {
+            currentTarget = $(this);
+        });
         $('#date-inline-picker').datetimepicker({
             inline: true,
             locale: 'zh-tw',
             format: 'L',
         });
         $('#date-inline-picker').on('change.datetimepicker', function (e) {
-        $('[data-target="#thedate"]').val(e.date.format('YYYY 年 M 月 DD 日'));
-    });
+            if (e.date && currentTarget) {
+                var dateString = e.date.format('YYYY/MM/DD');
+                currentTarget.find('input').val(dateString);
+            }
+        });
     });
 
 </script>
-<script>//多選膠囊按鈕
-document.querySelectorAll('.segmented-control').forEach(group => {
-  const radios = group.querySelectorAll('input[type="radio"]');
-  const labels = group.querySelectorAll('label');
-  const slider = group.querySelector('.slider');
 
-  const count = labels.length;
-  slider.style.width = `calc((100% - 8px) / ${count})`;
-
-  function update() {
-  const index = [...radios].findIndex(r => r.checked);
-  const targetLabel = labels[index];
-
-  slider.style.width = `${targetLabel.offsetWidth}px`;
-  slider.style.transform = `translateX(${targetLabel.offsetLeft}px)`;
-
-  labels.forEach((l, i) => {
-    l.classList.toggle('active', i === index);
-  });
-}
-
-  labels.forEach((label, i) => {
-    label.addEventListener('click', () => {
-      radios[i].checked = true;
-      update();
-    });
-  });
-
-  update();
-});
-</script>
 
 	</body>
 

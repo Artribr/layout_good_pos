@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic-picked" transform="translate(-230 -17)">
+    <rect id="Rectangle_232" data-name="Rectangle 232" width="30" height="30" rx="5" transform="translate(230 17)" fill="#ee6d6d"/>
+    <path id="ic-check" d="M5.313,10.973a.708.708,0,0,1-1,0l-4-4a1.062,1.062,0,0,1,0-1.5l.5-.5a1.062,1.062,0,0,1,1.5,0l2.5,2.5L11.561.717a1.062,1.062,0,0,1,1.5,0l.5.5a1.062,1.062,0,0,1,0,1.5Zm0,0" transform="translate(238 26.594)" fill="#fff"/>
+  </g>
+</svg>

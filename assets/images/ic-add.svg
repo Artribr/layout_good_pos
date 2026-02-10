@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="ic-add" transform="translate(-1076 -26)">
+    <g id="Group_450" data-name="Group 450">
+      <rect id="Rectangle_348" data-name="Rectangle 348" width="20" height="20" transform="translate(1076 26)" fill="none"/>
+      <path id="plus" d="M13.843,6.078H8.779V1.013A1.013,1.013,0,0,0,7.766,0H7.09A1.013,1.013,0,0,0,6.078,1.013V6.078H1.013A1.013,1.013,0,0,0,0,7.09v.675A1.013,1.013,0,0,0,1.013,8.779H6.078v5.065A1.013,1.013,0,0,0,7.09,14.856h.675a1.013,1.013,0,0,0,1.013-1.013V8.779h5.065a1.013,1.013,0,0,0,1.013-1.013V7.09A1.013,1.013,0,0,0,13.843,6.078Zm0,0" transform="translate(1079 29)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

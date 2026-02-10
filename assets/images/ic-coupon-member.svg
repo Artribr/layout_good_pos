@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="ic-coupon-member" transform="translate(0 0.277)">
+    <rect id="Rectangle_348" data-name="Rectangle 348" width="16" height="16" transform="translate(0 -0.277)" fill="none"/>
+    <g id="user_1_" data-name="user (1)" transform="translate(2.862 2.381)">
+      <g id="Group_355" data-name="Group 355" transform="translate(1.771)">
+        <g id="Group_354" data-name="Group 354">
+          <path id="Path_312" data-name="Path 312" d="M123.8,0a2.8,2.8,0,1,0,2.8,2.8A2.8,2.8,0,0,0,123.8,0Z" transform="translate(-121)" fill="#a2a2a2"/>
+        </g>
+      </g>
+      <g id="Group_357" data-name="Group 357" transform="translate(0 6.652)">
+        <g id="Group_356" data-name="Group 356">
+          <path id="Path_313" data-name="Path 313" d="M38.981,301.206a3.87,3.87,0,0,0-2.8-1.206H34.96a3.87,3.87,0,0,0-2.8,1.206A4.123,4.123,0,0,0,31,304.084a.308.308,0,0,0,.3.311h8.53a.308.308,0,0,0,.3-.311A4.123,4.123,0,0,0,38.981,301.206Z" transform="translate(-31 -300)" fill="#a2a2a2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

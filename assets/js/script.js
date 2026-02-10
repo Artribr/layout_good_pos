@@ -274,3 +274,72 @@ function checkInput() {
 		$(".js-note-btn").removeClass("d-none");
 	}
 }
+//-------------------會員搜尋綁定視窗---------------------
+function checkMemberActive() {
+	var hasActive = $(".js-member-modal-list button.active").length > 0;
+	var couponCount = $(".js-coupon-list button").length;
+
+	// 沒選會員
+	if (!hasActive) {
+		$(".js-unselected").show();
+		$(".js-coupon-list").hide();
+		$(".js-nocoupon").hide();
+		return;
+	}
+
+	// 有選會員
+	$(".js-unselected").hide();
+
+	if (couponCount === 0) {
+		// 有會員但沒 coupon
+		$(".js-coupon-list").hide();
+		$(".js-nocoupon").show();
+	} else {
+		// 有會員且有 coupon
+		$(".js-coupon-list").show();
+		$(".js-nocoupon").hide();
+	}
+}
+
+
+// 點會員
+$('.js-member-modal-list button').click(function () {
+	$(this)
+		.addClass("active")
+		.siblings("button")
+		.removeClass("active");
+
+	checkMemberActive();
+})
+
+// 初始狀態
+checkMemberActive();
+
+//-------------------多選膠囊按鈕---------------------
+document.querySelectorAll('.segmented-control').forEach(group => {
+	const radios = group.querySelectorAll('input[type="radio"]');
+	const labels = group.querySelectorAll('label');
+	const slider = group.querySelector('.slider');
+	const count = labels.length;
+	slider.style.width = `calc((100% - 8px) / ${count})`;
+	
+	function update() {
+		const index = [...radios].findIndex(r => r.checked);
+		const targetLabel = labels[index];
+		slider.style.width = `${targetLabel.offsetWidth}px`;
+		slider.style.transform = `translateX(${targetLabel.offsetLeft}px)`;
+		labels.forEach((l, i) => {
+			l.classList.toggle('active', i === index);
+		});
+	}
+
+	labels.forEach((label, i) => {
+		label.addEventListener('click', () => {
+			radios[i].checked = true;
+			update();
+		});
+	});
+	
+	update();
+});
+
