@@ -37,7 +37,7 @@ $(function () {//JS開頭
 		const $order = $(".js-order");//訂單容器
 
 		if ($btn.hasClass("js-dropdown-toggler")) { // 含次選單按鈕
-			const target = $btn.data("target"); 
+			const target = $btn.data("target");
 			const $dropdown = $li.find(".js-order-dropdown-item[data-con='" + target + "']");
 
 			// 先關掉同一個訂單下其他 dropdown
@@ -68,20 +68,21 @@ $(function () {//JS開頭
 			$dropdownBox.removeClass("show");
 			$otherCards.removeClass("merging");
 			$otherCheck.addClass("god")
-			$otherCheck.trigger('click').trigger('change');
+			$otherCheck.prop('checked', false).trigger('change');
 		}
-		
+
 	});
-//擴大合併選取點擊範圍
+	// 擴大合併選取點擊範圍
 	$(".js-order-card").click(function (e) {
-		if($(this).hasClass("merging")){
-			$(this).find(".form-check-input").trigger('click').trigger('change');;
+		if ($(this).hasClass("merging")) {
+			const $checkbox = $(this).find(".form-check-input");
+			$checkbox.prop('checked', !$checkbox.prop('checked')).trigger('change');
 		}
 	})
 
 	//---------------------訂單次選單功能
 	$(".js-order-dropdown a").click(function (e) {
-		if ($(this).is(".js-cancel-dropdown")){//如果是取消按鈕
+		if ($(this).is(".js-cancel-dropdown")) {//如果是取消按鈕
 			const $dropdownItem = $(this).closest(".js-order-dropdown-item");//我的次選單
 			const $dropdownBox = $(this).closest(".js-order-dropdown");//我的次選單框架
 			const $otherCheck = $(this).closest(".js-order-dropdown").closest("li").siblings("li").find(".form-check-input:checked");//已選取的選取框
@@ -259,87 +260,171 @@ $(function () {//JS開頭
 		// 4. 顯示對應的 tab-pane
 		$(target).addClass('show active');
 	});
-	
-})//JS尾端	
 
-//-------------------備註判斷---------------------
-function checkInput() {
-	var input = document.getElementById('note-number');
-	var inputValue = input.value.trim(); // 获取输入框的值，并去除前后的空格
-	if (inputValue !== '') {
-		$(".js-note-show").removeClass("d-none");
-		$(".js-note-btn").addClass("d-none");
-	} else {
-		$(".js-note-show").addClass("d-none");
-		$(".js-note-btn").removeClass("d-none");
+
+
+	//-------------------備註判斷---------------------
+	function checkInput() {
+		var input = document.getElementById('note-number');
+		var inputValue = input.value.trim(); // 获取输入框的值，并去除前后的空格
+		if (inputValue !== '') {
+			$(".js-note-show").removeClass("d-none");
+			$(".js-note-btn").addClass("d-none");
+		} else {
+			$(".js-note-show").addClass("d-none");
+			$(".js-note-btn").removeClass("d-none");
+		}
 	}
-}
-//-------------------會員搜尋綁定視窗---------------------
-function checkMemberActive() {
-	var hasActive = $(".js-member-modal-list button.active").length > 0;
-	var couponCount = $(".js-coupon-list button").length;
+	//-------------------會員搜尋綁定視窗---------------------
+	function checkMemberActive() {
+		var hasActive = $(".js-member-modal-list button.active").length > 0;
+		var couponCount = $(".js-coupon-list button").length;
 
-	// 沒選會員
-	if (!hasActive) {
-		$(".js-unselected").show();
-		$(".js-coupon-list").hide();
-		$(".js-nocoupon").hide();
-		return;
+		// 沒選會員
+		if (!hasActive) {
+			$(".js-unselected").show();
+			$(".js-coupon-list").hide();
+			$(".js-nocoupon").hide();
+			return;
+		}
+
+		// 有選會員
+		$(".js-unselected").hide();
+
+		if (couponCount === 0) {
+			// 有會員但沒 coupon
+			$(".js-coupon-list").hide();
+			$(".js-nocoupon").show();
+		} else {
+			// 有會員且有 coupon
+			$(".js-coupon-list").show();
+			$(".js-nocoupon").hide();
+		}
 	}
 
-	// 有選會員
-	$(".js-unselected").hide();
 
-	if (couponCount === 0) {
-		// 有會員但沒 coupon
-		$(".js-coupon-list").hide();
-		$(".js-nocoupon").show();
-	} else {
-		// 有會員且有 coupon
-		$(".js-coupon-list").show();
-		$(".js-nocoupon").hide();
-	}
-}
+	// 點會員
+	$('.js-member-modal-list button').click(function () {
+		$(this)
+			.addClass("active")
+			.siblings("button")
+			.removeClass("active");
 
+		checkMemberActive();
+	})
 
-// 點會員
-$('.js-member-modal-list button').click(function () {
-	$(this)
-		.addClass("active")
-		.siblings("button")
-		.removeClass("active");
-
+	// 初始狀態
 	checkMemberActive();
-})
 
-// 初始狀態
-checkMemberActive();
+	//-------------------多選膠囊按鈕---------------------
+	document.querySelectorAll('.segmented-control').forEach(group => {
+		const radios = group.querySelectorAll('input[type="radio"]');
+		const labels = group.querySelectorAll('label');
+		const slider = group.querySelector('.slider');
+		const count = labels.length;
+		slider.style.width = `calc((100% - 8px) / ${count})`;
 
-//-------------------多選膠囊按鈕---------------------
-document.querySelectorAll('.segmented-control').forEach(group => {
-	const radios = group.querySelectorAll('input[type="radio"]');
-	const labels = group.querySelectorAll('label');
-	const slider = group.querySelector('.slider');
-	const count = labels.length;
-	slider.style.width = `calc((100% - 8px) / ${count})`;
-	
-	function update() {
-		const index = [...radios].findIndex(r => r.checked);
-		const targetLabel = labels[index];
-		slider.style.width = `${targetLabel.offsetWidth}px`;
-		slider.style.transform = `translateX(${targetLabel.offsetLeft}px)`;
-		labels.forEach((l, i) => {
-			l.classList.toggle('active', i === index);
+		function update() {
+			const index = [...radios].findIndex(r => r.checked);
+			const targetLabel = labels[index];
+			slider.style.width = `${targetLabel.offsetWidth}px`;
+			slider.style.transform = `translateX(${targetLabel.offsetLeft}px)`;
+			labels.forEach((l, i) => {
+				l.classList.toggle('active', i === index);
+			});
+		}
+
+		labels.forEach((label, i) => {
+			label.addEventListener('click', () => {
+				radios[i].checked = true;
+				update();
+			});
 		});
-	}
 
-	labels.forEach((label, i) => {
-		label.addEventListener('click', () => {
-			radios[i].checked = true;
-			update();
-		});
+		update();
 	});
-	
-	update();
-});
 
+	//toast通知功能
+	jQuery(document).ready(function ($) {
+
+		// --- 核心監聽事件 ---
+		$(document).on("change", 'input[role="switch"]', function () {
+			const $this = $(this);
+
+			// 1. 檢查是否在 data-func="setting" 範圍內
+			if (!$this.closest('[data-func="setting"]').length) return;
+
+			const isChecked = $this.prop("checked");
+			let itemName = "";
+
+			// 2. 判斷是在「上方導覽列」還是在「下方商品列表」
+			if ($this.closest('.top-nav-item').length) {
+				// 上方導覽列：抓按鈕裡的 <p> 文字
+				itemName = $this.closest('.top-nav-item').find('p').first().text().trim();
+			} else if ($this.closest('.menu-edit-list').length) {
+				// 下方商品列表：抓商品標題 <h4>
+				itemName = $this.closest('.menu-edit-list').find('.order-list-title').text().trim();
+			}
+
+			// 3. 如果還是抓不到，抓 Label 的文字作為保險
+			if (!itemName) {
+				itemName = $this.closest('.form-check').find('label').text().replace('分類開關', '').replace('項目開關', '').trim();
+			}
+
+			// 4. 顯示 Toast
+			const type = isChecked ? "success" : "disabled";
+			const statusText = isChecked ? "已啟用" : "已關閉";
+			showToast(`${statusText}「${itemName}」`, type);
+		});
+
+		// --- Toast 顯示函式 ---
+		function showToast(message, type) {
+			if ($("#toast-container").length === 0) {
+				$("body").append('<div id="toast-container"></div>');
+			}
+
+			const $toast = $(`
+				<div class="custom-toast ${type}">
+					<span class="toast-text">${message}</span>
+					<span class="close">&times;</span>
+				</div>
+			`);
+
+			$("#toast-container").append($toast);
+			$toast.fadeIn(200);
+
+			let timer = setTimeout(() => removeToast($toast), 3000);
+
+			$toast.find(".close").on("click", function () {
+				clearTimeout(timer);
+				removeToast($toast);
+			});
+		}
+
+		// --- Toast 移除函式 (含平滑淡出動畫) ---
+		function removeToast($el) {
+			if (!$el || $el.data('removing')) return;
+			$el.data('removing', true); // 防止重複觸發
+
+			// 1. 觸發 CSS 向下飄落與淡出
+			// 我們往下方移動 30px 並讓透明度歸零
+			$el.css({
+				"transform": "translateY(30px)",
+				"opacity": "0",
+				"pointer-events": "none"
+			});
+
+			// 2. 飄落的同時讓空間開始平滑收縮
+			// 這樣下方的 Toast 會「順著」飄落的節奏慢慢推上來
+			setTimeout(() => {
+				$el.slideUp({
+					duration: 300,
+					easing: "swing",
+					complete: function () {
+						$(this).remove();
+					}
+				});
+			});
+		}
+	});
+})//JS尾端	

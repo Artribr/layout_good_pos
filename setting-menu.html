@@ -13,7 +13,7 @@
     <meta property="og:image" content="assets/images/fb-img.png" />
     <!--分享設定-->
     <link rel="icon" href="assets/images/favicon.png" type="image/ico" />
-    <!--iconfont設定-->
+    <!--icon設定-->
     <link rel="stylesheet" href="assets/style/all.css">
     <!--css設定-->
 </head>
@@ -42,7 +42,6 @@
                 <p class="text-center">
                     已成功送出訂單！
                 </p>
-
             </div>
             <div class="modal-footer pt-0 pb-3 px-3 px-sm-5">
                 <button type="button" class="modal-action btn btn-dark-gray700 py-2 me-3"
@@ -2040,10 +2039,8 @@
         </div>
     </div>
 </div>
-			<!--頁面開始-->
 			<div class="wrapper">
 				<div class="d-flex" data-con="">
-
 					<!--主選單開始-->
 <nav class="sidebar bg-primary-color">
     <a href="https://goodpos.com.tw/" target="_blank" class="img-link">
@@ -2057,7 +2054,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link js-nav-link active" href="order.html">
+            <a class="nav-link js-nav-link " href="order.html">
                 <img src="./assets/images/ic-order.svg" alt="訂單">
                 訂單
             </a>
@@ -2076,7 +2073,7 @@
             <!--data-status="notice"為有提醒的狀態-->
         </li>
         <li class="nav-item">
-            <a class="nav-link js-nav-link " href="setting.html">
+            <a class="nav-link js-nav-link active" href="setting.html">
                 <img src="./assets/images/ic-setting.svg" alt="設定">
                 設定
             </a>
@@ -2089,260 +2086,540 @@
         </li>
         <li class="nav-active "></li><!--active背景-->
     </ul>
-    <button class="sidebar-btn btn-dark-primary-dark-color"><img src="./assets/images/ic-shutdown.svg"
-            alt="離開">離開</button>
+    <button class="sidebar-btn btn-dark-primary-dark-color">
+        <img src="./assets/images/ic-shutdown.svg" alt="離開">離開
+    </button>
 </nav>
 <!--主選單結束-->
 						<div class="content-wrapper ">
-							<main class="content bg-white">
-	<header class="navbar p-0 mb-2">
-		<a class="navbar-brand" href="index.html">
-			<h1 class="mb-0"><img src="./assets/images/logo.svg" alt="好點POS"></h1>
-		</a>
-	</header>
-		<ul class="nav top-nav nav-pills mb-2 scrollbar">
-			<li class="top-nav-item nav-item">
-				<button class="btn top-nav-link active" data-bs-toggle="pill">
-					<img src="./assets/images/ic-pizza.svg" alt="披薩" class="top-nav-icon">
-					<p>披薩</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-burger.svg" alt="漢堡" class="top-nav-icon">
-					<p>漢堡</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-rice.svg" alt="燉飯" class="top-nav-icon">
-					<p>燉飯</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-pasta.svg" alt="義麵" class="top-nav-icon">
-					<p>義麵</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-tableware.svg" alt="排餐" class="top-nav-icon">
-					<p>排餐</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-beverage.svg" alt="飲料" class="top-nav-icon">
-					<p>飲料</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-sandwich.svg" alt="小食" class="top-nav-icon">
-					<p>小食</p>
-				</button>
-			</li>
-			<li class="top-nav-item">
-				<button class="btn top-nav-link" data-bs-toggle="pill">
-					<img src="./assets/images/ic-dessert.svg" alt="甜點" class="top-nav-icon">
-					<p>甜點</p>
-				</button>
-			</li>
-		</ul>
-	
-	<div class="menu-card-info d-flex justify-content-between">
-		<h2 class="font-lg font-heavy mb-3">選擇披薩</h2>
-		<div class="d-flex gray700 align-items-center">
-			<p class="me-2 font-xxs">12 項結果</p>
-			<ul class="function-link d-flex nav nav-pills">
-				<li class="me-2">
-					<a href="#" class="function-link-item active js-grid3" data-bs-toggle="pill">
-						<img src="./assets/images/ic-grid3.svg" alt="一列三欄">
-					</a>
-				</li>
-				<li>
-					<a href="#" class="function-link-item js-grid4" data-bs-toggle="pill">
-						<img src="./assets/images/ic-grid4.svg" alt="一列四欄">
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class="container-fluid menu-card scrollbar scrollx-none px-0 js-menu-card">
-		<ul class="row scrollbar-content">
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item soldout" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">0</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-			<li class="col-4 mb-4">
-				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
-					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
-					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
-						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
-					</div>
-				</a>
-			</li>
-		</ul>
-	</div>
-</main>
-<!--清單區塊開始-->
-<div class="sidelist bg-gray100">
-	<div class="sidelist-header">
-		<div class="d-flex justify-content-between align-items-center">
-			<div class="d-flex ms-auto">
-				<button class="btn btn-dropdown me-2 ps-2" data-bs-toggle="offcanvas" data-bs-target="#pay">
-					<img src="./assets/images/ic-pay.svg" alt="linepay" class="me-1">現金
-				</button>
-				<button class="btn btn-dropdown me-2 ps-2" data-bs-toggle="offcanvas" data-bs-target="#dine">
-					<img src="./assets/images/ic-dine-in.svg" alt="內用" class="me-1">內用
-				</button>
-				<!--外帶：圖ic-takeout.svg-->
-				<button class="btn btn-dropdown ps-2" data-bs-toggle="offcanvas" data-bs-target="#table-list">
-					<img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
-				</button>
-			</div>
-		</div>
-	</div>
-	<div class="order-list-wrapper scrollbar-dark">
-		<div class="message">
-            <div class="message-icon mb-3">
-                <img src="./assets/images/ic-order-message.svg" alt="">
-            </div>
-            <h4 class="message-title">請由左側進行點餐</h4>
+							<main class="content bg-white w-100" data-func="setting">
+    <!-- Toast 通知容器開始-->
+    <div id="toast-container"></div>
+    <!-- Toast 通知容器結束-->
+    <header class="navbar p-0 mb-2">
+        <a class="navbar-brand" href="index.html">
+            <h1 class="mb-0"><img src="./assets/images/logo.svg" alt="好點POS"></h1>
+        </a>
+    </header>
+    <div class="d-flex pt-3 mb-3 w-100">
+        <div class="segmented-control me-2">
+            <input type="radio" name="status1" checked>
+            <input type="radio" name="status1">
+            <div class="slider"></div>
+            <label>POS 機</label>
+            <label>線上點餐</label>
         </div>
-	</div>
-	<div class="price-card">
-		<ul>
-			<li class="price-card-item">
-				<p>品項 (0)</p>
-				<p>$0</p>
-			</li>
-			<li class="price-card-item primary-color" data-con="total">
-				<p class="font-sm">總金額</p>
-				<p class="font-lg font-heavy">$0</p>
-			</li>
-		</ul>
-		<div class="price-card-action mt-2">
-			<button class="btn btn-lg btn-dark-alert-color W-100 me-3" data-bs-toggle="modal" data-bs-target="#message">送單</button>
-			<button class="btn btn-lg btn-dark-primary-color" data-bs-toggle="offcanvas"
-				data-bs-target="#checkout">結帳</button>
-		</div>
-	</div>
-</div>
+    </div>
+    <ul class="nav top-nav nav-pills mb-2 scrollbar">
+        <li class="top-nav-item nav-item">
+            <button class="btn top-nav-link active" data-bs-toggle="pill">
+                <p>披薩</p>
+            </button>
+            <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="menu-switch1">
+                <label class="form-check-label" for="menu-switch1">分類開關</label>
+            </div>
+        </li>
+        <li class="top-nav-item">
+            <button class="btn top-nav-link" data-bs-toggle="pill">
+                <p>漢堡</p>
+            </button>
+            <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="menu-switch2">
+                <label class="form-check-label" for="menu-switch2">分類開關</label>
+            </div>
+        </li>
+        <li class="top-nav-item">
+            <button class="btn top-nav-link" data-bs-toggle="pill">
+                <p>燉飯</p>
+            </button>
+            <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="menu-switch3">
+                <label class="form-check-label" for="menu-switch3">分類開關</label>
+            </div>
+        </li>
+        <li class="top-nav-item">
+            <button class="btn top-nav-link" data-bs-toggle="pill">
+                <p>義麵</p>
+            </button>
+            <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="menu-switch4" checked>
+                <label class="form-check-label" for="menu-switch4">分類開關</label>
+            </div>
+        </li>
+        <li class="top-nav-item">
+            <button class="btn top-nav-link" data-bs-toggle="pill">
+                <p>排餐</p>
+            </button>
+            <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="menu-switch5" checked>
+                <label class="form-check-label" for="menu-switch5">分類開關</label>
+            </div>
+        </li>
+        <li class="top-nav-item">
+            <button class="btn top-nav-link" data-bs-toggle="pill">
+                <p>飲料</p>
+            </button>
+            <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="menu-switch6">
+                <label class="form-check-label" for="menu-switch6">分類開關</label>
+            </div>
+        </li>
+        <li class="top-nav-item">
+            <button class="btn top-nav-link" data-bs-toggle="pill">
+                <p>小食</p>
+            </button>
+            <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="menu-switch7" checked>
+                <label class="form-check-label" for="menu-switch7">分類開關</label>
+            </div>
+        </li>
+        <li class="top-nav-item">
+            <button class="btn top-nav-link" data-bs-toggle="pill">
+                <p>甜點</p>
+            </button>
+            <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="menu-switch8" checked>
+                <label class="form-check-label" for="menu-switch8">分類開關</label>
+            </div>
+        </li>
+    </ul>
+    <h2 class="font-lg font-heavy mb-3">菜單編輯</h2>
+    <div class="setting-wrapper pt-1 scrollbar">
+        <div class="row gy-3">
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch1" checked>
+                        <label class="form-check-label" for="item-switch1">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch2" checked>
+                        <label class="form-check-label" for="item-switch2">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch3" checked>
+                        <label class="form-check-label" for="item-switch3">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch4" checked>
+                        <label class="form-check-label" for="item-switch4">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">夏威夷千層披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch5" checked>
+                        <label class="form-check-label" for="item-switch5">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">烤肉BBQ 千層披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch6" checked>
+                        <label class="form-check-label" for="item-switch6">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙醬薯薯披薩及經典海陸披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch7" checked>
+                        <label class="form-check-label" for="item-switch7">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch8" checked>
+                        <label class="form-check-label" for="item-switch8">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch9" checked>
+                        <label class="form-check-label" for="item-switch9">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch10" checked>
+                        <label class="form-check-label" for="item-switch10">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch11" checked>
+                        <label class="form-check-label" for="item-switch11">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch12" checked>
+                        <label class="form-check-label" for="item-switch12">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch13" checked>
+                        <label class="form-check-label" for="item-switch13">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch14" checked>
+                        <label class="form-check-label" for="item-switch14">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch15" checked>
+                        <label class="form-check-label" for="item-switch15">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch16" checked>
+                        <label class="form-check-label" for="item-switch16">項目開關</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="menu-edit-list">
+                    <div class="menu-edit-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
+                    <div class="w-100">
+                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+                        <p class="font-bold primary-color"><span class="font-md">NT$578</span></p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center me-3">
+                        <p class="font-xxs font-bold">每日供應量</p>
+                        <div class="input-group number-form">
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-minus.svg" alt="減少">
+                            </button>
+                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">10</div>
+                            <button class="btn btn-dark-gray600" type="button">
+                                <img src="./assets/images/ic-plus.svg" alt="增加">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="item-switch17" checked>
+                        <label class="form-check-label" for="item-switch17">項目開關</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 						</div>
 				</div>
 			</div>
 			<!-- SCRIPTS -->
-<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
 <script src='assets/js/jquery-ui.min.js'></script>
 <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 <script src="assets/js/jquery.blockUI.js"></script>

@@ -13,7 +13,7 @@
     <meta property="og:image" content="assets/images/fb-img.png" />
     <!--分享設定-->
     <link rel="icon" href="assets/images/favicon.png" type="image/ico" />
-    <!--iconfont設定-->
+    <!--icon設定-->
     <link rel="stylesheet" href="assets/style/all.css">
     <!--css設定-->
 </head>
@@ -42,7 +42,6 @@
                 <p class="text-center">
                     已成功送出訂單！
                 </p>
-
             </div>
             <div class="modal-footer pt-0 pb-3 px-3 px-sm-5">
                 <button type="button" class="modal-action btn btn-dark-gray700 py-2 me-3"
@@ -2040,10 +2039,8 @@
         </div>
     </div>
 </div>
-			<!--頁面開始-->
 			<div class="wrapper">
 				<div class="d-flex" data-con="">
-
 					<!--主選單開始-->
 <nav class="sidebar bg-primary-color">
     <a href="https://goodpos.com.tw/" target="_blank" class="img-link">
@@ -2089,8 +2086,9 @@
         </li>
         <li class="nav-active "></li><!--active背景-->
     </ul>
-    <button class="sidebar-btn btn-dark-primary-dark-color"><img src="./assets/images/ic-shutdown.svg"
-            alt="離開">離開</button>
+    <button class="sidebar-btn btn-dark-primary-dark-color">
+        <img src="./assets/images/ic-shutdown.svg" alt="離開">離開
+    </button>
 </nav>
 <!--主選單結束-->
 						<div class="content-wrapper ">
@@ -2100,9 +2098,81 @@
             <h1 class="mb-0"><img src="./assets/images/logo.svg" alt="好點POS"></h1>
         </a>
     </header>
-
-
     <div class="setting-wrapper pt-1 scrollbar">
+        <h2 class="font-lg font-heavy mb-3">頁面</h2>
+        <div class="row gy-3 mb-3">
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='consumer-video-only.html'">
+                    顧客端螢幕純影片
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='consumer-video.html'">
+                    顧客端螢幕影片+圖片
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='consumer.html'">
+                    顧客端螢幕純圖片
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='index.html'">
+                    歡迎頁
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='member.html'">
+                    會員
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='member-info.html'">
+                    會員-載入資料
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='menu.html'">
+                    點餐頁
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='menu-default.html'">
+                    點餐頁-未點
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='order.html'">
+                    訂單
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='order-edit.html'">
+                    訂單-編輯
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='order-done.html'">
+                    訂單-已結
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='order-nolist.html'">
+                    訂單-無內容
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='setting-menu.html'">
+                    設定
+                </button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-sm btn-dark-primary-color w-100" onclick="window.location.href='setting-menu.html'">
+                    設定-菜單編輯
+                </button>
+            </div>
+        </div>
+        <hr>
         <h2 class="font-lg font-heavy mb-3">欄位</h2>
         <div class="row align-items-end">
             <div class="col-2">
@@ -2140,7 +2210,8 @@
             <div class="col-2">
                 <div class="mb-3">
                     <label for="date" class="form-label">日期欄位</label>
-                    <div class="input-group date mb-3 js-datetimepicker" data-bs-toggle="modal" data-bs-target="#date-select">
+                    <div class="input-group date mb-3 js-datetimepicker" data-bs-toggle="modal"
+                        data-bs-target="#date-select">
                         <input type="text" class="form-control border-end-0 pe-0" id="date">
                         <div class="input-group-append">
                             <button class="btn input-group-text h-100" type="button">
@@ -2227,7 +2298,7 @@
         </div>
         <hr>
         <h2 class="font-lg font-heavy mb-3">選取(垂直)</h2>
-        <div class="row">
+        <div class="row gy-2">
             <div class="col-4">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
@@ -2273,7 +2344,7 @@
         </div>
         <hr>
         <h2 class="font-lg font-heavy mb-3">按鈕</h2>
-        <div class="row align-items-end mb-3">
+        <div class="row align-items-end mb-3 gy-3">
             <div class="col-2">
                 <button class="btn btn-lg btn-dark-primary-color w-100 mb-3" data-bs-toggle="offcanvas"
                     data-bs-target="#setting">開啟視窗</button>
@@ -2319,7 +2390,6 @@
                 <button class="btn btn-dark-alert-color mb-3"><img src="./assets/images/ic-search-white.svg"></button>
                 <button class="btn btn-sm btn-dark-alert-color"><img src="./assets/images/ic-search-white.svg"></button>
             </div>
-
         </div>
     </div>
 </main>
@@ -2327,7 +2397,7 @@
 				</div>
 			</div>
 			<!-- SCRIPTS -->
-<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
 <script src='assets/js/jquery-ui.min.js'></script>
 <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 <script src="assets/js/jquery.blockUI.js"></script>

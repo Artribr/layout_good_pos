@@ -13,7 +13,7 @@
     <meta property="og:image" content="assets/images/fb-img.png" />
     <!--分享設定-->
     <link rel="icon" href="assets/images/favicon.png" type="image/ico" />
-    <!--iconfont設定-->
+    <!--icon設定-->
     <link rel="stylesheet" href="assets/style/all.css">
     <!--css設定-->
 </head>
@@ -42,7 +42,6 @@
                 <p class="text-center">
                     已成功送出訂單！
                 </p>
-
             </div>
             <div class="modal-footer pt-0 pb-3 px-3 px-sm-5">
                 <button type="button" class="modal-action btn btn-dark-gray700 py-2 me-3"
@@ -2040,10 +2039,8 @@
         </div>
     </div>
 </div>
-			<!--頁面開始-->
 			<div class="wrapper">
 				<div class="d-flex" data-con="">
-
 					<!--主選單開始-->
 <nav class="sidebar bg-primary-color">
     <a href="https://goodpos.com.tw/" target="_blank" class="img-link">
@@ -2051,13 +2048,13 @@
     </a>
     <ul class="sidebar-nav nav d-flex flex-column h-100">
         <li class="nav-item">
-            <a class="nav-link js-nav-link active" href="menu.html">
+            <a class="nav-link js-nav-link " href="menu.html">
                 <img src="./assets/images/ic-menu.svg" alt="菜單">
                 菜單
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link js-nav-link " href="order.html">
+            <a class="nav-link js-nav-link active" href="order.html">
                 <img src="./assets/images/ic-order.svg" alt="訂單">
                 訂單
             </a>
@@ -2089,22 +2086,20 @@
         </li>
         <li class="nav-active "></li><!--active背景-->
     </ul>
-    <button class="sidebar-btn btn-dark-primary-dark-color"><img src="./assets/images/ic-shutdown.svg"
-            alt="離開">離開</button>
+    <button class="sidebar-btn btn-dark-primary-dark-color">
+        <img src="./assets/images/ic-shutdown.svg" alt="離開">離開
+    </button>
 </nav>
 <!--主選單結束-->
 						<div class="content-wrapper ">
-							
-<!--內容區塊開始-->
-<main class="content bg-white">
+							<main class="content bg-white" id="content">
+	<div id="loading-content" class="loading bg-white rounded-lg" style="display:none;">
+		<img src="./assets/images/loading.gif" alt="loading">
+	</div>
 	<header class="navbar p-0 mb-2">
 		<a class="navbar-brand" href="index.html">
-			<h1 class="mb-0"><img src="./assets/images/logo.svg" alt="好點POS"></h1>
+			<h1 class="mb-0 primary-color">訂單編號 # 907653</h1> 
 		</a>
-		<div class="navbar-info primary-color">
-			<img src="./assets/images/ic-clock.svg" class="me-1">
-			2023/09/20 上午 11:10
-		</div>
 	</header>
 	<ul class="nav top-nav nav-pills mb-2 scrollbar">
 		<li class="top-nav-item nav-item">
@@ -2156,7 +2151,6 @@
 			</button>
 		</li>
 	</ul>
-
 	<div class="menu-card-info d-flex justify-content-between">
 		<h2 class="font-lg font-heavy mb-3">選擇披薩</h2>
 		<div class="d-flex gray700 align-items-center">
@@ -2176,10 +2170,10 @@
 		</div>
 	</div>
 	<div class="container-fluid menu-card scrollbar scrollx-none px-0 js-menu-card">
-		<ul class="row scrollbar-content">
+		<ul class="row">
 			<li class="col-4 mb-4">
 				<a href="#" class="menu-card-item" data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<div class="menu-card-pic"><img src="./assets/images/default-pic.svg" alt="雙濃起司炸魚番薯比薩"></div>
+					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
 						<p class="primary-color font-bold font-md">$289</p>
@@ -2304,249 +2298,204 @@
 <div class="sidelist bg-gray100">
 	<div class="sidelist-header">
 		<div class="d-flex justify-content-between align-items-center">
-			<div class="d-flex ms-auto">
-				<button class="btn btn-dropdown me-2 ps-2" data-bs-toggle="offcanvas" data-bs-target="#pay">
-					<img src="./assets/images/ic-pay.svg" alt="linepay" class="me-1">街口支付付
-				</button>
-				<button class="btn btn-dropdown me-2 ps-2" data-bs-toggle="offcanvas" data-bs-target="#dine">
-					<img src="./assets/images/ic-dine-in.svg" alt="內用" class="me-1">內用
-				</button>
-				<!--外帶：圖ic-takeout.svg-->
-				<button class="btn btn-dropdown ps-2" data-bs-toggle="offcanvas" data-bs-target="#table-list">
+			<p class="primary-color font-heavy my-2"># 907653</p>
+			<div class="d-flex">
+				<button class="btn btn-dropdown" data-status="disabled">
 					<img src="./assets/images/ic-table.svg" alt="桌號" class="me-1">桌號 A01
 				</button>
+				<!--data-status="disabled"為不能編輯的按鈕，可與平台外送屬性合併使用-->
 			</div>
 		</div>
 	</div>
 	<div class="order-list-wrapper scrollbar-dark">
-		<ul class="order-list scroll-content">
-			<li class="order-list-item js-slidedelete">
-				<div class="order-list-end">
-					<img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-						data-bs-toggle="offcanvas" data-bs-target="#order-list">
-					<button class="btn btn-dark-gray600 mb-auto" type="button">
-						<img src="./assets/images/ic-trash.svg" alt="刪除">
-					</button>
-				</div>
+		<ul class="order-list">
+			<li class="order-list-item">
 				<div class="order-list-info">
-					<div data-bs-toggle="offcanvas" data-bs-target="#order-list">
+					<div>
 						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-						<span class="order-list-caption">NT$289</span>
-						<p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
 					</div>
-					<div class="d-flex flex-column justify-content-between">
-						<div class="input-group number-form w-100 justify-content-between mb-1">
-							<button class="btn btn-dark-gray600" type="button">
-								<img src="./assets/images/ic-minus.svg" alt="減少">
-							</button>
-							<div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">88,888</div>
-							<button class="btn btn-dark-gray600" type="button">
-								<img src="./assets/images/ic-plus.svg" alt="增加">
-							</button>
-						</div>
-						<p class="font-bold ms-auto"><span class="font-xxs me-1">小計</span><span class="font-sm">$578,888</span></p>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
 					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
 				</div>
 				<button class="order-list-remove btn-dark-danger-color rounded-0">
 					移除
 				</button>
 			</li>
-            <li class="order-list-item js-slidedelete">
-                <div class="order-list-end">
-                    <img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-                        data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                    <button class="btn btn-dark-gray600 mb-auto" type="button">
-                        <img src="./assets/images/ic-trash.svg" alt="刪除">
-                    </button>
-                </div>
-                <div class="order-list-info">
-                    <div data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between">
-                        <div class="input-group number-form w-100 justify-content-between mb-1">
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-minus.svg" alt="減少">
-                            </button>
-                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">88,888</div>
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-plus.svg" alt="增加">
-                            </button>
-                        </div>
-                        <p class="font-bold ms-auto"><span class="font-xxs me-1">小計</span><span class="font-sm">$578,888</span></p>
-                    </div>
-                </div>
-                <button class="order-list-remove btn-dark-danger-color rounded-0">
-                    移除
-                </button>
-            </li>
-            <li class="order-list-item js-slidedelete">
-                <div class="order-list-end">
-                    <img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-                        data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                    <button class="btn btn-dark-gray600 mb-auto" type="button">
-                        <img src="./assets/images/ic-trash.svg" alt="刪除">
-                    </button>
-                </div>
-                <div class="order-list-info">
-                    <div data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between">
-                        <div class="input-group number-form w-100 justify-content-between mb-1">
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-minus.svg" alt="減少">
-                            </button>
-                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">88,888</div>
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-plus.svg" alt="增加">
-                            </button>
-                        </div>
-                        <p class="font-bold ms-auto"><span class="font-xxs me-1">小計</span><span class="font-sm">$578,888</span></p>
-                    </div>
-                </div>
-                <button class="order-list-remove btn-dark-danger-color rounded-0">
-                    移除
-                </button>
-            </li>
-            <li class="order-list-item js-slidedelete">
-                <div class="order-list-end">
-                    <img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-                        data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                    <button class="btn btn-dark-gray600 mb-auto" type="button">
-                        <img src="./assets/images/ic-trash.svg" alt="刪除">
-                    </button>
-                </div>
-                <div class="order-list-info">
-                    <div data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between">
-                        <div class="input-group number-form w-100 justify-content-between mb-1">
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-minus.svg" alt="減少">
-                            </button>
-                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">88,888</div>
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-plus.svg" alt="增加">
-                            </button>
-                        </div>
-                        <p class="font-bold ms-auto"><span class="font-xxs me-1">小計</span><span class="font-sm">$578,888</span></p>
-                    </div>
-                </div>
-                <button class="order-list-remove btn-dark-danger-color rounded-0">
-                    移除
-                </button>
-            </li>
-            <li class="order-list-item js-slidedelete">
-                <div class="order-list-end">
-                    <img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-                        data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                    <button class="btn btn-dark-gray600 mb-auto" type="button">
-                        <img src="./assets/images/ic-trash.svg" alt="刪除">
-                    </button>
-                </div>
-                <div class="order-list-info">
-                    <div data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between">
-                        <div class="input-group number-form w-100 justify-content-between mb-1">
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-minus.svg" alt="減少">
-                            </button>
-                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">88,888</div>
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-plus.svg" alt="增加">
-                            </button>
-                        </div>
-                        <p class="font-bold ms-auto"><span class="font-xxs me-1">小計</span><span class="font-sm">$578,888</span></p>
-                    </div>
-                </div>
-                <button class="order-list-remove btn-dark-danger-color rounded-0">
-                    移除
-                </button>
-            </li>
-            <li class="order-list-item js-slidedelete">
-                <div class="order-list-end">
-                    <img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-                        data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                    <button class="btn btn-dark-gray600 mb-auto" type="button">
-                        <img src="./assets/images/ic-trash.svg" alt="刪除">
-                    </button>
-                </div>
-                <div class="order-list-info">
-                    <div data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between">
-                        <div class="input-group number-form w-100 justify-content-between mb-1">
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-minus.svg" alt="減少">
-                            </button>
-                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">88,888</div>
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-plus.svg" alt="增加">
-                            </button>
-                        </div>
-                        <p class="font-bold ms-auto"><span class="font-xxs me-1">小計</span><span class="font-sm">$578,888</span></p>
-                    </div>
-                </div>
-                <button class="order-list-remove btn-dark-danger-color rounded-0">
-                    移除
-                </button>
-            </li>
-            <li class="order-list-item js-slidedelete">
-                <div class="order-list-end">
-                    <img src="./assets/images/demo-pic-small.jpg" alt="雙濃起司炸魚番薯披薩" class="order-list-img mb-2"
-                        data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                    <button class="btn btn-dark-gray600 mb-auto" type="button">
-                        <img src="./assets/images/ic-trash.svg" alt="刪除">
-                    </button>
-                </div>
-                <div class="order-list-info">
-                    <div data-bs-toggle="offcanvas" data-bs-target="#order-list">
-                        <h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
-                        <span class="order-list-caption">NT$289</span>
-                        <p class="order-list-txt mb-2">芝心餅皮(+$30)x2 、芝心腸x2</p>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between">
-                        <div class="input-group number-form w-100 justify-content-between mb-1">
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-minus.svg" alt="減少">
-                            </button>
-                            <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#amount">88,888</div>
-                            <button class="btn btn-dark-gray600" type="button">
-                                <img src="./assets/images/ic-plus.svg" alt="增加">
-                            </button>
-                        </div>
-                        <p class="font-bold ms-auto"><span class="font-xxs me-1">小計</span><span class="font-sm">$578,888</span></p>
-                    </div>
-                </div>
-                <button class="order-list-remove btn-dark-danger-color rounded-0">
-                    移除
-                </button>
-            </li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
+			<li class="order-list-item">
+				<div class="order-list-info">
+					<div>
+						<h4 class="order-list-title">雙濃起司炸魚番薯披薩</h4>
+						<p class="order-list-txt mb-3">芝心餅皮(+$30)x2 、芝心腸x2</p>
+					</div>
+					<div class="d-flex">
+						<button class="btn btn-dark-primary-pale-color me-3" type="button" data-style="action">
+							<img src="./assets/images/ic-print-label.svg" alt="列印標籤">
+						</button>
+						<button class="btn btn-dark-primary-pale-color" type="button" data-style="action">
+							<img src="./assets/images/ic-print-receipt.svg" alt="列印收據">
+						</button>
+					</div>
+				</div>
+				<div class="order-list-end">
+					<span class="order-list-caption">NT$289</span>
+					<span class="font-xheavy">x2</span>
+					<p class="font-bold primary-color"><span class="font-xxs me-1">小計</span><span
+							class="font-sm">$578</span></p>
+				</div>
+				<button class="order-list-remove btn-dark-danger-color rounded-0">
+					移除
+				</button>
+			</li>
 		</ul>
 	</div>
 	<div class="price-card">
 		<ul>
 			<li class="price-card-item">
-				<button class="btn price-card-btn py-1 js-note-btn" data-bs-toggle="offcanvas" data-bs-target="#note">
+				<button class="btn price-card-btn py-1 js-note-btn d-none" data-bs-toggle="offcanvas"
+					data-bs-target="#note">
 					<img src="./assets/images/ic-addnote.svg" alt="增加備註" class="me-1">增加備註
 				</button>
 			</li>
-			<li class="price-card-item justify-content-start d-none js-note-show" data-bs-toggle="offcanvas" data-bs-target="#note">
+			<li class="price-card-item justify-content-start js-note-show" data-bs-toggle="offcanvas"
+				data-bs-target="#note">
 				<p>備註：0988888888</p>
 				<button class="btn price-card-btn ms-2"><img src="./assets/images/ic-edit-noline.svg" alt="編輯"> 編輯</button>
 			</li>
@@ -2564,16 +2513,8 @@
 			</li>
 		</ul>
 		<div class="price-card-action mt-2">
-			<!--
-			<button class="btn btn-lg btn-dark-gray600 W-100 flex-shrink-0 me-3" style="width: 46px;"
-				data-bs-toggle="modal" data-bs-target="#message">
-				<img src="./assets/images/ic-trash.svg" alt="清空">
-			</button>
-				-->
-				<button class="btn btn-lg btn-dark-gray600 flex-shrink-1 me-3" data-bs-toggle="modal"
-				data-bs-target="#message">取消</button>
-				<button class="btn btn-lg btn-dark-alert-color flex-shrink-1" data-bs-toggle="offcanvas"
-				data-bs-target="#checkout">送單</button>
+			<button class="btn btn-lg btn-dark-gray700 W-100 me-3" onclick="window.location.href='order.html'">取消</button>
+			<button class="btn btn-lg btn-dark-primary-color" onclick="window.location.href='order.html'">完成</button>
 		</div>
 	</div>
 </div>
@@ -2581,7 +2522,7 @@
 				</div>
 			</div>
 			<!-- SCRIPTS -->
-<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
 <script src='assets/js/jquery-ui.min.js'></script>
 <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 <script src="assets/js/jquery.blockUI.js"></script>
