@@ -23491,7 +23491,7 @@ body {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.custom-toast.success {
+.custom-toast.active {
   background: rgba(109, 166, 202, 0.9);
 }
 .custom-toast.inactive {

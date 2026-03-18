@@ -372,7 +372,7 @@ $(function () {//JS開頭
 			}
 
 			// 4. 顯示 Toast
-			const type = isChecked ? "success" : "inactive";
+			const type = isChecked ? "active" : "inactive";
 			const statusText = isChecked ? "已啟用" : "已關閉";
 			showToast(`${statusText}「${itemName}」`, type);
 		});
