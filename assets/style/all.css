@@ -21892,6 +21892,10 @@ body {
   position: relative;
   border-radius: 5px;
   z-index: 10;
+  border: 2px solid #ee7474 !important;
+}
+.checkout-coupon-toggler[data-con=point] {
+  border: 2px solid #FF9130 !important;
 }
 .checkout-coupon-toggler[data-con=point]::after {
   background: #FF9130;
@@ -21908,7 +21912,6 @@ body {
   right: -6px;
 }
 .checkout-coupon-toggler[data-con=point].using {
-  border: 2px solid #FF9130 !important;
   color: #FF9130 !important;
 }
 .checkout-coupon-toggler[data-con=point].using img {
@@ -21927,7 +21930,7 @@ body {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  z-index: 1;
+  z-index: 2;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -21945,12 +21948,12 @@ body {
 }
 .checkout-coupon-toggler.using {
   background: #fff !important;
-  border: 2px solid #ee7474;
   color: #ee7474 !important;
 }
 .checkout-coupon-toggler.using:after {
   background: #fff;
   right: 2px;
+  opacity: 0;
 }
 .checkout-coupon-toggler.using img {
   -webkit-filter: none;
