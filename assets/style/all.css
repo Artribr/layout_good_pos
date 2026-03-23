@@ -22053,7 +22053,9 @@ body {
 }
 .checkout-keyboard-form-input[data-con=point] {
   border: 2px solid #FF9130 !important;
-  padding: 0;
+  padding: 0 12px 0 80px;
+  text-align: left;
+  color: #FF9130;
 }
 .checkout-keyboard-form-label {
   position: absolute;

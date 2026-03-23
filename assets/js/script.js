@@ -106,7 +106,7 @@ $(function () {//JS開頭
 			$(this).addClass('active');
 		}
 	});
-	//---------------------優惠/折扣互斥切換設定---------------------------
+	//---------------------優惠/點數互斥切換設定---------------------------
 	const $checkoutCoupon = $('.js-checkout-coupon');
 	const $checkoutCouponToggler = $('.js-checkout-coupon-toggler');
 	const $checkoutPointToggler = $('.js-checkout-point-toggler');
@@ -131,8 +131,9 @@ $(function () {//JS開頭
 
 	function deactivatePointUsing() {
 		$checkoutPointToggler.removeClass('using active');
-		$checkoutPointToggler.find('p').html('使用<br>折扣');
+		$checkoutPointToggler.find('p').html('使用<br>點數');
 		$checkoutPointList.removeClass('active');
+		$('.js-check-point-input').val(''); // 清空點數輸入框
 		syncCheckoutCouponPanel();
 	}
 
@@ -188,18 +189,18 @@ $(function () {//JS開頭
 		closePointPanel(); // 只關閉 point 面板，不移除 point using
 	});
 
-	//---------------------折扣按鈕設定---------------------------
+	//---------------------點數按鈕設定---------------------------
 	$checkoutPointToggler.click(function () {
 		const $btn = $(this);
 		const isUsing = $btn.hasClass('using');
 		const isPanelOpen = $checkoutPointList.hasClass('active');
 
 		if (isUsing) {
-			deactivatePointUsing(); // 取消折扣
+			deactivatePointUsing(); // 取消點數
 			return;
 		}
 		if (isPanelOpen) {
-			closePointPanel(); // 關閉折扣清單
+			closePointPanel(); // 關閉點數清單
 			return;
 		}
 
@@ -207,9 +208,9 @@ $(function () {//JS開頭
 	});
 
 	$(".js-checkout-point-list-btn").click(function () {
-		// 若頁面有提供折扣確認按鈕，則套用後切換 using 狀態
+		// 若頁面有提供點數確認按鈕，則套用後切換 using 狀態
 		$checkoutPointToggler.removeClass('active').addClass('using');
-		$checkoutPointToggler.find('p').html('取消折扣');
+		$checkoutPointToggler.find('p').html('取消點數');
 		$checkoutPointList.removeClass('active');
 		closeCouponPanel(); // 只關閉 coupon 面板，不移除 coupon using
 	});

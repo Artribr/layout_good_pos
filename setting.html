@@ -904,8 +904,8 @@
                     <button
                         class="checkout-coupon-toggler btn btn-dark-alert-light-color js-checkout-point-toggler h-100"
                         data-con="point">
-                        <img src="./assets/images/ic-point-white.svg" alt="折扣">
-                        <p>使用<br>折扣</p>
+                        <img src="./assets/images/ic-point-white.svg" alt="點數">
+                        <p>使用<br>點數</p>
                     </button>
                 </div>
                 <ul class="checkout-coupon-list nav nav-pills js-checkout-coupon-list scrollbar">
@@ -971,8 +971,8 @@
                             <div class="position-relative">
                                 <label class="checkout-keyboard-form-label alert-light-color" for="point">點數：</label>
                                 <input
-                                    class="form-control form-control-lg shadow-none checkout-keyboard-form-input border-0"
-                                    type="text" id="point" maxlength="4" data-con="point">
+                                    class="form-control form-control-lg shadow-none checkout-keyboard-form-input js-check-point-input"
+                                    type="text" id="point" data-con="point" maxlength="4">
                             </div>
                         </div>
                     </div>
@@ -1248,9 +1248,13 @@
                             <p class="font-smd font-bold">優惠</p>
                             <p class="font-xl font-heavy">-$100</p>
                         </li>
+                        <li class="checkout-sum-item alert-light-color">
+                            <p class="font-smd font-bold">點數</p>
+                            <p class="font-xl font-heavy">-$50</p>
+                        </li>
                         <li class="checkout-sum-item">
                             <p class="font-smd font-bold">應收</p>
-                            <p class="font-xl font-heavy">$1,930</p>
+                            <p class="font-xl font-heavy">$1,880</p>
                         </li>
                         <li class="checkout-sum-item primary-color">
                             <p class="font-smd font-bold">找零</p>
