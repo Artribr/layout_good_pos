@@ -22051,6 +22051,10 @@ body {
   position: relative;
   border-radius: 5px;
 }
+.checkout-keyboard-form-input[data-con=point] {
+  border: 2px solid #FF9130 !important;
+  padding: 0;
+}
 .checkout-keyboard-form-label {
   position: absolute;
   left: 24px;
