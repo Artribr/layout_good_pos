@@ -106,24 +106,113 @@ $(function () {//JS開頭
 			$(this).addClass('active');
 		}
 	});
-	//---------------------優惠按鈕設定---------------------------
-	$('.js-checkout-coupon-toggler').click(function () {
-		if ($(this).hasClass("using")) {
-			$('.js-checkout-coupon-toggler').removeClass('using');
-			$('.js-checkout-coupon-toggler p').html('使用優惠');
+	//---------------------優惠/折扣互斥切換設定---------------------------
+	const $checkoutCoupon = $('.js-checkout-coupon');
+	const $checkoutCouponToggler = $('.js-checkout-coupon-toggler');
+	const $checkoutPointToggler = $('.js-checkout-point-toggler');
+	const $checkoutCouponList = $('.js-checkout-coupon-list');
+	const $checkoutPointList = $('.js-checkout-point-list');
+
+	function syncCheckoutCouponPanel() {
+		// checkout-coupon.active 會控制容器寬度；清單是否展開則看各自的 .active
+		if ($checkoutCouponList.hasClass('active') || $checkoutPointList.hasClass('active')) {
+			$checkoutCoupon.addClass('active');
 		} else {
-			$(this).toggleClass('active');
-			$('.js-checkout-coupon').toggleClass('active');
-			$('.js-checkout-coupon-list').toggleClass('active');
+			$checkoutCoupon.removeClass('active');
 		}
-	})
+	}
+
+	function deactivateCouponUsing() {
+		$checkoutCouponToggler.removeClass('using active');
+		$checkoutCouponToggler.find('p').html('使用<br>優惠');
+		$checkoutCouponList.removeClass('active');
+		syncCheckoutCouponPanel();
+	}
+
+	function deactivatePointUsing() {
+		$checkoutPointToggler.removeClass('using active');
+		$checkoutPointToggler.find('p').html('使用<br>折扣');
+		$checkoutPointList.removeClass('active');
+		syncCheckoutCouponPanel();
+	}
+
+	function openCouponPanel() {
+		closePointPanel(); // 只關閉 point 面板，不動點數 using 狀態
+		$checkoutCouponToggler.addClass('active');
+		$checkoutCouponList.addClass('active');
+		syncCheckoutCouponPanel();
+	}
+
+	function openPointPanel() {
+		closeCouponPanel(); // 只關閉優惠面板，不動優惠 using 狀態
+		$checkoutPointToggler.addClass('active');
+		$checkoutPointList.addClass('active');
+		syncCheckoutCouponPanel();
+	}
+
+	function closeCouponPanel() {
+		$checkoutCouponToggler.removeClass('active');
+		$checkoutCouponList.removeClass('active');
+		syncCheckoutCouponPanel();
+	}
+
+	function closePointPanel() {
+		$checkoutPointToggler.removeClass('active');
+		$checkoutPointList.removeClass('active');
+		syncCheckoutCouponPanel();
+	}
+
+	//---------------------優惠按鈕設定---------------------------
+	$checkoutCouponToggler.click(function () {
+		const $btn = $(this);
+		const isUsing = $btn.hasClass('using');
+		const isPanelOpen = $checkoutCouponList.hasClass('active');
+
+		if (isUsing) {
+			deactivateCouponUsing(); // 取消優惠
+			return;
+		}
+		if (isPanelOpen) {
+			closeCouponPanel(); // 關閉優惠清單
+			return;
+		}
+
+		openCouponPanel();
+	});
+
 	$(".js-checkout-coupon-list-btn").click(function () {
-		$('.js-checkout-coupon-toggler').removeClass('active');
-		$('.js-checkout-coupon').removeClass('active');
-		$('.js-checkout-coupon-toggler').addClass('using');
-		$('.js-checkout-coupon-toggler p').html('取消優惠');
-		$('.js-checkout-coupon-list').removeClass('active');
-	})
+		// 套用優惠後：關閉清單並切換成 using 狀態；只關閉 point 面板
+		$checkoutCouponToggler.removeClass('active').addClass('using');
+		$checkoutCouponToggler.find('p').html('取消優惠');
+		$checkoutCouponList.removeClass('active');
+		closePointPanel(); // 只關閉 point 面板，不移除 point using
+	});
+
+	//---------------------折扣按鈕設定---------------------------
+	$checkoutPointToggler.click(function () {
+		const $btn = $(this);
+		const isUsing = $btn.hasClass('using');
+		const isPanelOpen = $checkoutPointList.hasClass('active');
+
+		if (isUsing) {
+			deactivatePointUsing(); // 取消折扣
+			return;
+		}
+		if (isPanelOpen) {
+			closePointPanel(); // 關閉折扣清單
+			return;
+		}
+
+		openPointPanel();
+	});
+
+	$(".js-checkout-point-list-btn").click(function () {
+		// 若頁面有提供折扣確認按鈕，則套用後切換 using 狀態
+		$checkoutPointToggler.removeClass('active').addClass('using');
+		$checkoutPointToggler.find('p').html('取消折扣');
+		$checkoutPointList.removeClass('active');
+		closeCouponPanel(); // 只關閉 coupon 面板，不移除 coupon using
+	});
 	//---------------------filter按鈕設定------------------------
 	$('.js-filter button').click(function () {
 		$(this).toggleClass('active');

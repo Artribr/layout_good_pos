@@ -895,11 +895,19 @@
                 </li>
             </ul>
             <div class="checkout-coupon js-checkout-coupon">
-                <button class="checkout-coupon-toggler btn btn-dark-danger-light-color js-checkout-coupon-toggler">
-                    <img src="./assets/images/ic-coupon.svg" alt="現金">
-                    <p>使用<br>優惠</p>
-                </button>
-                
+                <div class="d-flex flex-column h-100">
+                    <button
+                        class="checkout-coupon-toggler btn btn-dark-danger-light-color js-checkout-coupon-toggler h-100 mb-2">
+                        <img src="./assets/images/ic-coupon.svg" alt="優惠">
+                        <p>使用<br>優惠</p>
+                    </button>
+                    <button
+                        class="checkout-coupon-toggler btn btn-dark-alert-light-color js-checkout-point-toggler h-100"
+                        data-con="point">
+                        <img src="./assets/images/ic-point-white.svg" alt="折扣">
+                        <p>使用<br>折扣</p>
+                    </button>
+                </div>
                 <ul class="checkout-coupon-list nav nav-pills js-checkout-coupon-list scrollbar">
                     <div class="btn coupon-list-item active" data-bs-toggle="pill">
                         <div class="coupon-list-con">
@@ -908,7 +916,8 @@
                             </h6>
                             <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
                             <span>2025.10.01~2025.10.31</span>
-                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                            <button
+                                class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
                         </div>
                     </div>
                     <div class="btn coupon-list-item" data-bs-toggle="pill" data-status="未符合">
@@ -918,7 +927,8 @@
                             </h6>
                             <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
                             <span>2025.10.01~2025.10.31</span>
-                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                            <button
+                                class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
                         </div>
                     </div>
                     <div class="btn coupon-list-item" data-bs-toggle="pill">
@@ -928,7 +938,8 @@
                             </h6>
                             <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
                             <span>2025.10.01~2025.10.31</span>
-                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                            <button
+                                class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
                         </div>
                     </div>
                     <div class="btn coupon-list-item" data-bs-toggle="pill" data-member="none">
@@ -938,7 +949,8 @@
                             </h6>
                             <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
                             <span>2025.10.01~2025.10.31</span>
-                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                            <button
+                                class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
                         </div>
                     </div>
                     <div class="btn coupon-list-item" data-bs-toggle="pill">
@@ -948,9 +960,49 @@
                             </h6>
                             <p class="coupon-list-txt">消費滿 $299 現折 $150</p>
                             <span>2025.10.01~2025.10.31</span>
-                            <button class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
+                            <button
+                                class="coupon-list-btn btn btn-dark-danger-light-color js-checkout-coupon-list-btn">確認</button>
                         </div>
                     </div>
+                </ul>
+                <ul class="checkout-point-list js-checkout-point-list">
+                    <div class="row checkout-keyboard-form g-0">
+                        <div class="col-12">
+                            <div class="position-relative">
+                                <label class="checkout-keyboard-form-label" for="creditcard">點數：</label>
+                                <input
+                                    class="form-control form-control-lg border-0 shadow-none checkout-keyboard-form-input"
+                                    type="text" id="creditcard" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="row checkout-keyboard-list g-2" style="height:calc(100% - 56px)">
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">7</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">8</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">9</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">4</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">5</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">6</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">1</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">2</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">3</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">C</button></li>
+                        <li class="col-4"><button
+                                class="checkout-keyboard-list-item btn btn-dark-gray600 p-0">0</button></li>
+                        <li class="col-4"><button
+                                    class="checkout-keyboard-list-item btn btn-dark-alert-light-color p-0 font-sm js-checkout-point-list-btn">確認</button></li>
+
+                    </ul>
                 </ul>
             </div>
             <div class="checkout-keyboard js-checkout-keyboard tab-content">
@@ -1763,9 +1815,10 @@
                                         <span class="ms-auto gray800 font-xs">"8888" 的搜尋結果</span>
                                     </h5>
 
-                                    <div class="member-modal-list scrollx-none scrollbar js-member-modal-list" role="tablist">
-                                        <button class="btn member-pick" data-bs-toggle="pill"
-                                            aria-selected="true" role="tab">
+                                    <div class="member-modal-list scrollx-none scrollbar js-member-modal-list"
+                                        role="tablist">
+                                        <button class="btn member-pick" data-bs-toggle="pill" aria-selected="true"
+                                            role="tab">
                                             <div class="member-pick-con w-100 me-3">
                                                 <p class="member-pick-base">王大明<br>0923888888</p>
                                                 <div class="w-100">
@@ -2027,7 +2080,8 @@
                                 </div>
                                 <div class="col-3">
                                     <button type="button"
-                                        class="btn btn-dark-primary-color w-100 rounded-2 py-2 js-confirm-member" data-bs-dismiss="modal">
+                                        class="btn btn-dark-primary-color w-100 rounded-2 py-2 js-confirm-member"
+                                        data-bs-dismiss="modal">
                                         確認
                                     </button>
                                 </div>
