@@ -438,35 +438,43 @@ $(function () {//JS開頭
 	jQuery(document).ready(function ($) {
 
 		// --- 核心監聽事件 ---
-		$(document).on("change", 'input[role="switch"]', function () {
+		$(document).on("change", 'input[role="switch"], [data-con="checkbox"] input[type="checkbox"]', function () {
 			const $this = $(this);
-
+		
 			// 1. 檢查是否在 data-func="setting" 範圍內
 			if (!$this.closest('[data-func="setting"]').length) return;
-
+		
 			const isChecked = $this.prop("checked");
 			let itemName = "";
-
-			// 2. 判斷是在「上方導覽列」還是在「下方商品列表」
-			if ($this.closest('.top-nav-item').length) {
-				// 上方導覽列：抓按鈕裡的 <p> 文字
+		
+			// 2. 判斷來源
+			if ($this.closest('[data-con="checkbox"]').length) {
+				// --- 針對「每日供應量」的處理 ---
+				// 抓取 label 文字，並移除換行與多餘空白
+				itemName = $this.closest('[data-con="checkbox"]').find('label').text().trim();
+			} else if ($this.closest('.top-nav-item').length) {
+				// 上方導覽列
 				itemName = $this.closest('.top-nav-item').find('p').first().text().trim();
 			} else if ($this.closest('.menu-edit-list').length) {
-				// 下方商品列表：抓商品標題 <h4>
+				// 下方商品列表
 				itemName = $this.closest('.menu-edit-list').find('.order-list-title').text().trim();
 			}
-
-			// 3. 如果還是抓不到，抓 Label 的文字作為保險
+		
+			// 3. 保險機制（僅針對原本帶有「分類開關」字眼的標籤）
 			if (!itemName) {
-				itemName = $this.closest('.form-check').find('label').text().replace('分類開關', '').replace('項目開關', '').trim();
+				itemName = $this.closest('.form-check').find('label').text()
+								.replace('分類開關', '')
+								.replace('項目開關', '')
+								.trim();
 			}
-
+		
 			// 4. 顯示 Toast
 			const type = isChecked ? "active" : "inactive";
 			const statusText = isChecked ? "已啟用" : "已關閉";
+			
+			// 最終輸出的 itemName 就會是「每日供應量」
 			showToast(`${statusText}「${itemName}」`, type);
 		});
-
 		// --- Toast 顯示函式 ---
 		function showToast(message, type) {
 			if ($("#toast-container").length === 0) {

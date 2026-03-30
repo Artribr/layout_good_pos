@@ -23412,41 +23412,22 @@ body {
   background-color: #5BA9DA !important;
   background-position: 20px -4px;
 }
-[data-func=setting] .form-check-label {
-  margin-right: 0;
-  font-size: 0.8rem;
-  line-height: 1;
-  color: #fff;
-  position: relative;
-}
-[data-func=setting] .form-check-label::after {
-  position: absolute;
-  display: inline-block;
-  left: 7px;
-  top: 1px;
-  font-weight: 600;
-  content: "已關閉";
-  color: #525252;
+[data-func=setting] .top-nav .form-check-label {
+  display: none;
 }
 [data-func=setting] .top-nav-link {
-  color: #7a7a7a;
+  color: #525252;
+  padding-right: 60px;
+  padding-left: 20px;
+  font-weight: 500;
 }
 [data-func=setting] .top-nav-link::before {
-  background: #f5f5f5;
-  border: 1px solid #ebebeb;
+  background: #fff;
+  border: 1px solid #fff;
 }
 [data-func=setting] .top-nav-link.active {
   color: #fff;
   border: none !important;
-}
-[data-func=setting] .top-nav-link.active ~ .form-switch {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -4px;
-  margin-right: 20px;
-  opacity: 1;
-  pointer-events: initial;
 }
 [data-func=setting] .top-nav-link.active::before {
   background: #7a7a7a;
@@ -23455,14 +23436,19 @@ body {
 [data-func=setting] .top-nav-link.active::after {
   background: #7a7a7a;
 }
+[data-func=setting] .top-nav-link.active ~ .form-switch .form-check-input[role=switch]:checked {
+  background-color: #A1DAFF !important;
+}
 [data-func=setting] .top-nav-item {
-  margin-right: 16px;
+  margin-right: 0;
 }
 [data-func=setting] .top-nav-item .form-switch {
-  display: none;
-  margin-left: -124px;
-  opacity: 0;
-  pointer-events: none;
+  z-index: 10;
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
+  margin-left: -70px;
+  margin-top: 7px;
 }
 [data-func=setting] .top-nav-item:has([role=switch]:checked) .top-nav-link {
   color: #1F89CD;
@@ -23480,9 +23466,6 @@ body {
 }
 [data-func=setting] .top-nav-item:has([role=switch]:checked) .top-nav-link.active::after {
   background: #1F89CD !important;
-}
-[data-func=setting] .top-nav-item:has([role=switch]:checked) .form-check-label::after {
-  content: "已啟用";
 }
 
 .menu-edit-list {
@@ -23510,21 +23493,52 @@ body {
 }
 .menu-edit-list .form-check-input[role=switch] {
   margin-bottom: 0;
+  margin-top: 16px;
 }
-.menu-edit-list .form-check-input[role=switch]:checked ~ .form-check-label::after {
-  content: "已啟用";
+.menu-edit-list .form-check[data-con=checkbox] {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: -4px;
+  min-height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.menu-edit-list .form-check-label {
-  width: 100%;
+.menu-edit-list .form-check[data-con=checkbox] .form-check-input {
+  margin-right: 6px;
 }
-.menu-edit-list .form-check-label::after {
-  content: "已關閉";
+.menu-edit-list .form-check[data-con=checkbox] .form-check-label {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: 3px;
+}
+.menu-edit-list .form-check[data-con=checkbox]:has(.form-check-input:checked) ~ .number-form {
+  margin-top: 0;
+  opacity: 1;
+  pointer-events: initial;
+}
+.menu-edit-list .number-form {
+  opacity: 0;
+  margin-top: -30px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  pointer-events: none;
 }
 .menu-edit-list .form-switch {
   width: 67px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 0;
+}
+.menu-edit-list .form-switch .form-check-label {
+  display: none;
 }
 .menu-edit-list p {
   margin-bottom: 6px;
