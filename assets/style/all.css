@@ -21900,6 +21900,9 @@ body {
 .checkout-coupon-toggler[data-con=point]::after {
   background: #FF9130;
 }
+.checkout-coupon-toggler[data-con=point]:hover::after {
+  background: none;
+}
 .checkout-coupon-toggler[data-con=point] img {
   -webkit-filter: none;
           filter: none;
