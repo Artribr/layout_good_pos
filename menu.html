@@ -611,6 +611,95 @@
         </div>
     </div>
 </div>
+<!--金額視窗開始-->
+<div class="offcanvas offcanvas-end bg-primary-color white" tabindex="-1" id="single-price">
+    <div class="offcanvas-header align-items-start">
+        <button type="button" class="btn flex-shrink-0" data-bs-dismiss="offcanvas">
+            <img src="./assets/images/ic-close.svg" alt="關閉">
+        </button>
+        <h4 class="offcanvas-title font-sm font-light" id="offcanvasRightLabel">雙濃起司炸魚番薯比薩</h4>
+    </div>
+    <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="box-list-wrapper scrollx-none scrollbar-dark">
+            <div class="container px-0">
+                <ul class="row box-list g-3 mb-5" data-con="number">
+                    <li class="col-12">
+                        <input type="text" id="note-number" class="box-list-form form-control" placeholder="金額">
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            1
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            2
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            3
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            4
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            5
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            6
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            7
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            8
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            9
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item font-heavy bg-danger-pale-color danger-color">
+                            –
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            0
+                        </button>
+                    </li>
+                    <li class="col-4">
+                        <button type="button" class="btn box-list-item">
+                            <img src="./assets/images/ic-backward.svg" alt="倒退">
+                        </button>
+                    </li>
+                    <li class="col-12">
+                        <button class="btn box-list-item" data-con="clear">
+                            清除
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-list-action mt-3">
+            <button class="btn btn-lg btn-dark-gray900 w-100 py-2" data-bs-dismiss="offcanvas"
+                onclick="checkInput()">確認</button>
+        </div>
+    </div>
+</div>
 <!--點餐視窗開始-->
 <div class="offcanvas offcanvas-end offcanvas-end-lg" tabindex="-1" id="order-list">
     <div class="offcanvas-header bg-primary-color white">
@@ -2259,7 +2348,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/default-pic.svg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2269,7 +2358,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">0</span> 份</p>
 					</div>
 				</a>
@@ -2279,7 +2368,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2289,7 +2378,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2299,7 +2388,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2309,7 +2398,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2319,7 +2408,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2329,7 +2418,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2339,7 +2428,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2349,7 +2438,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2359,7 +2448,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
@@ -2369,7 +2458,7 @@
 					<div class="menu-card-pic"><img src="./assets/images/demo-pic.jpg" alt="雙濃起司炸魚番薯比薩"></div>
 					<h3 class="menu-card-title font-sm mb-1">雙濃起司炸魚番薯比薩</h3>
 					<div class="menu-card-info d-flex justify-content-between">
-						<p class="primary-color font-bold font-md">$289</p>
+						<p class="primary-color font-bold font-md" data-bs-target="#single-price" data-bs-toggle="offcanvas">$289</p>
 						<p class="font-xxs gray700">剩最後 <span class="font-sm gray900 font-bold">1</span> 份</p>
 					</div>
 				</a>
