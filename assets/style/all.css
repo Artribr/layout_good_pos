@@ -23226,12 +23226,19 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  min-height: 60px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   border-radius: 8px;
   margin-bottom: 12px;
   background: #fff;
   border: 2px solid #f5f5f5;
   position: relative;
+  padding: 8px 8px 8px 12px;
 }
 .coupon-list-item:active {
   background: #fff !important;
@@ -23252,7 +23259,6 @@ body {
   width: 30px;
   height: 30px;
   background: url("../images/ic-picked.svg") no-repeat;
-  margin-top: 6px;
 }
 .coupon-list-item.active .coupon-list-title, .coupon-list-item.active:active .coupon-list-title {
   color: #F16464;
@@ -23303,8 +23309,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 4px;
-  padding-right: 72px;
+  margin-bottom: 0;
   color: #1F89CD;
 }
 .coupon-list-title img {
@@ -23314,6 +23319,7 @@ body {
 }
 .coupon-list-txt {
   margin-bottom: -2px;
+  margin-top: 4px;
   font-size: 0.9rem;
 }
 .coupon-list-txt ~ span {
@@ -23335,12 +23341,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  right: 12px;
-  top: 12px;
   padding: 0;
   font-size: 0.9rem;
   display: none;
+  margin-left: auto;
 }
 
 .checkout-coupon-list .coupon-list-item.active .coupon-list-btn {
